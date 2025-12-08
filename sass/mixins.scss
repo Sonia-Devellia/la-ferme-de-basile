@@ -1,0 +1,78 @@
+@use "variables" as *;
+
+// -------------------------------------
+// Mixins
+// -------------------------------------
+
+// Responsive
+@mixin tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+
+// Bouton
+@mixin button-base {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+// Container
+@mixin container($max: 1200px) {
+  max-width: $max;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+// Style pour les titres de section
+@mixin section-title($color) {
+  color: $color;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: $space-lg;
+}
+
+@mixin heading($level) {
+  font-family: $font-headings;
+  line-height: $lh-headings;
+  font-weight: var(--font-weight-bold);
+
+  @if $level == 1 {
+    font-size: $font-h1-mobile;
+  } @else if $level == 2 {
+    font-size: $font-h2-mobile;
+  } @else if $level == 3 {
+    font-size: $font-h3-mobile;
+  }
+
+  @include desktop {
+    @if $level == 1 {
+      font-size: $font-h1-desktop;
+    } @else if $level == 2 {
+      font-size: $font-h2-desktop;
+    } @else if $level == 3 {
+      font-size: $font-h3-desktop;
+    }
+  }
+}
+
+@mixin body-text {
+  font-family: $font-body;
+  font-size: $font-paragraph-mobile;
+  line-height: $lh-body;
+
+  @include desktop {
+    font-size: $font-paragraph-desktop;
+  }
+}

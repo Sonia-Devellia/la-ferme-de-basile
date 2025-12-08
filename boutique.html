@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil – Ferme de Basile</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+<header class="header">
+  <div class="header-content">
+
+    <!-- Logo + titre -->
+    <div class="logo-section">
+      <img src="images/logo.jpg" alt="Logo de La Ferme de Basile" class="logo" />
+      <h1 class="site-title">La Ferme de Basile</h1>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+
+      <!-- Bouton mobile -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-list" id="navList">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="apropos.html" class="nav-link">À propos</a></li>
+
+        <li class="dropdown" id="dropdown">
+          <a href="boutique.html" class="nav-link">La Boutique ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="boutique.html#boucherie">Boucherie</a></li>
+            <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+            <li><a href="boutique.html#fruits-legumes">Fruits et légumes</a></li>
+            <li><a href="boutique.html#epicerie">Épicerie</a></li>
+            <li><a href="boutique.html#cave">La cave</a></li>
+            <li class="special"><a href="boutique.html#noel">Sélection de Noël</a></li>
+          </ul>
+        </li>
+
+        <li><a href="actualites.html" class="nav-link">Actualités</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Icône du panier -->
+      <a href="panier.html" class="cart-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </a>
+
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="boutique-hero">
+    <h1>La Boutique</h1>
+    <p>
+      Découvrez notre sélection de produits frais et locaux, cultivés avec passion et dans le respect de la nature.
+    </p>
+  </section>
+
+  <!-- CONTAINER PRINCIPAL -->
+  <div class="boutique-container">
+
+    <!-- MODALITÉS -->
+    <section class="modalites-section">
+
+      <!-- CTA -->
+      <div class="modalite-cta">
+        <h2 class="cta-title-responsive">
+          Commandez en ligne et récupérez votre commande
+        </h2>
+
+        <p>En click & collect (retrait à la ferme) ou en vous faisant livrer à domicile</p>
+
+        <a href="#" class="btn-order">Commandez dès maintenant</a>
+      </div>
+
+      <!-- GRID -->
+      <div class="modalites-grid">
+
+        <!-- CLICK & COLLECT -->
+        <div class="modalite-card">
+          <h3>Click & Collect</h3>
+
+          <div class="modalite-info">
+
+            <div class="info-item">
+              <h4>Retrait à la ferme</h4>
+              <p>Commandez en ligne et récupérez votre panier directement à la ferme</p>
+            </div>
+
+            <div class="info-item">
+              <h4>Horaires de retrait</h4>
+              <p>Mercredi, jeudi et vendredi<br>De 9h à 18h</p>
+            </div>
+
+            <div class="info-item">
+              <h4>Tarif</h4>
+              <p>Gratuit - aucun frais de retrait</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- LIVRAISON -->
+        <div class="modalite-card">
+          <h3>Livraison à domicile</h3>
+
+          <div class="modalite-info">
+
+            <div class="info-item">
+              <h4>Zone de livraison</h4>
+              <p>À moins de 20 km de notre ferme</p>
+            </div>
+
+            <div class="info-item">
+              <h4>Jours de livraison</h4>
+              <p>Mercredi, jeudi, vendredi<br>Commande avant 9h00 le jour de la livraison</p>
+            </div>
+
+            <div class="info-item">
+              <h4>Frais de livraison</h4>
+              <ul>
+                <li>Gratuit dès 100 € d'achat</li>
+                <li>9,99 € entre 25 € et 100 €</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <!-- Bouton remonter -->
+  <button class="scroll-top" id="scrollTopBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <div class="footer-content">
+
+    <!-- COL 1 -->
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="images/logo.jpg" alt="Logo" />
+        <span>La Ferme de Basile</span>
+      </div>
+      <p>Des produits frais et locaux cultivés avec passion depuis 1985.</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-col footer-col-accordion" id="footerNavCol">
+      <h3 id="footerNavToggle">Navigation</h3>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="boutique.html">La Boutique</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- INFORMATIONS -->
+    <div class="footer-col footer-col-accordion" id="footerInfoCol">
+      <h3 id="footerInfoToggle">Informations</h3>
+      <ul>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Paiement</a></li>
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Confidentialité</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+
+      <ul class="contact-list">
+        <li>📍 123 Rue de la Ferme, 75000 Paris</li>
+        <li>📞 01 23 45 67 89</li>
+        <li>✉️ contact@basilicferme.fr</li>
+      </ul>
+
+      <div class="social-links">
+        <a href="#"><svg width="20" height="20" fill="currentColor"><path d=""/></svg></a>
+        <a href="#"><svg width="20" height="20"></svg></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
+  </div>
+</footer>
+
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil – Ferme de Basile</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+<header class="header">
+  <div class="header-content">
+
+    <!-- Logo + titre -->
+    <div class="logo-section">
+      <img src="images/logo.jpg" alt="Logo de La Ferme de Basile" class="logo" />
+      <h1 class="site-title">La Ferme de Basile</h1>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+
+      <!-- Bouton mobile -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-list" id="navList">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="apropos.html" class="nav-link">À propos</a></li>
+
+        <li class="dropdown" id="dropdown">
+          <a href="boutique.html" class="nav-link">La Boutique ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="boutique.html#boucherie">Boucherie</a></li>
+            <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+            <li><a href="boutique.html#fruits-legumes">Fruits et légumes</a></li>
+            <li><a href="boutique.html#epicerie">Épicerie</a></li>
+            <li><a href="boutique.html#cave">La cave</a></li>
+            <li class="special"><a href="boutique.html#noel">Sélection de Noël</a></li>
+          </ul>
+        </li>
+
+        <li><a href="actualites.html" class="nav-link">Actualités</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Icône du panier -->
+      <a href="panier.html" class="cart-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </a>
+
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO ACTUALITÉS -->
+  <section class="actualites-hero">
+    <h1>Actualités de la ferme</h1>
+    <p>
+      Suivez la vie de la ferme, les nouvelles récoltes, les événements et toutes nos nouveautés en boutique.
+    </p>
+  </section>
+
+  <!-- LISTE DES ACTUALITÉS -->
+  <section class="actualites-list">
+    <div class="actualites-container">
+
+      <div class="actualites-grid">
+
+        <!-- ARTICLE 1 -->
+        <article class="actualite-card">
+          <a href="article1.html" class="actualite-image-link">
+            <img src="images/articles1.jpg" alt="Atelier biscuits de Noël" />
+          </a>
+          <div class="actualite-content">
+            <span class="actualite-date">20 novembre 2025</span>
+            <span class="actualite-tag">Atelier</span>
+            <h2>Atelier Biscuits de Noël pour enfants</h2>
+            <p>
+              Venez vivre un moment cuisine avec votre enfant et préparez des biscuits de Noël avec une pâtissière diplômée.
+            </p>
+            <a href="article1.html" class="actualite-link">Lire l’article</a>
+          </div>
+        </article>
+
+        <!-- ARTICLE 2 -->
+        <article class="actualite-card">
+          <a href="article2.html" class="actualite-image-link">
+            <img src="images/articles2bis.png" alt="Produits fermiers pour Noël" />
+          </a>
+          <div class="actualite-content">
+            <span class="actualite-date">1 décembre 2025</span>
+            <span class="actualite-tag">Noël</span>
+            <h2>Pour Noël, pensez fermier !</h2>
+            <p>
+              Découvrez notre sélection festive de produits fermiers et locaux pour vos repas de fin d’année.
+            </p>
+            <a href="article2.html" class="actualite-link">Lire l’article</a>
+          </div>
+        </article>
+
+        <!-- ARTICLE 3 -->
+        <article class="actualite-card">
+          <a href="article3.html" class="actualite-image-link">
+            <img src="images/articles3bis.png" alt="Ateliers dégustations" />
+          </a>
+          <div class="actualite-content">
+            <span class="actualite-date">28 novembre 2025</span>
+            <span class="actualite-tag">Dégustation</span>
+            <h2>Ateliers Dégustations à la ferme</h2>
+            <p>
+              Participez à nos ateliers découverte et savourez nos produits d’exception en prévision des fêtes.
+            </p>
+            <a href="article3.html" class="actualite-link">Lire l’article</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <!-- Bouton remonter -->
+  <button class="scroll-top" id="scrollTopBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <div class="footer-content">
+
+    <!-- COL 1 -->
+    <div class="footer-col">
+      <div class="footer-logo">
+        <img src="images/logo.jpg" alt="Logo" />
+        <span>La Ferme de Basile</span>
+      </div>
+      <p>Des produits frais et locaux cultivés avec passion depuis 1985.</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-col footer-col-accordion" id="footerNavCol">
+      <h3 id="footerNavToggle">Navigation</h3>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="boutique.html">La Boutique</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- INFORMATIONS -->
+    <div class="footer-col footer-col-accordion" id="footerInfoCol">
+      <h3 id="footerInfoToggle">Informations</h3>
+      <ul>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Paiement</a></li>
+        <li><a href="#">CGV</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Confidentialité</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+
+      <ul class="contact-list">
+        <li>📍 123 Rue de la Ferme, 75000 Paris</li>
+        <li>📞 01 23 45 67 89</li>
+        <li>✉️ contact@basilicferme.fr</li>
+      </ul>
+
+      <div class="social-links">
+        <a href="#"><svg width="20" height="20" fill="currentColor"><path d=""/></svg></a>
+        <a href="#"><svg width="20" height="20"></svg></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
+  </div>
+</footer>
+
+
+  <script src="scripts.js"></script>
+</body>
+</html>
