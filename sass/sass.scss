@@ -1,7 +1,8 @@
 
 @use "variables" as *;
 @use "mixins" as *;
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap');
+
 
 
 
@@ -321,25 +322,25 @@ img {
 
 .hero {
   background: $green-primary; // #a4a661
-  padding: 15px 20px;
+  padding: $space-lg $space-sm;
   text-align: center;
   color: $white;
 }
 
 .hero h1 {
   @include heading(1);
-  margin-bottom: 8px;
+  margin-bottom: 30px;
 }
 
 .hero p {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 30px;
   line-height: 1.3;
 }
 
 .btn--green { 
   min-height: 56px; 
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 
@@ -815,12 +816,12 @@ img {
   color: $white;
 
   h1 {
-    margin-bottom: $space-sm;
+    margin-top: 5px;
   }
 
   p {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 30px;
     line-height: 1.6;
   }
 
