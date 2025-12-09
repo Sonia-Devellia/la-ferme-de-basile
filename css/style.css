@@ -1,43 +1,5 @@
 @charset "UTF-8";
-:root {
-  /* ========== POLICES ========== */
-  --font-family-headings: 'Playfair Display', serif;
-  --font-family-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* ========== TITRES ========== */
-  --font-size-h1-mobile: 2rem;
-  --font-size-h2-mobile: 2.2rem;
-  --font-size-h3-mobile: 2.2rem;
-  --font-size-h4-mobile: 2.2rem;
-  --font-size-h5-mobile: 2.2rem;
-  --font-size-h6-mobile: 2.2rem;
-  --font-size-h1-desktop: 3.5rem;
-  --font-size-h2-desktop: 3rem;
-  --font-size-h3-desktop: 3rem;
-  --font-size-h4-desktop: 3rem;
-  --font-size-h5-desktop: 3rem;
-  --font-size-h6-desktop: 3rem;
-  --line-height-headings: 1.4;
-  --line-height-headings-hero: 1.3;
-  /* ========== PARAGRAPHES ========== */
-  --font-size-body-mobile: 18px;
-  --font-size-paragraph-mobile: 1.05rem;
-  --font-size-small-mobile: 1rem;
-  --font-size-large-mobile: 1.2rem;
-  --font-size-body-desktop: 18px;
-  --font-size-paragraph-desktop: 1.2rem;
-  --font-size-small-desktop: 1.05rem;
-  --font-size-large-desktop: 1.5rem;
-  --line-height-body: 1.7;
-  --line-height-paragraph: 1.8;
-  --line-height-large: 1.9;
-  /* ========== POIDS ========== */
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500&display=swap");
 /* ----------------------------------------------------
    BASE GLOBALE
 ---------------------------------------------------- */
@@ -51,103 +13,159 @@ body {
   margin: 0;
   padding: 0;
   color: #1e3a5f;
-  background-color: #666666;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-paragraph-mobile);
-  line-height: var(--line-height-body);
+  background-color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 @media (min-width: 1200px) {
   body {
-    font-size: var(--font-size-paragraph-desktop);
+    font-size: 1.15rem;
   }
 }
 
 h1 {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h1-mobile);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 2.1rem;
 }
 @media (min-width: 1200px) {
   h1 {
-    font-size: var(--font-size-h1-desktop);
+    font-size: 3.2rem;
   }
 }
 
 h2 {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h2-mobile);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 1.7rem;
 }
 @media (min-width: 1200px) {
   h2 {
-    font-size: var(--font-size-h2-desktop);
+    font-size: 2.4rem;
   }
 }
 
 h3 {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h3-mobile);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 1.35rem;
 }
 @media (min-width: 1200px) {
   h3 {
-    font-size: var(--font-size-h3-desktop);
+    font-size: 1.8rem;
   }
 }
 
 h4 {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h3-mobile);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 1.35rem;
 }
 @media (min-width: 1200px) {
   h4 {
-    font-size: var(--font-size-h3-desktop);
+    font-size: 1.8rem;
   }
 }
 
 h5 {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h3-mobile);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 1.35rem;
 }
 @media (min-width: 1200px) {
   h5 {
-    font-size: var(--font-size-h3-desktop);
+    font-size: 1.8rem;
   }
 }
 
 h6 {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h3-mobile);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 1.35rem;
 }
 @media (min-width: 1200px) {
   h6 {
-    font-size: var(--font-size-h3-desktop);
-  }
-}
-
-p, li, a, button, input, textarea {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-paragraph-mobile);
-  line-height: var(--line-height-body);
-}
-@media (min-width: 1200px) {
-  p, li, a, button, input, textarea {
-    font-size: var(--font-size-paragraph-desktop);
+    font-size: 1.8rem;
   }
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+.btn--blue {
+  display: inline-block;
+  padding: 18px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  border: 2px solid transparent;
+  text-align: center;
+  background: #ffffff;
+  color: #1e3a5f;
+}
+.btn--blue:hover {
+  background: #a4a661;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn--green {
+  display: inline-block;
+  padding: 18px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  border: 2px solid transparent;
+  text-align: center;
+  background: #ffffff;
+  color: #a4a661;
+}
+.btn--green:hover {
+  background: #1e3a5f;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  display: inline-block;
+  padding: 18px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  border: 2px solid transparent;
+  text-align: center;
+  background: #a4a661;
+  color: #ffffff;
+}
+.btn--white:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18), 0 0 0 4px rgba(164, 166, 97, 0.25);
 }
 
 .header {
@@ -180,14 +198,15 @@ img {
 }
 .header .site-title {
   display: none;
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h3-mobile);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 1.7rem;
 }
 @media (min-width: 1200px) {
   .header .site-title {
-    font-size: var(--font-size-h3-desktop);
+    font-size: 2.4rem;
   }
 }
 .header .site-title {
@@ -230,7 +249,6 @@ img {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   display: none;
   flex-direction: column;
-  /* ✅ Plus d’espace entre les liens */
   gap: 16px;
 }
 .header .nav-list.active {
@@ -309,9 +327,20 @@ img {
   }
   .site-title {
     display: block;
-    font-size: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    font-size: 1.7rem;
     color: #a4a661;
   }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .site-title {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 768px) {
   .mobile-menu-btn {
     display: none;
     position: static;
@@ -381,15 +410,30 @@ img {
 }
 
 .hero h1 {
-  font-size: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 2.1rem;
+}
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+}
+.hero h1 {
   margin-bottom: 8px;
 }
 
 .hero p {
-  font-size: 0.95rem;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.3;
+}
+
+.btn--green {
+  min-height: 56px;
+  margin-top: 20px;
 }
 
 /* Mobile/Tablette - bandeau plus grand pour lisibilité */
@@ -405,6 +449,9 @@ img {
     line-height: 1.5;
   }
 }
+/* =======================
+   A PROPOS DE NOTRE FERME 
+======================= */
 .ferme-photos-section {
   padding: 0;
   background: #ffffff;
@@ -427,17 +474,6 @@ img {
   }
 }
 .section-title {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h2-mobile);
-}
-@media (min-width: 1200px) {
-  .section-title {
-    font-size: var(--font-size-h2-desktop);
-  }
-}
-.section-title {
   text-align: center;
   color: #a4a661;
   margin-bottom: 50px;
@@ -445,19 +481,20 @@ img {
 
 @media (max-width: 1200px) {
   .section-title {
-    text-align: center !important;
-    margin-left: 0 !important;
+    text-align: center;
+    margin-left: 0;
   }
 }
 .section-title-white {
-  font-family: var(--font-family-headings);
-  line-height: var(--line-height-headings);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h2-mobile);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  font-size: 1.7rem;
 }
 @media (min-width: 1200px) {
   .section-title-white {
-    font-size: var(--font-size-h2-desktop);
+    font-size: 2.4rem;
   }
 }
 .section-title-white {
@@ -468,8 +505,8 @@ img {
 
 @media (max-width: 1200px) {
   .section-title-white {
-    text-align: center !important;
-    margin-left: 0 !important;
+    text-align: center;
+    margin-left: 0;
   }
 }
 .about-content {
@@ -498,29 +535,9 @@ img {
 }
 
 .about-image img {
-  border-radius: 12px;
+  border-radius: 5px;
   width: 100%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.btn {
-  display: inline-block;
-  padding: 15px 40px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s;
-  margin-top: 20px;
-}
-
-.btn-secondary {
-  background: #1e3a5f;
-  color: #ffffff;
-}
-
-.btn-secondary:hover {
-  background: #a4a661;
-  transform: translateY(-2px);
 }
 
 /* PRODUITS */
@@ -608,7 +625,7 @@ img {
 }
 
 .product-title-noel {
-  color: #ff6b6b;
+  color: #c41e3a;
 }
 
 .carousel-btn {
@@ -826,16 +843,6 @@ img {
     display: block;
   }
 }
-.btn-contact {
-  background: #ffffff;
-  color: #1e3a5f;
-}
-
-.btn-contact:hover {
-  background: #a4a661;
-  color: #ffffff;
-}
-
 /* RESPONSIVE SUPPLÉMENTAIRES */
 @media (max-width: 1200px) {
   .news-grid {
@@ -904,10 +911,6 @@ img {
   padding: 0 16px;
 }
 .team-section h2 {
-  color: #a4a661;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 40px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -944,7 +947,7 @@ img {
 .team-section .team-member p {
   max-width: 420px;
   margin: 0 auto;
-  color: #666666;
+  color: #1b1b1b;
   line-height: 1.6;
 }
 @media (min-width: 1200px) {
@@ -964,10 +967,6 @@ img {
   padding: 0 16px;
 }
 .farm-presentation h2 {
-  color: #a4a661;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 40px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -1010,7 +1009,7 @@ img {
   gap: 30px;
 }
 .farm-presentation .farm-content p {
-  color: #666666;
+  color: #1b1b1b;
   line-height: 1.8;
   text-align: justify;
 }
@@ -1087,24 +1086,12 @@ img {
   }
 }
 .modalite-cta p {
-  color: #666666;
+  color: #1b1b1b;
   margin-bottom: 30px;
 }
-.modalite-cta .btn-order {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: #a4a661;
-  color: #ffffff;
+.modalite-cta .btn--white {
   padding: 12px 32px;
   border-radius: 8px;
-}
-.modalite-cta .btn-order:hover {
-  background: rgb(140.3368421053, 142.1360323887, 80.0639676113);
 }
 
 /* GRID 1 → 2 colonnes */
@@ -1154,7 +1141,7 @@ img {
 }
 .modalite-info p,
 .modalite-info ul {
-  color: #666666;
+  color: #1b1b1b;
   margin: 0;
   line-height: 1.7;
 }
@@ -1258,7 +1245,7 @@ img {
 }
 .actualite-card .actualite-content .actualite-date {
   font-size: 0.8rem;
-  color: #666666;
+  color: #1b1b1b;
 }
 .actualite-card .actualite-content .actualite-tag {
   display: inline-block;
@@ -1273,7 +1260,7 @@ img {
   color: #1e3a5f;
 }
 .actualite-card .actualite-content p {
-  color: #666666;
+  color: #1b1b1b;
   line-height: 1.6;
   flex: 1;
 }

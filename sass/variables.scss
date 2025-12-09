@@ -1,14 +1,10 @@
-
 // COULEURS
 $green-primary: #a4a661;
 $blue-dark: #1e3a5f;
 $white: #ffffff;
 $gray-light: #f5f5f5;
-$gray-text: #666666;
-$gray-dark: #333333;
-
-$red-special: #c41e3a;
-$red-noel: #ff6b6b;
+$gray-text: #1b1b1b;
+$red-noel: #c41e3a;
 
 // ESPACEMENTS
 $space-xs: 8px;
@@ -18,41 +14,21 @@ $space-lg: 40px;
 $space-xl: 56px;
 $space-xxl: 72px;
 
+
 // =============================
-// FONTS (pont SCSS → CSS vars)
+// FONTS ACCESSIBLES
 // =============================
 
-$font-headings: var(--font-family-headings);
-$font-body: var(--font-family-body);
+$font-headings: 'DM Sans', sans-serif;
+$font-body: 'Inter', sans-serif;
 
-// Tailles
-$font-h1-mobile: var(--font-size-h1-mobile);
-$font-h2-mobile: var(--font-size-h2-mobile);
-$font-h3-mobile: var(--font-size-h3-mobile);
-$font-h4-mobile: var(--font-size-h4-mobile);
-$font-h5-mobile: var(--font-size-h5-mobile);
-$font-h6-mobile: var(--font-size-h6-mobile);
 
-$font-h1-desktop: var(--font-size-h1-desktop);
-$font-h2-desktop: var(--font-size-h2-desktop);
-$font-h3-desktop: var(--font-size-h3-desktop);
-$font-h4-desktop: var(--font-size-h4-desktop);
-$font-h5-desktop: var(--font-size-h5-desktop);
-$font-h6-desktop: var(--font-size-h6-desktop);
 
-// Paragraphes
-$font-body-mobile: var(--font-size-body-mobile);
-$font-paragraph-mobile: var(--font-size-paragraph-mobile);
-$font-body-desktop: var(--font-size-body-desktop);
-$font-paragraph-desktop: var(--font-size-paragraph-desktop);
 
 // Line heights
 $lh-headings: var(--line-height-headings);
 $lh-body: var(--line-height-body);
 
-
 // BREAKPOINTS
 $bp-tablet: 768px;
 $bp-desktop: 1200px;
-
-

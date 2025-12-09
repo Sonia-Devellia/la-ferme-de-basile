@@ -1,24 +1,20 @@
 :root {
   /* ========== POLICES ========== */
 
-  --font-family-headings: 'Playfair Display', serif;
-  --font-family-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-headings: 'Playfair Display', sans-serif;
+  --font-family-body: 'Segoe UI', Verdana, sans-serif;
 
   /* ========== TITRES ========== */
 
   --font-size-h1-mobile: 2rem;
-  --font-size-h2-mobile: 2.2rem;
-  --font-size-h3-mobile: 2.2rem;
-  --font-size-h4-mobile: 2.2rem;
-  --font-size-h5-mobile: 2.2rem;
-  --font-size-h6-mobile: 2.2rem;
+  --font-size-h2-mobile: 1.8rem;
+  --font-size-h3-mobile: 1.5rem;
+ 
 
   --font-size-h1-desktop: 3.5rem;
   --font-size-h2-desktop: 3rem;
-  --font-size-h3-desktop: 3rem;
-  --font-size-h4-desktop: 3rem;
-  --font-size-h5-desktop: 3rem;
-  --font-size-h6-desktop: 3rem;
+  --font-size-h3-desktop: 2rem;
+  
 
   --line-height-headings: 1.4;
   --line-height-headings-hero: 1.3;
@@ -38,12 +34,4 @@
   --line-height-body: 1.7;
   --line-height-paragraph: 1.8;
   --line-height-large: 1.9;
-
-  /* ========== POIDS ========== */
-
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
 }
