@@ -49,54 +49,45 @@ img {
   @include btn-on-white;
 }
 
-// ===========================
-// HEADER – MOBILE FIRST
-// ===========================
+/* =========================== */
+/* HEADER MOBILE */
+/* =========================== */
 
-.header {
+.header-mobile {
   background: $white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 12px 16px; 
+  padding: 16px;
 
-  .header-content {
-    @include container(1200px);
+  .header-content-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Logo centré */
     position: relative;
-    min-height: 72px;
+    min-height: 90px; /* header plus haut pour mobile */
   }
 
+  /* ---------- LOGO ---------- */
   .logo-section {
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    gap: 10px;
+
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     border-radius: 8px;
   }
 
-  // Mobile first : caché, puis affiché à partir de la tablette
-  .site-title {
-    display: none;
-    @include heading(2);
-    color: $green-primary;
-  }
-
-  // NAV GLOBAL
-  .nav {
-    width: 100%;
-  }
-
-  // -------------------
-  // BOUTON BURGER MENU MOBILE
-  // -------------------
+  /* ---------- BOUTON BURGER ---------- */
   .mobile-menu-btn {
     display: flex;
     flex-direction: column;
@@ -104,216 +95,243 @@ img {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 8px;
+
     position: absolute;
-    left: 16px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
 
     span {
       display: block;
-      width: 25px;
+      width: 28px;
       height: 3px;
       background: $green-primary;
       transition: 0.3s;
     }
   }
 
-  // -------------------
-  // NAV LIST (MOBILE)
-  // -------------------
-  .nav-list {
-  list-style: none;
-  margin: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 72px; 
-  width: 100vw;
-  padding: $space-md 20px;
-  background: $white;
-  border-bottom: 1px solid rgba(0,0,0,.1);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  display: none;
-  flex-direction: column;
-  gap: $space-sm;
-
-  &.active {
-    display: flex;
-  }
-}
-
-
-  .nav-link {
-    display: block;
-    padding-block: 10px;
-    color: $green-primary;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $blue-dark;
-    }
-  }
-
-  // -------------------
-  // DROPDOWN – MOBILE
-  // -------------------
-  .dropdown {
-    position: relative;
-
-    > .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      color: $blue-dark;
-    }
-
-    .dropdown-menu {
-      list-style: none;
-      margin: 0;
-      padding: $space-xs 0 $space-xs $space-md;
-      background: $white;
-      border-radius: 6px;
-      border: 1px solid rgba(0,0,0,.1);
-      display: none;
-      position: static; 
-    }
-
-    .dropdown-menu a {
-      display: block;
-      padding-block: 10px;
-      color: $blue-dark;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    &.active .dropdown-menu {
-      display: block; 
-    }
-  }
-
-  // Icône panier
+  /* ---------- PANIER ---------- */
   .cart-icon {
-    display: flex;
-    align-items: center;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 
     svg {
-      stroke: $blue-dark;
       display: block;
+      stroke: $blue-dark;
+    }
+  }
+
+  /* ---------- MENU VERTICAL ---------- */
+  .nav-list-mobile {
+    display: none; 
+    position: fixed;
+    top: 90px; 
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: $space-sm;
+
+    background: $white;
+    padding: $space-md 20px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+
+    &.active {
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+
+      a.boutique {
+        color: $blue-dark;
+      }
+      a {
+        display: block;
+        padding: 10px 0;
+        color: $green-primary;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $blue-dark;
+        }
+      }
+
+      /* Dropdown mobile */
+      &.dropdown {
+        .dropdown-menu {
+          display: none;
+          margin: 0;
+          padding: $space-xs 0 $space-xs $space-md;
+          background: $white;
+          border-radius: 6px;
+          border: 1px solid rgba(0,0,0,.1);
+        
+
+        a {
+          color: $blue-dark;
+        
+
+        &:hover {
+          color: $green-primary;
+          background-color: $gray-light;
+        }
+      }
+    }
+
+      &.active .dropdown-menu {
+          display: block;
+        }
+      }
     }
   }
 }
 
-// ===========================
-// TABLET & + (>= 768px)
-// ===========================
-@include tablet {
-    .header {
-      padding: 15px 20px;
-    }
-  
-    .header-content {
-    @include container(1200px);
+
+/* =========================== */
+/* HEADER DESKTOP */
+/* =========================== */
+
+.header-desktop {
+  display: none; /* caché par défaut pour mobile */
+  background: $white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 16px;
+
+  .header-content-desktop {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: auto;
-    position: static;
-    }
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 90px; /* hauteur confortable */
+  }
 
-    .logo-section{
-      position: static;
-      transform: none;
+  /* ---------- LOGO + TITRE ---------- */
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .logo {
+      width: 65px;
+      height: 65px;
+      border-radius: 8px;
     }
 
     .site-title {
-      display: block; 
+      display: block;
       @include heading(2);
-      color: $green-primary;
+      color:$blue-dark;
     }
-
-    .mobile-menu-btn {
-      display: none;
-      position: static;
-      color: $green-primary;
-    }
-
-    .nav{
-      width: auto;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .cart-icon {
-      position: static;
-      transform: none;
-    }
-
-    .nav-list {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 72px;
-    width: 100vw;
-    background: $white;
-    padding: $space-md 32px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-    border-bottom: 1px solid rgba(0,0,0,.1);
-    display: none;
-    flex-direction: row; // ✅ horizontal
-    justify-content: flex-start;
-    gap: 30px;
-    
-
   }
 
-    .nav-list.active {
+  /* ---------- BURGER ---------- */
+  .mobile-menu-btn {
+    display: none; /* burger invisible sur desktop */
+  }
+
+  /* ---------- MENU ---------- */
+  .nav-desktop {
+    flex: 1;
     display: flex;
-  }
+    justify-content: center;
 
+    .nav-list-desktop {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
+      li {
+        position: relative;
+        
+        a.boutique {
+          color: $blue-dark;
+        }
+        a {
+          display: block;
+          padding: 10px 0;
+          color: $green-primary;
+          font-weight: 500;
+          text-decoration: none;
+          transition: color 0.3s;
 
-    .dropdown {
-      .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 10px 0;
-        min-width: 200px;
-        border-radius: 8px;
-        border: none;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        display: none; // par défaut
-      }
-      .dropdown-menu a {
-        text-align: left ;
-      }
+          &:hover {
+            color: $blue-dark;
+          }
+        }
 
-      // Comportement desktop : hover OU classe .active
-      &:hover .dropdown-menu,
-      &.active .dropdown-menu {
-        display: block;
+        /* Dropdown desktop */
+        &.dropdown {
+          .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: $white;
+            border-radius: 8px;
+            padding: 10px 0;
+            min-width: 200px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          }
+
+          &:hover .dropdown-menu,
+          &.active .dropdown-menu {
+            display: block;
+          }
+
+          .dropdown-menu li {
+            padding: 0;
+
+            a {
+              display: block;
+              padding: 8px 16px;
+              color: $blue-dark;
+
+              &:hover {
+                color: $green-primary;
+                background: rgba(0,0,0,0.05);
+              }
+            }
+          }
+        }
       }
     }
   }
 
+  /* ---------- PANIER ---------- */
+  .cart-icon {
+    display: flex;
+    align-items: center;
 
-// ===========================
-// DESKTOP LARGE (>= 1200px)
-// ===========================
-@include desktop {
-    .header-content {
-      @include container(1200px); 
+    svg {
+      display: block;
+      stroke: $blue-dark;
     }
   }
+}
 
+/* =========================== */
+/* MEDIA QUERY POUR DESKTOP */
+/* =========================== */
+@media (min-width: 768px) {
+  .header-mobile {
+    display: none; /* on cache le mobile */
+  }
+  .header-desktop {
+    display: block; /* on affiche le desktop */
+  }
+}
 
 
 /* =======================

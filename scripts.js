@@ -4,35 +4,45 @@ document.addEventListener("DOMContentLoaded", () => {
   // ========================================
   // MENU BURGER MOBILE
   // ========================================
-  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-  const navList = document.getElementById("navList");
+ 
 
-  if (mobileMenuBtn && navList) {
-    mobileMenuBtn.addEventListener("click", () => {
-      navList.classList.toggle("active");
-    });
+// Sélection des éléments
+const mobileMenuBtn = document.getElementById('mobileMenuBtn'); // Bouton burger
+const mobileNavList = document.getElementById('mobileNavList'); // Liste du menu mobile
+const dropdown = document.getElementById('dropdown'); // Liens du dropdown
+const dropdownLink = dropdown.querySelector('a'); // Lien "La Boutique"
 
-    // Fermer le menu mobile lors du clic sur un lien
-    const navLinks = document.querySelectorAll(".nav-link");
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth < 1200) {
-          navList.classList.remove("active");
-        }
-      });
+// Ouvrir/fermer le menu mobile (toggle burger)
+mobileMenuBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // Empêche la propagation du clic à d'autres éléments
+  mobileNavList.classList.toggle('active'); // Ajoute ou enlève la classe "active"
+});
+
+// Ouvrir/fermer le dropdown mobile (uniquement au clic sur "La Boutique")
+dropdownLink.addEventListener('click', (e) => {
+  e.preventDefault(); // Empêche la navigation du lien
+  dropdown.classList.toggle('active'); // Ajoute ou enlève la classe "active" pour le dropdown
+});
+
+// Fermer menu et dropdown au clic ailleurs
+document.addEventListener('click', (e) => {
+  // Si le clic n'est pas dans le menu mobile ni dans le dropdown, alors on ferme tout
+  if (!mobileNavList.contains(e.target) && !dropdown.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+    mobileNavList.classList.remove('active'); // Ferme le menu mobile
+    dropdown.classList.remove('active'); // Ferme le dropdown
+  }
+});
+
+// Fermer le menu lorsque l'on clique sur un autre lien (exclut le lien "La Boutique")
+mobileNavList.querySelectorAll('a').forEach(link => {
+  if (!link.closest('.dropdown')) { // Exclut "La Boutique"
+    link.addEventListener('click', () => {
+      mobileNavList.classList.remove('active'); // Ferme le menu
+      dropdown.classList.remove('active'); // Ferme le dropdown
     });
   }
+});
 
-  // Dropdown mobile (La Boutique)
-  const dropdown = document.getElementById("dropdown");
-  if (dropdown && navList) {
-    dropdown.addEventListener("click", (e) => {
-      if (window.innerWidth < 1200) {
-        e.preventDefault();
-        dropdown.classList.toggle("active");
-      }
-    });
-  }
 
   // ========================================
   // CAROUSEL (uniquement sur la home)
@@ -165,4 +175,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.");
+    form.reset();
+  });
+});
+  // ========================================
+  // FONCTION POUR CHARGER LE HEADER
+  // ========================================
+
+
+// Fonction pour charger le contenu du header
+function loadHeader() {
+  // Utilisation de fetch() pour charger le fichier header.html
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Le fichier header.html est introuvable');
+      }
+      return response.text(); // Récupérer le texte du fichier HTML
+    })
+    .then(data => {
+      // Insérer le contenu du header dans l'élément avec id="header-container"
+      document.getElementById('header-container').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Erreur de chargement du header:', error);
+    });
+}
+
+// Appel de la fonction pour charger le header
+loadHeader();
+
 
