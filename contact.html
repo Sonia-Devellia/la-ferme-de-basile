@@ -9,7 +9,101 @@
 </head>
 <body>
 
-   <div id="header-container"></div>
+  <header class="header-mobile">
+  <div class="header-content-mobile">
+
+    <!-- Burger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Logo centré -->
+    <div class="logo-section">
+      <img src="images/logo.jpg" alt="Logo" class="logo" />
+    </div>
+
+    <!-- Panier à droite -->
+    <a href="panier.html" class="cart-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 0 1 0 2 1.61h9.72a2 1.61L23 6H6"></path>
+      </svg>
+    </a>
+
+    <!-- Menu déroulant mobile -->
+    <ul class="nav-list-mobile" id="mobileNavList">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+
+      <li class="dropdown" id="dropdown">
+        <a href="boutique.html" class="boutique">La Boutique ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="boutique.html#boucherie">Boucherie</a></li>
+          <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+          <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
+          <li><a href="boutique.html#epicerie">Épicerie</a></li>
+          <li><a href="boutique.html#cave">La Cave</a></li>
+          <li><a href="boutique.html#produits-de-noel" class="red">Les Produits de Noel</a></li>
+        </ul>
+      </li>
+
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+  </div>
+</header>
+
+
+<!-- ========================= -->
+<!-- HEADER DESKTOP -->
+<!-- ========================= -->
+<header class="header-desktop">
+  <div class="header-content-desktop">
+
+    <!-- Logo + titre -->
+    <div class="logo-section">
+      <img src="images/logo.jpg" alt="Logo" class="logo" />
+      <h1 class="site-title">La Ferme de Basile</h1>
+    </div>
+
+    <!-- Menu Desktop -->
+    <nav class="nav-desktop">
+      <ul class="nav-list-desktop">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+
+        <li class="dropdown">
+          <a href="boutique.html" class="boutique">La Boutique ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="boutique.html#boucherie">Boucherie</a></li>
+            <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+            <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
+            <li><a href="boutique.html#epicerie">Épicerie</a></li>
+            <li><a href="boutique.html#cave">La Cave</a></li>
+            <li><a href="boutique.html#produits-de-noel" class="red">Les Produits de Noel</a></li>
+          </ul>
+        </li>
+
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Panier -->
+    <a href="panier.html" class="cart-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 0 1 0 2 1.61h9.72a2 1.61L23 6H6"></path>
+      </svg>
+    </a>
+
+  </div>
+</header>
 
   <main>
 
@@ -39,7 +133,7 @@
               </ul>
             </div>
 
-            <div class="horaires-section">
+            <div class="horaires-section-retrait">
               <h3>Point de retrait</h3>
               <p><strong>Adresse :</strong></p>
               <p>700 avenue de Beaumont<br>95470 Fosses</p>
@@ -52,24 +146,29 @@
 
       <!-- COORDONNÉES -->
       <div class="coordonnees-grid">
-        <div class="coordonnee-card coordonnee-card-blue">
+        <div class="coordonnee-card-blue">
           <h3>Adresse</h3>
           <p>700 avenue de Beaumont<br>95470 Fosses</p>
         </div>
 
-        <div class="coordonnee-card coordonnee-card-blue">
+        <div class="news-separator"></div>
+
+        <div class="coordonnee-card-blue">
           <h3>Téléphone</h3>
           <p>01 23 45 67 89</p>
         </div>
 
-        <div class="coordonnee-card coordonnee-card-blue">
+        <div class="news-separator"></div>
+
+        <div class="coordonnee-card-blue">
           <h3>Email</h3>
           <p>
-            <a href="mailto:contact@lafermedebasile.fr">
+            <a  href="mailto:contact@lafermedebasile.fr">
               contact@lafermedebasile.fr
             </a>
           </p>
         </div>
+
       </div>
 
       <!-- FORMULAIRE -->
@@ -125,20 +224,29 @@
             <textarea required></textarea>
           </div>
 
+          <label class="rgpd-checkbox">
+            <input type="checkbox" name="accept_rgpd" required>
+              J'accepte la collecte et le traitement de mes données personnelles conformément à la <a href="#/politique-de-confidentialité" target="_blank">politique de confidentialité</a>.
+           </label>
+
           <button type="submit" class="btn-submit">Envoyer le message</button>
         </form>
       </div>
+</div>
+        <div class="confirmation-message">Merci pour votre message, nous ne manquerons pas de vous recontacter dans les plus bref delais.</div>
 
-    </div>
+    
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <button class="scroll-top" id="scrollTopBtn" aria-label="Remonter en haut de la page">
-      <svg width="24" height="24" viewBox="0 0 24 24">
-        <polyline points="18 15 12 9 6 15"></polyline>
-      </svg>
-    </button>
+
+    <!-- Bouton remonter -->
+  <button class="scroll-top" id="scrollTopBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
     <div class="footer-content">
 
@@ -187,8 +295,8 @@
     </div>
   </footer>
 
-  <!-- JS GLOBAL -->
-  <script src="script.js"></script> <!-- Le script pour charger le header -->
+ 
+  <script src="scripts.js"></script> 
   
 
 </body>

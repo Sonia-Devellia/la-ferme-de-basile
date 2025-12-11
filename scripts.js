@@ -5,43 +5,30 @@ document.addEventListener("DOMContentLoaded", () => {
   // MENU BURGER MOBILE
   // ========================================
  
+console.log('Script chargé et exécuté');
 
-// Sélection des éléments
-const mobileMenuBtn = document.getElementById('mobileMenuBtn'); // Bouton burger
-const mobileNavList = document.getElementById('mobileNavList'); // Liste du menu mobile
-const dropdown = document.getElementById('dropdown'); // Liens du dropdown
-const dropdownLink = dropdown.querySelector('a'); // Lien "La Boutique"
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileNavList = document.getElementById('mobileNavList');
+console.log ('mobileMenuBtn')
 
-// Ouvrir/fermer le menu mobile (toggle burger)
+// Vérifie que le bouton burger existe
+if (!mobileMenuBtn) {
+  console.log('Le bouton burger n\'a pas été trouvé');
+} else {
+  console.log('Bouton burger trouvé');
+}
+
+// Vérifie que le menu est bien récupéré
+if (!mobileNavList) {
+  console.log('Le menu mobile n\'a pas été trouvé');
+}
+
 mobileMenuBtn.addEventListener('click', (e) => {
-  e.stopPropagation(); // Empêche la propagation du clic à d'autres éléments
-  mobileNavList.classList.toggle('active'); // Ajoute ou enlève la classe "active"
+  console.log("burger menu click");
+  mobileNavList.classList.toggle('active');
+  console.log(mobileNavList.classList);
 });
 
-// Ouvrir/fermer le dropdown mobile (uniquement au clic sur "La Boutique")
-dropdownLink.addEventListener('click', (e) => {
-  e.preventDefault(); // Empêche la navigation du lien
-  dropdown.classList.toggle('active'); // Ajoute ou enlève la classe "active" pour le dropdown
-});
-
-// Fermer menu et dropdown au clic ailleurs
-document.addEventListener('click', (e) => {
-  // Si le clic n'est pas dans le menu mobile ni dans le dropdown, alors on ferme tout
-  if (!mobileNavList.contains(e.target) && !dropdown.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-    mobileNavList.classList.remove('active'); // Ferme le menu mobile
-    dropdown.classList.remove('active'); // Ferme le dropdown
-  }
-});
-
-// Fermer le menu lorsque l'on clique sur un autre lien (exclut le lien "La Boutique")
-mobileNavList.querySelectorAll('a').forEach(link => {
-  if (!link.closest('.dropdown')) { // Exclut "La Boutique"
-    link.addEventListener('click', () => {
-      mobileNavList.classList.remove('active'); // Ferme le menu
-      dropdown.classList.remove('active'); // Ferme le dropdown
-    });
-  }
-});
 
 
   // ========================================
@@ -158,58 +145,71 @@ mobileNavList.querySelectorAll('a').forEach(link => {
   // ========================================
   // FOOTER ACCORDIONS (mobile)
   // ========================================
-  const footerNavToggle = document.getElementById("footerNavToggle");
-  const footerNavCol = document.getElementById("footerNavCol");
-  const footerInfoToggle = document.getElementById("footerInfoToggle");
-  const footerInfoCol = document.getElementById("footerInfoCol");
-
-  if (footerNavToggle && footerNavCol) {
-    footerNavToggle.addEventListener("click", () => {
-      footerNavCol.classList.toggle("active");
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+// 1. Récupérer l'élément h3
+const footerNavToggle = document.getElementById('footerNavToggle');
+  });
+// 2. Fonction qui gère le toggle de l'accordéon
+const handleFooterNavToggle = () => {
+  const footerNavCol = document.getElementById('footerNavCol');
+  if (footerNavCol) {
+    footerNavCol.classList.toggle('active');
   }
+};
 
-  if (footerInfoToggle && footerInfoCol) {
-    footerInfoToggle.addEventListener("click", () => {
-      footerInfoCol.classList.toggle("active");
-    });
+// 3. Ajouter l'event listener au clic
+if (footerNavToggle) {
+  footerNavToggle.addEventListener('click', handleFooterNavToggle);
+};
+
+// 4. Nettoyage lors du démontage du composant (dans le return du useEffect)
+return () => {
+  if (footerNavToggle) {
+    footerNavToggle.removeEventListener('click', handleFooterNavToggle);
   }
+};
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+
+ // ========================================
+  // FORMULAIRE
+  // ========================================
+
+ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
+  const confirmationMessage = document.querySelector('.confirmation-message');
+
+  // Vérifier si un message de confirmation a déjà été affiché pendant la session
+  if (sessionStorage.getItem('messageShown') === 'true') {
+    // Si un message a déjà été montré, on le masque à chaque rechargement
+    confirmationMessage.style.display = 'none'; // Masquer le message
+    sessionStorage.removeItem('messageShown'); // Réinitialiser la session pour éviter qu'il réapparaisse
+  }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    alert("Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.");
+
+    // Afficher le message de confirmation
+    confirmationMessage.style.display = 'block';
+
+    // Ajouter une classe pour l'animation d'apparition
+    confirmationMessage.classList.add('fade-in');
+
+    // Réinitialiser le formulaire
     form.reset();
+
+    // Marquer que le message a été montré dans la session
+    sessionStorage.setItem('messageShown', 'true');
+
+    // Ajouter une classe pour faire disparaître le message après 15 secondes
+    setTimeout(() => {
+      confirmationMessage.classList.add('fade-out');
+    }, 15000); // Après 15 secondes, commence la disparition
+
+    // Supprimer complètement le message après la fin de la transition (1 seconde après)
+    setTimeout(() => {
+      confirmationMessage.style.display = 'none';
+    }, 16000); // 1 seconde après la disparition de l'élément (fin de la transition)
   });
 });
-  // ========================================
-  // FONCTION POUR CHARGER LE HEADER
-  // ========================================
-
-
-// Fonction pour charger le contenu du header
-function loadHeader() {
-  // Utilisation de fetch() pour charger le fichier header.html
-  fetch('header.html')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Le fichier header.html est introuvable');
-      }
-      return response.text(); // Récupérer le texte du fichier HTML
-    })
-    .then(data => {
-      // Insérer le contenu du header dans l'élément avec id="header-container"
-      document.getElementById('header-container').innerHTML = data;
-    })
-    .catch(error => {
-      console.error('Erreur de chargement du header:', error);
-    });
-}
-
-// Appel de la fonction pour charger le header
-loadHeader();
-
 
