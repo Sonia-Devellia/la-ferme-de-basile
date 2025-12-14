@@ -34,89 +34,112 @@ mobileMenuBtn.addEventListener('click', (e) => {
   // ========================================
   // CAROUSEL (uniquement sur la home)
   // ========================================
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-  const carouselTrack = document.getElementById("carouselTrack");
-  const carouselContainer = document.querySelector(".carousel-container");
-  const dots = document.querySelectorAll(".carousel-dot");
+  (() => {
+  const slider = document.querySelector('[data-nivo-slider]');
+  if (!slider) return;
 
-  if (prevBtn && nextBtn && carouselTrack && carouselContainer && dots.length) {
-    let currentIndex = 0;
-    const totalCards = 6;
+  const slides = slider.querySelectorAll('.nivo-slide');
+  const prevBtn = slider.querySelector('.nivo-prev');
+  const nextBtn = slider.querySelector('.nivo-next');
+  const dotsContainer = slider.querySelector('.nivo-control-nav');
 
-    const getCardWidth = () => {
-      return window.innerWidth <= 768 ? 240 : 280;
-    };
+  let currentIndex = 0;
+  let isPaused = false;
+  const SLIDE_DURATION = 4000;
 
-    const getMaxIndex = () => {
-      const containerWidth = carouselContainer.offsetWidth;
-      const cardWidth = getCardWidth();
-      const visibleCards = Math.floor(containerWidth / cardWidth);
-      return Math.max(0, totalCards - visibleCards);
-    };
+  /* =========================
+     Création des dots
+     ========================= */
+  slides.forEach((slide, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'nivo-control';
 
-    const updateDots = () => {
-      const maxIndex = getMaxIndex();
-      dots.forEach((dot, index) => {
-        dot.style.display = index <= maxIndex ? "inline-block" : "none";
-        dot.classList.toggle("active", index === currentIndex);
-      });
-    };
+    // Dot spécial Noël
+    if (slide.classList.contains('noel-slide')) {
+      dot.classList.add('noel');
+    }
 
-    const updateCarousel = () => {
-      const cardWidth = getCardWidth();
-      carouselTrack.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
-      updateDots();
-    };
+    dot.setAttribute('aria-label', `Aller au slide ${index + 1}`);
+    dot.addEventListener('click', () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
 
-    prevBtn.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
+  const dots = dotsContainer.querySelectorAll('.nivo-control');
+
+  /* =========================
+     Fonctions
+     ========================= */
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
     });
 
-    nextBtn.addEventListener("click", () => {
-      const maxIndex = getMaxIndex();
-      if (currentIndex < maxIndex) {
-        currentIndex++;
-        updateCarousel();
-      }
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
     });
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener("click", () => {
-        const maxIndex = getMaxIndex();
-        if (index <= maxIndex) {
-          currentIndex = index;
-          updateCarousel();
-        }
-      });
-    });
-
-    window.addEventListener("resize", () => {
-      const maxIndex = getMaxIndex();
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
-      updateCarousel();
-    });
-
-    // Initialisation du carousel
-    updateCarousel();
   }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    showSlide(currentIndex);
+  }
+
+  /* =========================
+     Autoplay
+     ========================= */
+  setInterval(() => {
+    if (!isPaused) {
+      nextSlide();
+    }
+  }, SLIDE_DURATION);
+
+  /* =========================
+     Events
+     ========================= */
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  slider.addEventListener('mouseenter', () => {
+    isPaused = true;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isPaused = false;
+  });
+
+  /* =========================
+     Init
+     ========================= */
+  showSlide(currentIndex);
+})();
+
 
   // ========================================
   // SCROLL TO TOP
   // ========================================
-  const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-  if (scrollTopBtn) {
-    scrollTopBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+const boutonRemonter = document.getElementById("boutonRemonter");
+
+if (boutonRemonter) {
+  boutonRemonter.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
-  }
+  });
+}
+
 
   // ========================================
   // SMOOTH SCROLL POUR LES LIENS D'ANCRAGE
@@ -145,30 +168,71 @@ mobileMenuBtn.addEventListener('click', (e) => {
   // ========================================
   // FOOTER ACCORDIONS (mobile)
   // ========================================
-  document.addEventListener("DOMContentLoaded", () => {
-// 1. Récupérer l'élément h3
-const footerNavToggle = document.getElementById('footerNavToggle');
+
+console.log("Script accordéons du footer chargé ");
+
+function initialiserAccordeonsPiedDePage() {
+  console.log("initialiserAccordeonsPiedDePage() ");
+
+  const POINT_RUPTURE_DESKTOP = 1200;
+
+  const accordeons = [
+    {
+      idBouton: "boutonNavigation",
+      idColonne: "colonneNavigation",
+    },
+    {
+      idBouton: "boutonInformations",
+      idColonne: "colonneInformations",
+    },
+  ];
+
+  accordeons.forEach(({ idBouton, idColonne }) => {
+    const bouton = document.getElementById(idBouton);
+    const colonne = document.getElementById(idColonne);
+
+    console.log("Liaison :", idBouton, !!bouton, idColonne, !!colonne);
+
+    if (!bouton || !colonne) return;
+
+    bouton.addEventListener("click", () => {
+      console.log("CLIC", idBouton, "largeur =", window.innerWidth);
+
+      // Sur desktop, l’accordéon est désactivé
+      if (window.innerWidth >= POINT_RUPTURE_DESKTOP) return;
+
+      colonne.classList.toggle("is-open");
+      console.log(
+        "État ouvert =",
+        colonne.classList.contains("is-open")
+      );
+    });
   });
-// 2. Fonction qui gère le toggle de l'accordéon
-const handleFooterNavToggle = () => {
-  const footerNavCol = document.getElementById('footerNavCol');
-  if (footerNavCol) {
-    footerNavCol.classList.toggle('active');
-  }
-};
 
-// 3. Ajouter l'event listener au clic
-if (footerNavToggle) {
-  footerNavToggle.addEventListener('click', handleFooterNavToggle);
-};
+  // Réinitialisation automatique en mode desktop
+  const reinitialiserSurDesktop = () => {
+    if (window.innerWidth >= POINT_RUPTURE_DESKTOP) {
+      document
+        .querySelectorAll(".colonne-accordeon")
+        .forEach((colonne) => {
+          colonne.classList.remove("is-open");
+        });
+    }
+  };
 
-// 4. Nettoyage lors du démontage du composant (dans le return du useEffect)
-return () => {
-  if (footerNavToggle) {
-    footerNavToggle.removeEventListener('click', handleFooterNavToggle);
-  }
-};
-});
+  window.addEventListener("resize", reinitialiserSurDesktop);
+  reinitialiserSurDesktop();
+}
+
+// Initialisation selon l’état du DOM
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded",
+    initialiserAccordeonsPiedDePage
+  );
+} else {
+  initialiserAccordeonsPiedDePage();
+}
 
 
  // ========================================
@@ -212,4 +276,76 @@ return () => {
     }, 16000); // 1 seconde après la disparition de l'élément (fin de la transition)
   });
 });
+});
+
+
+
+ // ========================================
+  // COOKIE 
+  // ========================================
+
+  const CLE_COOKIES = "consentement_cookies";
+
+  const bandeauCookies = document.getElementById("bandeauCookies");
+  const boutonAccepter = document.getElementById("accepterCookies");
+  const boutonRefuser = document.getElementById("refuserCookies");
+
+  // Vérifier si un choix a déjà été fait
+  function verifierConsentement() {
+    return localStorage.getItem(CLE_COOKIES);
+  }
+
+  // Enregistrer le choix
+  function enregistrerConsentement(valeur) {
+    localStorage.setItem(CLE_COOKIES, valeur);
+    masquerBandeau();
+    appliquerConsentement(valeur);
+  }
+
+  // Masquer le bandeau
+  function masquerBandeau() {
+    bandeauCookies.style.display = "none";
+  }
+
+  // Appliquer le consentement
+  function appliquerConsentement(valeur) {
+    if (valeur === "accepte") {
+      activerStatistiques();
+    } else {
+      desactiverStatistiques();
+    }
+  }
+
+  // Exemple : activer analytics
+  function activerStatistiques() {
+    console.log("Cookies acceptés : statistiques activées");
+
+    // Exemple réel :
+    // const script = document.createElement("script");
+    // script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXX";
+    // script.async = true;
+    // document.head.appendChild(script);
+  }
+
+  function desactiverStatistiques() {
+    console.log("Cookies refusés : aucune statistique chargée");
+  }
+
+  // Événements
+  boutonAccepter.addEventListener("click", () => {
+    enregistrerConsentement("accepte");
+  });
+
+  boutonRefuser.addEventListener("click", () => {
+    enregistrerConsentement("refuse");
+  });
+
+  // Initialisation
+  const consentement = verifierConsentement();
+
+  if (consentement) {
+    masquerBandeau();
+    appliquerConsentement(consentement);
+  }
+
 

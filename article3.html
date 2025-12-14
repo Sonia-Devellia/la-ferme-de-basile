@@ -190,43 +190,53 @@
     </div>
   </main>
 
-<!-- FOOTER -->
-<footer class="footer">
+ <!-- FOOTER -->
 
-  <!-- Bouton remonter -->
-  <button class="scroll-top" id="scrollTopBtn">
+ <footer class="pied-de-page">
+
+  <!-- Bouton remonter en haut -->
+  <button class="bouton-remonter" id="boutonRemonter">
     <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
 
-  <div class="footer-content">
+  <div class="contenu-pied-de-page">
 
-    <!-- COL 1 -->
-    <div class="footer-col">
-      <div class="footer-logo">
-        <img src="images/logo.jpg" alt="Logo" />
-        <span>La Ferme de Basile</span>
+    <!-- COLONNE 1 : Présentation -->
+    <div class="colonne-pied-de-page">
+      <div class="logo-pied-de-page">
+        <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
+        <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
       </div>
-      <p>Des produits frais et locaux cultivés avec passion depuis 1985.</p>
+
+      <p class="texte-pied-de-page">
+        Des produits frais et locaux cultivés avec passion depuis 1985.
+      </p>
     </div>
 
     <!-- NAVIGATION -->
-    <div class="footer-col footer-col-accordion" id="footerNavCol">
-      <h3 id="footerNavToggle">Navigation</h3>
-      <ul>
+    <div class="colonne-pied-de-page colonne-accordeon" id="colonneNavigation">
+      <h3 class="titre-accordeon" id="boutonNavigation">
+        Navigation
+      </h3>
+
+      <ul class="liste-navigation">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="apropos.html">À propos</a></li>
-        <li><a href="boutique.html">La Boutique</a></li>
+        <li><a href="boutique.html">La boutique</a></li>
         <li><a href="actualites.html">Actualités</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
     <!-- INFORMATIONS -->
-    <div class="footer-col footer-col-accordion" id="footerInfoCol">
-      <h3 id="footerInfoToggle">Informations</h3>
-      <ul>
+    <div class="colonne-pied-de-page colonne-accordeon" id="colonneInformations">
+      <h3 class="titre-accordeon" id="boutonInformations">
+        Informations
+      </h3>
+
+      <ul class="liste-informations">
         <li><a href="#">Livraison</a></li>
         <li><a href="#">Paiement</a></li>
         <li><a href="#">CGV</a></li>
@@ -236,26 +246,36 @@
     </div>
 
     <!-- CONTACT -->
-    <div class="footer-col">
-      <h3>Contact</h3>
+    <div class="colonne-pied-de-page">
+      <h3 class="titre-pied-de-page">Contact</h3>
 
-      <ul class="contact-list">
+      <ul class="liste-contact">
         <li>📍 123 Rue de la Ferme, 75000 Paris</li>
         <li>📞 01 23 45 67 89</li>
-        <li>✉️ contact@basilicferme.fr</li>
+        <li>
+  <a href="mailto:contact@basilicferme.fr" aria-label="Envoyer un email à La Ferme de Basile">
+  contact@basilicferme.fr
+  </a>
+</li>
+
       </ul>
 
-      <div class="social-links">
-        <a href="#"><svg width="20" height="20" fill="currentColor"><path d=""/></svg></a>
-        <a href="#"><svg width="20" height="20"></svg></a>
+     <div class="liens-sociaux">
+        <a href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA" target="_blank" rel="noopener noreferrer"  aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
       </div>
-
     </div>
+
   </div>
 
-  <div class="footer-bottom">
+  <div class="bas-de-page">
     <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
   </div>
+
 </footer>
 
 

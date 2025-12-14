@@ -24,7 +24,6 @@
   display: inline-block;
   padding: 18px 40px;
   border-radius: 8px;
-  font-weight: 600;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -40,12 +39,12 @@
 // =======================
 @mixin btn-on-blue {
   @include btn-base;
-  background: $white;
-  color: $blue-dark;
+  background: $green-primary;
+  color: $white;
 
   &:hover {
-    background: $green-primary;
-    color: $white;
+    background: $white;
+    color: $green-primary;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   }
@@ -109,7 +108,7 @@
   } @else if $level == 2 {
     font-size: 1.7rem;   // Sections
   } @else if $level == 3 {
-    font-size: 1.35rem;  // Sous-sections
+    font-size: 1.2rem;  // Sous-sections
   } @else {
     font-size: 1.15rem;
   }
@@ -121,7 +120,7 @@
     } @else if $level == 2 {
       font-size: 2.4rem;
     } @else if $level == 3 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     } @else {
       font-size: 1.4rem;
     }

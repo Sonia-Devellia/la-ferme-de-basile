@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accueil – Ferme de Basile</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -24,13 +28,9 @@
     </div>
 
     <!-- Panier à droite -->
-    <a href="panier.html" class="cart-icon">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
-        <circle cx="9" cy="21" r="1"></circle>
-        <circle cx="20" cy="21" r="1"></circle>
-        <path d="M1 1h4l2.68 13.39a2 0 1 0 2 1.61h9.72a2 1.61L23 6H6"></path>
-      </svg>
-    </a>
+     <a href="panier.html" class="cart-icon">
+  <i class="fa-solid fa-basket-shopping" aria-label="Panier"></i>
+</a>
 
     <!-- Menu déroulant mobile -->
     <ul class="nav-list-mobile" id="mobileNavList">
@@ -94,255 +94,291 @@
 
     <!-- Panier -->
     <a href="panier.html" class="cart-icon">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
-        <circle cx="9" cy="21" r="1"></circle>
-        <circle cx="20" cy="21" r="1"></circle>
-        <path d="M1 1h4l2.68 13.39a2 0 1 0 2 1.61h9.72a2 1.61L23 6H6"></path>
-      </svg>
-    </a>
+  <i class="fa-solid fa-basket-shopping" aria-label="Panier"></i>
+</a>
+
 
   </div>
 </header>
 <main>
 
-  <!-- HERO / BANDEAU D'ACCUEIL -->
-  <section class="hero" aria-label="Bandeau d'accueil">
-    <div class="hero-overlay">
-      <div class="container hero-content">
-        <h1>Bienvenue à la ferme de Basile</h1>
-        <p>
-          Depuis 1985, nous cultivons avec passion des produits de qualité dans le respect de la nature et des traditions agricoles.
-          Notre engagement ? Vous offrir le meilleur de nos terres, en favorisant les circuits courts et le lien direct producteur–consommateur.
-        </p>
-        <a href="boutique.html" class="btn--green">Découvrir nos produits</a>
-      </div>
-    </div>
-  </section>
+  <!--BANDEAU D'ACCUEIL/SLIDER-->
+  <section class="hero-slider-section" aria-label="Bandeau principal">
+  <div class="nivo-slider-wrapper" data-nivo-slider>
+    <div class="nivo-slider-container">
 
-  <!-- SECTION PRÉSENTATION -->
-  <section class="about presentation-section" id="a-propos" aria-label="Présentation">
-    <div class="container about-content">
-      <div class="about-text">
-        <h2 class="section-title">À propos de notre ferme</h2>
-        <p>
-          Bienvenue chez nous ! Nous sommes Basile et Audrey, maraîchers passionnés depuis 6 générations entre
-          La Chapelle-en-Serval, Survilliers et Fosses. Nous produisons des fruits et légumes savoureux, au
-          rythme des saisons.
-        </p>
-        <p>
-          Nos produits sont labellisés bio depuis 2022, avec une attention particulière portée à la qualité,
-          au goût et au respect de la nature.
-        </p>
-        <p>
-          Notre priorité : vous proposer le meilleur du terroir, en privilégiant le local et les circuits courts.
-        </p>
-      </div>
-
-      <div class="about-image">
-        <img
-          src="images/laferme.png"
-          alt="Montage photo de la ferme "
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION PRODUITS / CAROUSEL -->
-  <section class="products sliderproduits-section" id="boutique" aria-label="Nos produits">
-    <div class="container">
-      <h2 class="section-title-white">Nos produits</h2>
-
-      <div class="carousel">
-        <button class="carousel-btn prev" id="prevBtn" aria-label="Produits précédents">‹</button>
-
-        <div class="carousel-container">
-          <div class="carousel-track" id="carouselTrack">
-            <!-- Carte 1 -->
-            <div class="product-card">
-              <img
-                src="images/laboucherie.jpg"
-                alt="Rayon boucherie"
-              />
-              <div class="product-title-overlay">Boucherie</div>
-            </div>
-
-            <!-- Carte 2 -->
-            <div class="product-card">
-              <img
-                src="images/cremerie1.jpeg"
-                alt="Produits laitiers"
-              />
-              <div class="product-title-overlay">Crèmerie</div>
-            </div>
-
-            <!-- Carte 3 -->
-            <div class="product-card">
-              <img
-                src="images/fruitsetlegumes.jpg"
-                alt="Fruits et légumes de saison"
-              />
-              <div class="product-title-overlay">Fruits & légumes</div>
-            </div>
-
-            <!-- Carte 4 -->
-            <div class="product-card">
-              <img
-                src="images/epiceriesucré.jpg"
-                alt="Épicerie fine"
-              />
-              <div class="product-title-overlay">Épicerie</div>
-            </div>
-
-            <!-- Carte 5 -->
-            <div class="product-card special">
-              <img
-                src="images/dindenoel.jpg"
-                alt="Produits de Noël"
-              />
-              <div class="product-title-overlay product-title-noel">Spécial Noël</div>
-            </div>
-
-            <!-- Carte 6 -->
-            <div class="product-card">
-              <img
-                src="images/lacave2.jpg"
-                alt="La cave"
-              />
-              <div class="product-title-overlay">La cave</div>
-            </div>
+      <div class="nivo-slide active">
+        <img src="images/lacave16:9.jpg" alt="La cave">
+        <div class="nivo-caption">
+          <div class="nivo-caption-content">
+            <h3>Caviste</h3>
+            <p>Le meilleurs des spiritueux</p>
           </div>
         </div>
-
-        <button class="carousel-btn next" id="nextBtn" aria-label="Produits suivants">›</button>
       </div>
 
-      <!-- Points du carousel -->
-      <div class="carousel-dots">
-        <span class="carousel-dot active"></span>
-        <span class="carousel-dot"></span>
-        <span class="carousel-dot"></span>
-        <span class="carousel-dot"></span>
-        <span class="carousel-dot"></span>
-        <span class="carousel-dot"></span>
+      <div class="nivo-slide active">
+        <img src="images/produitsnoel16:9.jpg" alt="Fruits et Légumes">
+        <div class="nivo-caption">
+          <div class="nivo-caption-content">
+            <h3>Fruits et Légumes</h3>
+            <p>Toujours de saison et bio</p>
+          </div>
+        </div>
       </div>
+
+      <div class="nivo-slide active">
+        <img src="images/epicerie16:9.jpg" alt="Epiceries">
+        <div class="nivo-caption">
+          <div class="nivo-caption-content">
+            <h3>Épiceries</h3>
+            <p>Sucrées ou salées pour reveillez vos sens</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nivo-slide active">
+        <img src="images/boucherie16:9.jpg" alt="Boucherie">
+        <div class="nivo-caption">
+          <div class="nivo-caption-content">
+            <h3>Boucherie</h3>
+            <p>Viandes d'exception issues de nos élevages</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nivo-slide">
+        <img src="images/cremerie16:9.jpg" alt="Crèmerie">
+        <div class="nivo-caption">
+          <div class="nivo-caption-content">
+            <h3>Crèmerie</h3>
+            <p>Produits laitiers artisanaux et fromages fermiers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nivo-slide noel-slide">
+        <img src="images/produitsnoel16:9.jpg" alt="Sélection de Noël">
+        <div class="nivo-caption">
+          <div class="nivo-caption-content">
+            <h3>Sélection de Noël</h3>
+            <p>L'excellence des fêtes - Édition limitée</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
 
-    <!-- SECTION ACTUALITÉS (APERÇU) -->
-  <section class="news actualites-section" id="actualites" aria-label="Actualités">
-    <h2 class="section-title" style="text-align:left">Actualités</h2>
+    <button class="nivo-nav-btn nivo-prev" type="button" aria-label="Précédent">‹</button>
+    <button class="nivo-nav-btn nivo-next" type="button" aria-label="Suivant">›</button>
 
-    <div class="news-grid" style="gap:40px">
-      <!-- Carte actu 1 -->
-      <a href="article1.html" class="news-card">
-        <img
-          src="images/articles1.jpg"
-          alt="Atelier Biscuits de Noël"
-        />
-        <div class="news-content">
-          <span class="news-date">20 Novembre 2025</span>
-          <h3 style="text-align:left; margin-left:0; white-space:nowrap;">
-            Atelier Biscuits pour Enfants
-          </h3>
-          <p>
-            Venez vivre un moment cuisine avec votre enfant... préparez des biscuits de Noël
-            avec une pâtissière diplômée.
-          </p>
-          <span class="news-link">Lire la suite →</span>
-        </div>
-      </a>
+    <div class="nivo-control-nav"></div>
+  </div>
+</section>
 
-      <div class="news-separator"></div>
+  <!-- SECTION PRÉSENTATION -->
+  <section class="a-propos section-presentation" id="a-propos" aria-label="Présentation">
+  <div class="conteneur contenu-a-propos">
+    
+    <div class="texte-a-propos">
+      <h2 class="titre-section">À propos de notre ferme</h2>
 
-      <!-- Carte actu 2 -->
-      <a href="article2.html" class="news-card">
-        <img
-          src="images/articles2bis.png"
-          alt="Produits de Noël"
-        />
-        <div class="news-content">
-          <span class="news-date">1 Décembre 2025</span>
-          <h3 style="text-align:left; margin-left:0;">
-            Pour Noël, pensez fermier !
-          </h3>
-          <p>
-            Découvrez notre sélection de produits festifs direct producteurs à
-            réserver dès maintenant.
-          </p>
-          <span class="news-link">Lire la suite →</span>
-        </div>
-      </a>
+      <p>
+        Bienvenue chez nous ! Nous sommes Basile et Audrey, maraîchers passionnés depuis 6 générations entre
+        La Chapelle-en-Serval, Survilliers et Fosses. Nous produisons des fruits et légumes savoureux, au
+        rythme des saisons.
+      </p>
 
-      <div class="news-separator"></div>
+      <p>
+        Nos produits sont labellisés bio depuis 2022, avec une attention particulière portée à la qualité,
+        au goût et au respect de la nature.
+      </p>
 
-      <!-- Carte actu 3 -->
-      <a href="article3.html" class="news-card">
-        <img
-          src="images/articles3bis.png"
-          alt="Ateliers dégustations"
-        />
-        <div class="news-content">
-          <span class="news-date">28 Novembre 2025</span>
-          <h3 style="text-align:left; margin-left:0;">
-            Ateliers Dégustations à la Ferme
-          </h3>
-          <p>
-            Participez à nos ateliers découverte et savourez nos produits d'exception en
-            prévision des fêtes.
-          </p>
-          <span class="news-link">Lire la suite →</span>
-        </div>
-      </a>
+      <p>
+        Notre priorité : vous proposer le meilleur du terroir, en privilégiant le local et les circuits courts.
+      </p>
     </div>
-  </section>
+
+    <div class="image-a-propos">
+      <img
+        src="images/laferme.png"
+        alt="Montage photo de la ferme"
+      />
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Section Contact CTA -->
-  <section class="contact-section ctacontact-section" aria-label="Ctacontact">
-  <h2 class="contact-cta-title" style="text-align:center; margin-left:0">
-    <span class="contact-line-1">Une question ?</span>
-    <span class="contact-line-2">Besoin d'un renseignement ?</span>
+ <section class="section-contact appel-contact" aria-label="Appel à contact">
+  <h2 class="titre-contact">
+    Besoin d’un renseignement ?
   </h2>
-  <a href="contact.html" class="btn--blue">Nous contacter</a>
+
+  <p class="texte-contact">
+    Commandes, disponibilités, informations sur nos produits et horaires : nous sommes là pour vous répondre !
+  </p>
+
+  <a href="contact.html" class="bouton-contact">
+    Nous contacter
+  </a>
 </section>
+
+
+   <!-- SECTION ACTUALITÉS (APERÇU) -->
+<section class="actualites section-actualites" id="actualites" aria-label="Actualités">
+  <h2 class="titre-actualites">Actualités</h2>
+
+  <div class="grille-actualites">
+
+    <!-- Carte actualité 1 -->
+    <a href="article1.html" class="carte-actualite">
+      <img
+        src="images/articles1.jpg"
+        alt="Atelier biscuits de Noël"
+      />
+
+      <div class="contenu-actualite">
+        <span class="date-actualite">20 novembre 2025</span>
+
+        <h3 class="titre-article">
+          Atelier biscuits pour enfants
+        </h3>
+
+        <p class="resume-article">
+          Venez vivre un moment cuisine avec votre enfant, préparez des biscuits de Noël
+          avec une pâtissière diplômée.
+        </p>
+
+        <span class="lien-article">Lire la suite →</span>
+      </div>
+    </a>
+
+    <div class="separateur-actualites"></div>
+
+    <!-- Carte actualité 2 -->
+    <a href="article2.html" class="carte-actualite">
+      <img
+        src="images/articles2bis.png"
+        alt="Produits de Noël"
+      />
+
+      <div class="contenu-actualite">
+        <span class="date-actualite">1 décembre 2025</span>
+
+        <h3 class="titre-article">
+          Pour Noël, pensez fermier !
+        </h3>
+
+        <p class="resume-article">
+          Découvrez notre sélection de produits festifs direct producteurs à
+          réserver dès maintenant.
+        </p>
+
+        <span class="lien-article">Lire la suite →</span>
+      </div>
+    </a>
+
+    <div class="separateur-actualites"></div>
+
+    <!-- Carte actualité 3 -->
+    <a href="article3.html" class="carte-actualite">
+      <img
+        src="images/articles3bis.png"
+        alt="Ateliers dégustations à la ferme"
+      />
+
+      <div class="contenu-actualite">
+        <span class="date-actualite">28 novembre 2025</span>
+
+        <h3 class="titre-article">
+          Ateliers dégustations à la ferme
+        </h3>
+
+        <p class="resume-article">
+          Participez à nos ateliers découverte et savourez nos produits d’exception en
+          prévision des fêtes.
+        </p>
+
+        <span class="lien-article">Lire la suite →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- BANDEAU PROMOTION -->
+<section class="bandeau-promotion" aria-label="Promotion de Noël">
+  <div class="contenu-promotion">
+    
+    <div class="icone-promotion" aria-hidden="true">🎄</div>
+
+    <div class="texte-promotion">
+      <h2 class="titre-promotion">Sélection de Noël</h3>
+
+      <p class="description-promotion">
+        Découvrez nos produits fermiers d’exception pour vos fêtes de fin d’année
+      </p>
+
+      <a href="boutique.html" class="bouton-promotion">
+        Voir la sélection
+      </a>
+    </div>
+
+  </div>
+</section>
+
 
   
  <!-- FOOTER -->
-<footer class="footer">
 
-  <!-- Bouton remonter -->
-  <button class="scroll-top" id="scrollTopBtn">
+ <footer class="pied-de-page">
+
+  <!-- Bouton remonter en haut -->
+  <button class="bouton-remonter" id="boutonRemonter">
     <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
 
-  <div class="footer-content">
+  <div class="contenu-pied-de-page">
 
-    <!-- COL 1 -->
-    <div class="footer-col">
-      <div class="footer-logo">
-        <img src="images/logo.jpg" alt="Logo" />
-        <span>La Ferme de Basile</span>
+    <!-- COLONNE 1 : Présentation -->
+    <div class="colonne-pied-de-page">
+      <div class="logo-pied-de-page">
+        <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
+        <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
       </div>
-      <p>Des produits frais et locaux cultivés avec passion depuis 1985.</p>
+
+      <p class="texte-pied-de-page">
+        Des produits frais et locaux cultivés avec passion depuis 1985.
+      </p>
     </div>
 
     <!-- NAVIGATION -->
-    <div class="footer-col footer-col-accordion" id="footerNavCol">
-      <h3 id="footerNavToggle">Navigation</h3>
-      <ul>
+    <div class="colonne-pied-de-page colonne-accordeon" id="colonneNavigation">
+      <h3 class="titre-accordeon" id="boutonNavigation">
+        Navigation
+      </h3>
+
+      <ul class="liste-navigation">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="apropos.html">À propos</a></li>
-        <li><a href="boutique.html">La Boutique</a></li>
+        <li><a href="boutique.html">La boutique</a></li>
         <li><a href="actualites.html">Actualités</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
     <!-- INFORMATIONS -->
-    <div class="footer-col footer-col-accordion" id="footerInfoCol">
-      <h3 id="footerInfoToggle">Informations</h3>
-      <ul>
+    <div class="colonne-pied-de-page colonne-accordeon" id="colonneInformations">
+      <h3 class="titre-accordeon" id="boutonInformations">
+        Informations
+      </h3>
+
+      <ul class="liste-informations">
         <li><a href="#">Livraison</a></li>
         <li><a href="#">Paiement</a></li>
         <li><a href="#">CGV</a></li>
@@ -352,27 +388,54 @@
     </div>
 
     <!-- CONTACT -->
-    <div class="footer-col">
-      <h3>Contact</h3>
+    <div class="colonne-pied-de-page">
+      <h3 class="titre-pied-de-page">Contact</h3>
 
-      <ul class="contact-list">
-        <li>📍 123 Rue de la Ferme, 75000 Paris</li>
-        <li>📞 01 23 45 67 89</li>
-        <li>✉️ contact@basilicferme.fr</li>
+      <ul class="liste-contact">
+        <li> 123 Rue de la Ferme, 75000 Paris</li>
+        <li> 01 23 45 67 89</li>
+        <li>
+  <a href="mailto:contact@basilicferme.fr" aria-label="Envoyer un email à La Ferme de Basile">
+    contact@basilicferme.fr
+  </a>
+</li>
+
       </ul>
 
-      <div class="social-links">
-        <a href="#"><svg width="20" height="20" fill="currentColor"><path d=""/></svg></a>
-        <a href="#"><svg width="20" height="20"></svg></a>
+      <div class="liens-sociaux">
+        <a href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA" target="_blank" rel="noopener noreferrer"  aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
       </div>
-
     </div>
+
   </div>
 
-  <div class="footer-bottom">
+  <div class="bas-de-page">
     <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
   </div>
+
 </footer>
+
+
+<!-- Bandeau cookies -->
+<div class="bandeau-cookies" id="bandeauCookies">
+  <p class="bandeau-cookies-texte">
+    Ce site utilise des cookies pour améliorer votre expérience et mesurer l’audience.
+  </p>
+
+  <div class="bandeau-cookies-actions">
+    <button id="refuserCookies" class="btn btn--secondaire">
+      Refuser
+    </button>
+    <button id="accepterCookies" class="btn btn--principal">
+      Accepter
+    </button>
+  </div>
+</div>
 
 
   <script src="scripts.js"></script>
