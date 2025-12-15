@@ -32,7 +32,7 @@ mobileMenuBtn.addEventListener('click', (e) => {
 
 
   // ========================================
-  // CAROUSEL (uniquement sur la home)
+  // SLIDER (uniquement sur la home)
   // ========================================
   (() => {
   const slider = document.querySelector('[data-nivo-slider]');

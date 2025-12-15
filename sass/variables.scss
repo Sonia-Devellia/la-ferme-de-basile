@@ -7,13 +7,12 @@ $gray-text: #1b1b1b;
 $red-noel: #c41e3a;
 
 // ESPACEMENTS
-$space-xs: 8px;
-$space-sm: 16px;
-$space-md: 30px;
-$space-lg: 40px;
-$space-xl: 56px;
-$space-xxl: 72px;
-
+$space-xs: 0.5rem;  // 8px
+$space-sm: 1rem;    // 16px
+$space-md: 2rem;    // 32px
+$space-lg: 2.5rem;  // 40px
+$space-xl: 3.5rem;  // 56px
+$space-xxl: 4.5rem; // 72px
 
 // =============================
 // FONTS ACCESSIBLES
@@ -21,8 +20,6 @@ $space-xxl: 72px;
 
 $font-headings: 'Playfair', serif;
 $font-body: 'Inter', sans-serif;
-
-
 
 
 // Line heights

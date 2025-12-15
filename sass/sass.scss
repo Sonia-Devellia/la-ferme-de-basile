@@ -1,10 +1,6 @@
 
 @use "variables" as *;
 @use "mixins" as *;
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap');
-
-
-
 
 /* ----------------------------------------------------
    BASE GLOBALE
@@ -16,9 +12,14 @@
   box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: 3px solid rgba($green-primary, 0.6);
+  outline-offset: 3px;
+}
+
+
 body {
   margin: 0;
-  padding: 0;
   color: $blue-dark;
   background-color: $gray-light;
   @include body-text;
@@ -27,10 +28,13 @@ body {
 h1 { @include heading(1); }
 h2 { @include heading(2); }
 h3 { @include heading(3); }
-h4 { @include heading(3); }
-h5 { @include heading(3); }
-h6 { @include heading(3); }
+h4 { @include heading(4); }
+h5 { @include heading(4); }
+h6 { @include heading(4); }
 
+a {
+  @include lien-base;
+}
 
 img {
   max-width: 100%;
@@ -303,6 +307,7 @@ img {
 
           .dropdown-menu li {
             padding: 0;
+            list-style: none;
 
            a.red {
                 color: $red-noel;
@@ -350,7 +355,7 @@ img {
 
 .hero-slider-section {
   padding: 20px 0;
-  background: #1e3a5f;
+  background: $green-primary;
 }
 
 /* Wrapper */
@@ -401,8 +406,8 @@ img {
   right: 0;
   bottom: 0;
   padding: 15px 12px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0.3, 0.5, 1), transparent);
+  color: $white;
 }
 
 .nivo-caption-content {
@@ -429,8 +434,8 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(164, 166, 97, 0.9);
-  color: #fff;
+  background: $blue-dark;
+  color: $white;
   border: none;
   width: 48px;
   height: 48px;
@@ -475,13 +480,13 @@ img {
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.6);
+    background: $gray-light;
     transform: scale(1.2);
   }
 
   &.active {
-    background: #a4a661;
-    border-color: #a4a661;
+    background: $blue-dark;
+    border-color: $white;
     width: 32px;
     border-radius: 6px;
   }
@@ -491,7 +496,9 @@ img {
     border-color: #c41e3a;
   }
 }
-
+.button.nivo-control{
+  color: $blue-dark;
+}
 /* Small mobile */
 @media (max-width: 480px) {
   .nivo-slider-container {
@@ -1094,6 +1101,29 @@ img {
     padding: $space-xl 0;
   }
 }
+
+.bandeau-promo-produit {
+  background-color: $green-primary;
+  padding: 20px 40px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  .bouton-promo-produit {
+    @include btn-base ;
+    background-color : $blue-dark;
+    color: $white;
+    
+    &:hover  {
+      background-color: $white;
+      color: $green-primary;
+    }
+  }
+
+  }
+
 
 /* ----------------------------------------------------
    PAGE BOUTIQUE — MODALITÉS
