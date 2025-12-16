@@ -1,34 +1,41 @@
 // La Ferme de Basile - JavaScript global
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ========================================
-  // MENU BURGER MOBILE
-  // ========================================
- 
-console.log('Script chargé et exécuté');
+  const boutonBurger = document.getElementById("mobileMenuBtn");
+  const menuMobile = document.getElementById("mobileNavList");
+  const blocDropdown = document.getElementById("dropdown");
 
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileNavList = document.getElementById('mobileNavList');
-console.log ('mobileMenuBtn')
+  if (!boutonBurger || !menuMobile) return;
 
-// Vérifie que le bouton burger existe
-if (!mobileMenuBtn) {
-  console.log('Le bouton burger n\'a pas été trouvé');
-} else {
-  console.log('Bouton burger trouvé');
-}
+  // Ouvrir / fermer le menu mobile
+  boutonBurger.addEventListener("click", () => {
+    menuMobile.classList.toggle("active");
+  });
 
-// Vérifie que le menu est bien récupéré
-if (!mobileNavList) {
-  console.log('Le menu mobile n\'a pas été trouvé');
-}
+  // Ouvrir / fermer le dropdown "Boutique" (mobile)
+  if (blocDropdown) {
+    const lienBoutique = blocDropdown.querySelector("a.header-lien-boutique");
+    if (lienBoutique) {
+      lienBoutique.addEventListener("click", (e) => {
+        // Empêche d'aller sur boutique.html, on veut dérouler
+        e.preventDefault();
+        blocDropdown.classList.toggle("active");
+      });
+    }
+  }
 
-mobileMenuBtn.addEventListener('click', (e) => {
-  console.log("burger menu click");
-  mobileNavList.classList.toggle('active');
-  console.log(mobileNavList.classList);
+  // Fermer le menu au clic sur un lien (sauf "La Boutique")
+  menuMobile.addEventListener("click", (event) => {
+    const lien = event.target.closest("a");
+    if (!lien) return;
+
+    const estLienBoutique = lien.classList.contains("header-lien-boutique");
+    if (!estLienBoutique) {
+      menuMobile.classList.remove("active");
+      if (blocDropdown) blocDropdown.classList.remove("active"); // optionnel : referme aussi le dropdown
+    }
+  });
 });
-
 
 
   // ========================================
@@ -276,9 +283,6 @@ if (document.readyState === "loading") {
     }, 16000); // 1 seconde après la disparition de l'élément (fin de la transition)
   });
 });
-});
-
-
 
  // ========================================
   // COOKIE 

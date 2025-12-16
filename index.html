@@ -14,40 +14,52 @@
 </head>
 
 <body>
- <header class="header-mobile">
-  <div class="header-content-mobile">
+ <!-- ========================= -->
+<!-- HEADER MOBILE -->
+<!-- ========================= -->
+<header class="header-mobile">
+  <div class="header-mobile__content">
 
     <!-- Burger -->
-    <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <button class="header-burger" id="mobileMenuBtn" aria-label="Ouvrir le menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
     <!-- Logo centré -->
-    <div class="logo-section">
-      <img src="images/logo.jpg" alt="Logo" class="logo" />
+    <div class="header-logo">
+      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
     </div>
 
-    <!-- Panier à droite -->
-     <a href="panier.html" class="cart-icon">
-  <i class="fa-solid fa-basket-shopping" aria-label="Panier"></i>
+    
+
+    <!-- Panier -->
+  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
+  <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
 </a>
 
-    <!-- Menu déroulant mobile -->
-    <ul class="nav-list-mobile" id="mobileNavList">
+    <!-- Navigation mobile -->
+    <ul class="header-nav-mobile" id="mobileNavList">
+      <li><a href="mon-compte.html"class="header-compte">Mon compte </a></li>
       <li><a href="index.html">Accueil</a></li>
       <li><a href="apropos.html">À propos</a></li>
 
       <li class="dropdown" id="dropdown">
-        <a href="boutique.html" class="boutique">La Boutique ▾</a>
+        <a href="boutique.html" class="header-lien-boutique">
+          La Boutique ▾
+        </a>
         <ul class="dropdown-menu">
           <li><a href="boutique.html#boucherie">Boucherie</a></li>
           <li><a href="boutique.html#cremerie">Crèmerie</a></li>
           <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
           <li><a href="boutique.html#epicerie">Épicerie</a></li>
           <li><a href="boutique.html#cave">La Cave</a></li>
-          <li><a href="boutique.html#produits-de-noel" class="red">Les Produits de Noel</a></li>
+          <li>
+            <a href="boutique.html#produits-de-noel" class="header-rouge">
+              Les Produits de Noël
+            </a>
+          </li>
         </ul>
       </li>
 
@@ -58,34 +70,39 @@
   </div>
 </header>
 
-
 <!-- ========================= -->
 <!-- HEADER DESKTOP -->
 <!-- ========================= -->
 <header class="header-desktop">
-  <div class="header-content-desktop">
+  <div class="header-desktop__content">
 
     <!-- Logo + titre -->
-    <div class="logo-section">
-      <img src="images/logo.jpg" alt="Logo" class="logo" />
-      <h1 class="site-title">La Ferme de Basile</h1>
+    <div class="header-logo">
+      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
+      <h1 class="header-titre-site">La Ferme de Basile</h1>
     </div>
 
-    <!-- Menu Desktop -->
-    <nav class="nav-desktop">
-      <ul class="nav-list-desktop">
+    <!-- Navigation desktop -->
+    <nav class="header-nav-desktop" aria-label="Navigation principale">
+      <ul class="header-nav-list">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="apropos.html">À propos</a></li>
 
         <li class="dropdown">
-          <a href="boutique.html" class="boutique">La Boutique ▾</a>
+          <a href="boutique.html" class="header-lien-boutique">
+            La Boutique ▾
+          </a>
           <ul class="dropdown-menu">
             <li><a href="boutique.html#boucherie">Boucherie</a></li>
             <li><a href="boutique.html#cremerie">Crèmerie</a></li>
             <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
             <li><a href="boutique.html#epicerie">Épicerie</a></li>
             <li><a href="boutique.html#cave">La Cave</a></li>
-            <li><a href="boutique.html#produits-de-noel" class="red">Les Produits de Noel</a></li>
+            <li>
+              <a href="boutique.html#produits-de-noel" class="header-rouge">
+                Les Produits de Noël
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -95,14 +112,22 @@
     </nav>
 
     <!-- Panier -->
-    <a href="panier.html" class="cart-icon">
-  <i class="fa-solid fa-basket-shopping" aria-label="Panier"></i>
-</a>
+   <div class="header-actions">
+  <a href="compte.html" class="header-compte" aria-label="Mon compte">
+    <i class="fa-regular fa-user" aria-hidden="true"></i>
+    <span>Mon compte</span>
+  </a>
 
+  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
+    <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+  </a>
+</div> 
 
   </div>
 </header>
+
 <main>
+
 
   <!--BANDEAU D'ACCUEIL/SLIDER-->
   <section class="hero-slider-section" aria-label="Bandeau principal">
@@ -110,7 +135,7 @@
     <div class="nivo-slider-container">
 
       <div class="nivo-slide active">
-        <img src="images/lacave16:9.jpg" alt="La cave">
+        <img src="images/alacave.png" alt="La cave">
         <div class="nivo-caption">
           <div class="nivo-caption-content">
             <h3>Caviste</h3>
@@ -120,7 +145,7 @@
       </div>
 
       <div class="nivo-slide active">
-        <img src="images/produitsnoel16:9.jpg" alt="Fruits et Légumes">
+        <img src="images/afruitsetlegumes.png" alt="Fruits et Légumes">
         <div class="nivo-caption">
           <div class="nivo-caption-content">
             <h3>Fruits et Légumes</h3>
@@ -130,7 +155,7 @@
       </div>
 
       <div class="nivo-slide active">
-        <img src="images/epicerie16:9.jpg" alt="Epiceries">
+        <img src="images/aepiceries.png" alt="Epiceries">
         <div class="nivo-caption">
           <div class="nivo-caption-content">
             <h3>Épiceries</h3>
@@ -160,7 +185,7 @@
       </div>
 
       <div class="nivo-slide noel-slide">
-        <img src="images/produitsnoel16:9.jpg" alt="Sélection de Noël">
+        <img src="images/atabledenoel.png" alt="Sélection de Noël">
         <div class="nivo-caption">
           <div class="nivo-caption-content">
             <h3>Sélection de Noël</h3>
@@ -394,7 +419,7 @@
       <h3 class="titre-pied-de-page">Contact</h3>
 
       <ul class="liste-contact">
-        <li> 123 Rue de la Ferme, 75000 Paris</li>
+        <li> 700 avenue de beaumont 95470 fosses</li>
         <li> 01 23 45 67 89</li>
         <li>
   <a href="mailto:contact@basilicferme.fr" aria-label="Envoyer un email à La Ferme de Basile">
