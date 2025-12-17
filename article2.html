@@ -1,313 +1,357 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article détail – Ferme de Basile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil – Ferme de Basile</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <!-- ========================= -->
+    <!-- HEADER MOBILE -->
+    <!-- ========================= -->
+    <header class="header-mobile">
+      <div class="header-mobile__content">
+        <!-- Burger -->
+        <button
+          class="header-burger"
+          id="mobileMenuBtn"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-<body>
- <!-- ========================= -->
-<!-- HEADER MOBILE -->
-<!-- ========================= -->
-<header class="header-mobile">
-  <div class="header-mobile__content">
+        <!-- Logo centré -->
+        <div class="header-logo">
+          <img
+            src="images/logo.jpg"
+            alt="Logo La Ferme de Basile"
+            class="header-logo-img"
+          />
+        </div>
 
-    <!-- Burger -->
-    <button class="header-burger" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Logo centré -->
-    <div class="header-logo">
-      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
-    </div>
-
-    <!-- Panier -->
-  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-  <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-</a>
-
-    <!-- Navigation mobile -->
-    <ul class="header-nav-mobile" id="mobileNavList">
-      <li><a href="login.html"class="header-compte">Mon compte </a></li>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-
-      <li class="dropdown" id="dropdown">
-        <a href="boutique.html" class="header-lien-boutique">
-          La Boutique ▾
+        <!-- Panier -->
+        <a href="panier.html" class="header-panier" aria-label="Voir le panier">
+          <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
         </a>
-        <ul class="dropdown-menu">
-          <li><a href="boutique.html#boucherie">Boucherie</a></li>
-          <li><a href="boutique.html#cremerie">Crèmerie</a></li>
-          <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
-          <li><a href="boutique.html#epicerie">Épicerie</a></li>
-          <li><a href="boutique.html#cave">La Cave</a></li>
-          <li>
-            <a href="boutique.html#produits-de-noel" class="header-rouge">
-              Les Produits de Noël
+
+        <!-- Navigation mobile -->
+        <ul class="header-nav-mobile" id="mobileNavList">
+          <li><a href="login.html" class="header-compte-mobile">Mon compte </a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+
+          <li class="dropdown" id="dropdown">
+            <a href="boutique.html" class="header-lien-boutique">
+              La Boutique ▾
             </a>
+            <ul class="dropdown-menu">
+              <li><a href="boutique.html#boucherie">Boucherie</a></li>
+              <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+              <li>
+                <a href="boutique.html#fruits-legumes">Fruits & Légumes</a>
+              </li>
+              <li><a href="boutique.html#epicerie">Épicerie</a></li>
+              <li><a href="boutique.html#cave">La Cave</a></li>
+              <li>
+                <a href="boutique.html#produits-de-noel" class="header-rouge">
+                  Les Produits de Noël
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ========================= -->
+    <!-- HEADER DESKTOP -->
+    <!-- ========================= -->
+    <header class="header-desktop">
+      <div class="header-desktop__content">
+        <!-- Logo + titre -->
+        <div class="header-logo">
+          <img
+            src="images/logo.jpg"
+            alt="Logo La Ferme de Basile"
+            class="header-logo-img"
+          />
+          <h1 class="header-titre-site">La Ferme de Basile</h1>
+        </div>
+
+        <!-- Navigation desktop -->
+        <nav class="header-nav-desktop" aria-label="Navigation principale">
+          <ul class="header-nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+
+            <li class="dropdown">
+              <a href="boutique.html" class="header-lien-boutique">
+                La Boutique ▾
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="boutique.html#boucherie">Boucherie</a></li>
+                <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+                <li>
+                  <a href="boutique.html#fruits-legumes">Fruits & Légumes</a>
+                </li>
+                <li><a href="boutique.html#epicerie">Épicerie</a></li>
+                <li><a href="boutique.html#cave">La Cave</a></li>
+                <li>
+                  <a href="boutique.html#produits-de-noel" class="header-rouge">
+                    Les Produits de Noël
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Panier -->
+        <div class="header-actions">
+          <a href="login.html" class="header-compte" aria-label="Mon compte">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>Mon compte</span>
+          </a>
+
+          <a
+            href="panier.html"
+            class="header-panier"
+            aria-label="Voir le panier"
+          >
+            <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- DÉTAIL ACTUALITÉ – ARTICLE 2 -->
+    <div class="article-detail">
+      <a href="actualites.html" class="article-back">← Retour aux actualités</a>
+
+      <div class="article-header">
+        <span class="article-date">1 Décembre 2025</span>
+        <h2 class="article-title">Pour Noël, pensez fermier !</h2>
+      </div>
+
+      <img
+        src="images/produitsnoel.jpg"
+        class="article-image"
+        alt="Sélection de produits festifs pour Noël"
+      />
+
+      <div class="article-body">
+        <p>Pour Noël, pensez fermier !</p>
+
+        <p>
+          Cette année, faites le choix de la qualité et de l'authenticité pour
+          votre repas de fêtes. Nous avons sélectionné pour vous les meilleurs
+          produits de nos producteurs partenaires, tous issus de l'agriculture
+          locale et raisonnée.
+        </p>
+
+        <p>
+          Par ici notre sélection direct producteurs à réserver sur
+          www.lafermedebasile.fr
+        </p>
+
+        <h3>Notre sélection de Noël</h3>
+
+        <h3>Volailles festives</h3>
+        <p>
+          Volailles des Lavignes de l'Eure – Dindes, chapons, poulardes et
+          pintades élevés en plein air. Viande tendre et savoureuse, élevage
+          traditionnel respectueux du bien-être animal.
+        </p>
+
+        <h3>Produits de la mer</h3>
+        <p>
+          Saumon fumé artisanal d'Emmanuel dans les Yvelines – Fumage au bois de
+          hêtre selon les méthodes traditionnelles. Un délice pour vos toasts de
+          fête.
+        </p>
+        <p>
+          Huîtres de Paimpol de la famille Arin – Fraîcheur garantie,
+          directement des côtes bretonnes. Disponibles en différentes tailles
+          selon vos préférences.
+        </p>
+
+        <h3>Foies gras artisanaux</h3>
+        <p>
+          Foies gras de Cédric et Bertrand du 64 – Préparations traditionnelles
+          du Sud-Ouest : foie gras entier, mi-cuit, en terrine.
+        </p>
+
+        <h3>Fromages locaux</h3>
+        <p>
+          @lesfromagesdechevremoret &amp; @la_ferme_sainte_colombe – Sélection
+          de fromages fermiers au lait cru : bûches de chèvre, tommes affinées,
+          camemberts crémeux.
+        </p>
+
+        <h3>Desserts glacés</h3>
+        <p>
+          Bûches glacées @les3givrees – Créations originales et savoureuses :
+          vanille-caramel, chocolat-praliné, fruits rouges.
+        </p>
+
+        <h3>Pour accompagner</h3>
+        <ul>
+          <li>Chocolats artisanaux : Pralinés, ganaches, mendiants</li>
+          <li>Champagnes et vins fins : Sélection rigoureuse de notre cave</li>
+          <li>
+            Nos légumes de saison : Courges, pommes de terre, légumes racines
+            fraîchement récoltés
           </li>
         </ul>
-      </li>
 
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+        <h3>Commande et réservation</h3>
+        <p>
+          Pour garantir la disponibilité de tous nos produits, nous vous
+          recommandons de passer commande avant le 15 décembre.
+        </p>
 
-  </div>
-</header>
+        <ul>
+          <li>En ligne : www.lafermedebasile.fr</li>
+          <li>Par téléphone : 01 23 45 67 89</li>
+          <li>Par email : contact@lafermedebasile.fr</li>
+          <li>À la ferme : 700 avenue de Beaumont, Fosses</li>
+        </ul>
 
-<!-- ========================= -->
-<!-- HEADER DESKTOP -->
-<!-- ========================= -->
-<header class="header-desktop">
-  <div class="header-desktop__content">
-
-    <!-- Logo + titre -->
-    <div class="header-logo">
-      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
-      <h1 class="header-titre-site">La Ferme de Basile</h1>
+        <p>
+          Vive Noël fermier ! Soutenez nos producteurs locaux et régalez-vous
+          avec des produits d'exception.
+        </p>
+      </div>
     </div>
 
-    <!-- Navigation desktop -->
-    <nav class="header-nav-desktop" aria-label="Navigation principale">
-      <ul class="header-nav-list">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
+    <!-- FOOTER -->
 
-        <li class="dropdown">
-          <a href="boutique.html" class="header-lien-boutique">
-            La Boutique ▾
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="boutique.html#boucherie">Boucherie</a></li>
-            <li><a href="boutique.html#cremerie">Crèmerie</a></li>
-            <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
-            <li><a href="boutique.html#epicerie">Épicerie</a></li>
-            <li><a href="boutique.html#cave">La Cave</a></li>
+    <footer class="pied-de-page">
+      <!-- Bouton remonter en haut -->
+      <button class="bouton-remonter" id="boutonRemonter">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke="white"
+          fill="none"
+          stroke-width="2"
+        >
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+
+      <div class="contenu-pied-de-page">
+        <!-- COLONNE 1 : Présentation -->
+        <div class="colonne-pied-de-page">
+          <div class="logo-pied-de-page">
+            <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
+            <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
+          </div>
+
+          <p class="texte-pied-de-page">
+            Des produits frais et locaux cultivés avec passion depuis 1985.
+          </p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div
+          class="colonne-pied-de-page colonne-accordeon"
+          id="colonneNavigation"
+        >
+          <h3 class="titre-accordeon" id="boutonNavigation">Navigation</h3>
+
+          <ul class="liste-navigation">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="boutique.html">La boutique</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Mon compte</a></li>
+            <li><a href="panier.html">Panier</a></li>
+          </ul>
+        </div>
+
+        <!-- INFORMATIONS -->
+        <div
+          class="colonne-pied-de-page colonne-accordeon"
+          id="colonneInformations"
+        >
+          <h3 class="titre-accordeon" id="boutonInformations">Informations</h3>
+
+          <ul class="liste-informations">
+            <li><a href="boutique.html">Livraison</a></li>
+            <li><a href="boutique.html">Paiement</a></li>
+            <li><a href="cgv.html">CGV</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="plandusite.html">Plan du site </a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="colonne-pied-de-page">
+          <h3 class="titre-pied-de-page">Contact</h3>
+
+          <ul class="liste-contact">
+            <li>700 avenue de beaumont 95470 fosses</li>
+            <li>01 23 45 67 89</li>
             <li>
-              <a href="boutique.html#produits-de-noel" class="header-rouge">
-                Les Produits de Noël
+              <a
+                href="mailto:contact@basilicferme.fr"
+                aria-label="Envoyer un email à La Ferme de Basile"
+              >
+                contact@basilicferme.fr
               </a>
             </li>
           </ul>
-        </li>
 
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Panier -->
-     <div class="header-actions">
-  <a href="login.html" class="header-compte" aria-label="Mon compte">
-    <i class="fa-regular fa-user" aria-hidden="true"></i>
-    <span>Mon compte</span>
-  </a>
-
-  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-    <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-  </a>
-</div> 
-
-  </div>
-</header>
-
-
-<!-- DÉTAIL ACTUALITÉ – ARTICLE 2 -->
-<div class="article-detail">
-
-  <a href="actualites.html" class="article-back">← Retour aux actualités</a>
-
-  <div class="article-header">
-    <span class="article-date">1 Décembre 2025</span>
-    <h2 class="article-title">Pour Noël, pensez fermier !</h2>
-  </div>
-
-  <img src="images/produitsnoel.jpg" class="article-image" alt="Sélection de produits festifs pour Noël">
-
-  <div class="article-body">
-
-    <p>Pour Noël, pensez fermier !</p>
-
-    <p>
-      Cette année, faites le choix de la qualité et de l'authenticité pour votre repas de fêtes.
-      Nous avons sélectionné pour vous les meilleurs produits de nos producteurs partenaires,
-      tous issus de l'agriculture locale et raisonnée.
-    </p>
-
-    <p>
-      Par ici notre sélection direct producteurs à réserver sur
-      www.lafermedebasile.fr
-    </p>
-
-    <h3>Notre sélection de Noël</h3>
-
-    <h3>Volailles festives</h3>
-    <p>
-      Volailles des Lavignes de l'Eure – Dindes, chapons, poulardes et pintades élevés en plein air.
-      Viande tendre et savoureuse, élevage traditionnel respectueux du bien-être animal.
-    </p>
-
-    <h3>Produits de la mer</h3>
-    <p>
-      Saumon fumé artisanal d'Emmanuel dans les Yvelines – Fumage au bois de hêtre selon les méthodes traditionnelles.
-      Un délice pour vos toasts de fête.
-    </p>
-    <p>
-      Huîtres de Paimpol de la famille Arin – Fraîcheur garantie, directement des côtes bretonnes.
-      Disponibles en différentes tailles selon vos préférences.
-    </p>
-
-    <h3>Foies gras artisanaux</h3>
-    <p>
-      Foies gras de Cédric et Bertrand du 64 – Préparations traditionnelles du Sud-Ouest :
-      foie gras entier, mi-cuit, en terrine.
-    </p>
-
-    <h3>Fromages locaux</h3>
-    <p>
-      @lesfromagesdechevremoret &amp; @la_ferme_sainte_colombe – Sélection de fromages fermiers au lait cru :
-      bûches de chèvre, tommes affinées, camemberts crémeux.
-    </p>
-
-    <h3>Desserts glacés</h3>
-    <p>
-      Bûches glacées @les3givrees – Créations originales et savoureuses :
-      vanille-caramel, chocolat-praliné, fruits rouges.
-    </p>
-
-    <h3>Pour accompagner</h3>
-    <ul>
-      <li>Chocolats artisanaux : Pralinés, ganaches, mendiants</li>
-      <li>Champagnes et vins fins : Sélection rigoureuse de notre cave</li>
-      <li>Nos légumes de saison : Courges, pommes de terre, légumes racines fraîchement récoltés</li>
-    </ul>
-
-    <h3>Commande et réservation</h3>
-    <p>
-      Pour garantir la disponibilité de tous nos produits, nous vous recommandons de passer
-      commande avant le 15 décembre.
-    </p>
-
-    <ul>
-      <li>En ligne : www.lafermedebasile.fr</li>
-      <li>Par téléphone : 01 23 45 67 89</li>
-      <li>Par email : contact@lafermedebasile.fr</li>
-      <li>À la ferme : 700 avenue de Beaumont, Fosses</li>
-    </ul>
-
-    <p>
-      Vive Noël fermier ! Soutenez nos producteurs locaux et régalez-vous avec des produits d'exception.
-    </p>
-
-  </div>
-
-</div>
-
- <!-- FOOTER -->
-
- <footer class="pied-de-page">
-
-  <!-- Bouton remonter en haut -->
-  <button class="bouton-remonter" id="boutonRemonter">
-    <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <div class="contenu-pied-de-page">
-
-    <!-- COLONNE 1 : Présentation -->
-    <div class="colonne-pied-de-page">
-      <div class="logo-pied-de-page">
-        <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
-        <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
+          <div class="liens-sociaux">
+            <a
+              href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <p class="texte-pied-de-page">
-        Des produits frais et locaux cultivés avec passion depuis 1985.
-      </p>
-    </div>
-
-    <!-- NAVIGATION -->
-    <div class="colonne-pied-de-page colonne-accordeon" id="colonneNavigation">
-      <h3 class="titre-accordeon" id="boutonNavigation">
-        Navigation
-      </h3>
-
-      <ul class="liste-navigation">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="boutique.html">La boutique</a></li>
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Mon compte</a></li>
-        <li><a href="panier.html">Panier</a></li>
-      </ul>
-    </div>
-
-    <!-- INFORMATIONS -->
-    <div class="colonne-pied-de-page colonne-accordeon" id="colonneInformations">
-      <h3 class="titre-accordeon" id="boutonInformations">
-        Informations
-      </h3>
-
-      <ul class="liste-informations">
-        <li><a href="boutique.html">Livraison</a></li>
-        <li><a href="#">Paiement</a></li>
-        <li><a href="cgv.html">CGV</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Confidentialité</a></li>
-      </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="colonne-pied-de-page">
-      <h3 class="titre-pied-de-page">Contact</h3>
-
-      <ul class="liste-contact">
-        <li> 700 avenue de beaumont 95470 fosses</li>
-        <li> 01 23 45 67 89</li>
-       <li>
-  <a href="mailto:contact@basilicferme.fr" aria-label="Envoyer un email à La Ferme de Basile">
-    contact@basilicferme.fr
-  </a>
-</li>
-
-      </ul>
-
-    <div class="liens-sociaux">
-        <a href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA" target="_blank" rel="noopener noreferrer"  aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
+      <div class="bas-de-page">
+        <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
       </div>
-    </div>
+    </footer>
 
-  </div>
-
-  <div class="bas-de-page">
-    <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
-  </div>
-
-</footer>
-
-
-  <script src="scripts.js"></script>
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>

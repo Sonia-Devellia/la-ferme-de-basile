@@ -22,8 +22,8 @@
 // =======================
 @mixin btn-base {
   display: inline-block;
-  padding: 1.125rem 2.5rem; // =18px 40px
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem; // =18px 40px
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -31,11 +31,11 @@
   border: 2px solid transparent;
   text-align: center;
 
-    &:focus-visible { // Focus visible pour interaction avec clavier ( accessibilité ++ )
+  &:focus-visible {
+    // Focus visible pour interaction avec clavier ( accessibilité ++ )
     outline: 3px solid rgba($green-primary, 0.6);
     outline-offset: 3px;
   }
-
 }
 
 // =======================
@@ -52,7 +52,7 @@
     background: $white;
     color: $green-primary;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -70,7 +70,7 @@
     background: $blue-dark;
     color: $white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -85,10 +85,10 @@
   color: $white;
 
   &:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow:
-      0 6px 14px rgba(0, 0, 0, 0.18),
-      0 0 0 4px rgba($green-primary, 0.25);
+    background-color: $blue-dark;
+    color: $white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -100,7 +100,7 @@
 }
 
 // =======================
-// TITRES 
+// TITRES
 // =======================
 @mixin heading($level) {
   font-family: $font-headings;
@@ -109,11 +109,11 @@
 
   // MOBILE FIRST
   @if $level == 1 {
-    font-size: 2.1rem;   // Hero
+    font-size: 2.1rem; // Hero
   } @else if $level == 2 {
-    font-size: 1.7rem;   // Sections
+    font-size: 1.7rem; // Sections
   } @else if $level == 3 {
-    font-size: 1.2rem;  // Sous-sections
+    font-size: 1.5rem; // Sous-sections
   } @else {
     font-size: 1.15rem;
   }
@@ -131,7 +131,6 @@
     }
   }
 }
-
 
 // =======================
 // TEXTE
@@ -164,4 +163,3 @@
     outline-offset: 2px;
   }
 }
-

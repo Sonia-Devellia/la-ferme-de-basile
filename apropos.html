@@ -1,309 +1,378 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Propos– Ferme de Basile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ========================= -->
+    <!-- HEADER MOBILE -->
+    <!-- ========================= -->
+    <header class="header-mobile">
+      <div class="header-mobile__content">
+        <!-- Burger -->
+        <button
+          class="header-burger"
+          id="mobileMenuBtn"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-<head>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil – Ferme de Basile</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
- <!-- ========================= -->
-<!-- HEADER MOBILE -->
-<!-- ========================= -->
-<header class="header-mobile">
-  <div class="header-mobile__content">
+        <!-- Logo centré -->
+        <div class="header-logo">
+          <img
+            src="images/logo.jpg"
+            alt="Logo La Ferme de Basile"
+            class="header-logo-img"
+          />
+        </div>
 
-    <!-- Burger -->
-    <button class="header-burger" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Logo centré -->
-    <div class="header-logo">
-      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
-    </div>
-
-     <!-- Panier -->
-  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-  <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-</a>
-    <!-- Navigation mobile -->
-    <ul class="header-nav-mobile" id="mobileNavList">
-      <li><a href="login.html"class="header-compte">Mon compte </a></li>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-
-      <li class="dropdown" id="dropdown">
-        <a href="boutique.html" class="header-lien-boutique">
-          La Boutique ▾
+        <!-- Panier -->
+        <a href="panier.html" class="header-panier" aria-label="Voir le panier">
+          <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
         </a>
-        <ul class="dropdown-menu">
-          <li><a href="boutique.html#boucherie">Boucherie</a></li>
-          <li><a href="boutique.html#cremerie">Crèmerie</a></li>
-          <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
-          <li><a href="boutique.html#epicerie">Épicerie</a></li>
-          <li><a href="boutique.html#cave">La Cave</a></li>
-          <li>
-            <a href="boutique.html#produits-de-noel" class="header-rouge">
-              Les Produits de Noël
+        <!-- Navigation mobile -->
+        <ul class="header-nav-mobile" id="mobileNavList">
+          <li><a href="login.html" class="header-compte-mobile">Mon compte </a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+
+          <li class="dropdown" id="dropdown">
+            <a href="boutique.html" class="header-lien-boutique">
+              La Boutique ▾
             </a>
+            <ul class="dropdown-menu">
+              <li><a href="boutique.html#boucherie">Boucherie</a></li>
+              <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+              <li>
+                <a href="boutique.html#fruits-legumes">Fruits & Légumes</a>
+              </li>
+              <li><a href="boutique.html#epicerie">Épicerie</a></li>
+              <li><a href="boutique.html#cave">La Cave</a></li>
+              <li>
+                <a href="boutique.html#produits-de-noel" class="header-rouge">
+                  Les Produits de Noël
+                </a>
+              </li>
+            </ul>
           </li>
+
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-      </li>
+      </div>
+    </header>
 
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- ========================= -->
+    <!-- HEADER DESKTOP -->
+    <!-- ========================= -->
+    <header class="header-desktop">
+      <div class="header-desktop__content">
+        <!-- Logo + titre -->
+        <div class="header-logo">
+          <img
+            src="images/logo.jpg"
+            alt="Logo La Ferme de Basile"
+            class="header-logo-img"
+          />
+          <h1 class="header-titre-site">La Ferme de Basile</h1>
+        </div>
 
-  </div>
-</header>
+        <!-- Navigation desktop -->
+        <nav class="header-nav-desktop" aria-label="Navigation principale">
+          <ul class="header-nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
 
-<!-- ========================= -->
-<!-- HEADER DESKTOP -->
-<!-- ========================= -->
-<header class="header-desktop">
-  <div class="header-desktop__content">
+            <li class="dropdown">
+              <a href="boutique.html" class="header-lien-boutique">
+                La Boutique ▾
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="boutique.html#boucherie">Boucherie</a></li>
+                <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+                <li>
+                  <a href="boutique.html#fruits-legumes">Fruits & Légumes</a>
+                </li>
+                <li><a href="boutique.html#epicerie">Épicerie</a></li>
+                <li><a href="boutique.html#cave">La Cave</a></li>
+                <li>
+                  <a href="boutique.html#produits-de-noel" class="header-rouge">
+                    Les Produits de Noël
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-    <!-- Logo + titre -->
-    <div class="header-logo">
-      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
-      <h1 class="header-titre-site">La Ferme de Basile</h1>
-    </div>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-    <!-- Navigation desktop -->
-    <nav class="header-nav-desktop" aria-label="Navigation principale">
-      <ul class="header-nav-list">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-
-        <li class="dropdown">
-          <a href="boutique.html" class="header-lien-boutique">
-            La Boutique ▾
+        <!-- Panier -->
+        <div class="header-actions">
+          <a href="login.html" class="header-compte" aria-label="Mon compte">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>Mon compte</span>
           </a>
-          <ul class="dropdown-menu">
-            <li><a href="boutique.html#boucherie">Boucherie</a></li>
-            <li><a href="boutique.html#cremerie">Crèmerie</a></li>
-            <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
-            <li><a href="boutique.html#epicerie">Épicerie</a></li>
-            <li><a href="boutique.html#cave">La Cave</a></li>
+
+          <a
+            href="panier.html"
+            class="header-panier"
+            aria-label="Voir le panier"
+          >
+            <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO À PROPOS -->
+      <section class="apropos-hero">
+        <h2>À propos</h2>
+        <p>
+          Découvrez l'histoire de notre ferme familiale et notre engagement
+          envers une agriculture responsable et authentique.
+        </p>
+      </section>
+
+      <!-- SECTION ÉQUIPE -->
+      <section class="team-section">
+        <div class="team-container">
+          <h2>Notre équipe</h2>
+
+          <div class="team-grid">
+            <article class="team-member">
+              <img src="images/basile.png" alt="Basile" />
+              <h3>Basile</h3>
+              <div class="role">Maraîcher – Fondateur</div>
+              <p>
+                Passionné par l'agriculture depuis son enfance, Basile a repris
+                la ferme familiale en 2012 avec l'ambition de développer une
+                production bio de qualité.
+              </p>
+            </article>
+
+            <article class="team-member">
+              <img src="images/audrey.png" alt="Audrey" />
+              <h3>Audrey</h3>
+              <div class="role">Co-gérante – Responsable commerciale</div>
+              <p>
+                Audrey gère la partie commerciale et les relations avec nos
+                clients. Elle organise également les ateliers et événements à la
+                ferme.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRÉSENTATION DE LA FERME -->
+      <section class="farm-presentation">
+        <div class="farm-container">
+          <h2>La Ferme de Basile</h2>
+
+          <p class="farm-intro">
+            La Ferme de Basile est bien plus qu'une simple exploitation
+            agricole, c'est un lieu où l'agriculture durable et le respect de la
+            nature sont au cœur de chaque démarche.
+          </p>
+
+          <div class="farm-image-wrapper">
+            <img src="images/equipe.jpg" alt="Vue de la Ferme de Basile" />
+          </div>
+
+          <div class="farm-content">
+            <p>
+              Située dans un cadre paisible et verdoyant, cette ferme familiale
+              incarne un modèle de production respectueux de l'environnement,
+              alliant savoir-faire traditionnel et innovation.
+            </p>
+            <p>
+              À la Ferme de Basile, la production est fondée sur des valeurs
+              fortes : la qualité des produits, le respect des cycles naturels
+              et le bien-être des animaux. Cultivant une agriculture biologique
+              et raisonnée, la ferme s'efforce de préserver la biodiversité tout
+              en proposant des produits sains et savoureux, issus directement du
+              terroir.
+            </p>
+            <p>
+              Les cultures sont variées et adaptées à l'écosystème local, avec
+              une attention particulière portée à l'utilisation limitée de
+              traitements et engrais chimiques. L'une des spécificités de la
+              ferme réside dans son approche polyculture-élevage, qui permet une
+              rotation des cultures et une gestion des sols optimisée.
+            </p>
+            <p>
+              Les animaux, élevés en plein air, bénéficient d'un espace
+              suffisant pour vivre dans des conditions dignes et naturelles. Ce
+              choix garantit non seulement le respect du bien-être animal, mais
+              aussi une qualité de viande et de produits dérivés qui sont le
+              reflet du respect des cycles naturels.
+            </p>
+            <p>
+              La Ferme de Basile met également un point d'honneur à favoriser
+              les circuits courts, en proposant ses produits directement aux
+              consommateurs, à travers des paniers fermiers, des marchés locaux
+              et des ventes à la ferme. Cela permet de renforcer le lien entre
+              le producteur et le consommateur, tout en réduisant l'empreinte
+              carbone liée au transport des denrées alimentaires.
+            </p>
+            <p>
+              Des ateliers, des visites pédagogiques et des événements sont
+              organisés tout au long de l’année pour faire découvrir au public
+              les coulisses de l'agriculture biologique et les enjeux
+              environnementaux qui y sont liés.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bandeau-promo-produit"
+        aria-label="Découvrez notre savoir faire"
+      >
+        <div class="contenu-promo-produit">
+          <div class="texte-promo-produit">
+            <h3 class="titre-promo-produit">Découvrez notre savoir faire</h3>
+
+            <p class="description-promo-produit">
+              Des produits fermiers locaux et de saison issues de notre ferme ou
+              de nos producteurs locaux
+            </p>
+
+            <a href="boutique.html" class="bouton-promo-produit">
+              Voir les produits
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="pied-de-page">
+      <!-- Bouton remonter en haut -->
+      <button class="bouton-remonter" id="boutonRemonter">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke="white"
+          fill="none"
+          stroke-width="2"
+        >
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+
+      <div class="contenu-pied-de-page">
+        <!-- COLONNE 1 : Présentation -->
+        <div class="colonne-pied-de-page">
+          <div class="logo-pied-de-page">
+            <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
+            <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
+          </div>
+
+          <p class="texte-pied-de-page">
+            Des produits frais et locaux cultivés avec passion depuis 1985.
+          </p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div
+          class="colonne-pied-de-page colonne-accordeon"
+          id="colonneNavigation"
+        >
+          <h3 class="titre-accordeon" id="boutonNavigation">Navigation</h3>
+
+          <ul class="liste-navigation">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="boutique.html">La boutique</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Mon compte</a></li>
+            <li><a href="panier.html">Panier</a></li>
+          </ul>
+        </div>
+
+        <!-- INFORMATIONS -->
+        <div
+          class="colonne-pied-de-page colonne-accordeon"
+          id="colonneInformations"
+        >
+          <h3 class="titre-accordeon" id="boutonInformations">Informations</h3>
+
+          <ul class="liste-informations">
+            <li><a href="boutique.html">Livraison</a></li>
+            <li><a href="boutique.html">Paiement</a></li>
+            <li><a href="cgv.html">CGV</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="plandusite.html">Plan du site </a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="colonne-pied-de-page">
+          <h3 class="titre-pied-de-page">Contact</h3>
+
+          <ul class="liste-contact">
+            <li>123 Rue de la Ferme, 75000 Paris</li>
+            <li>01 23 45 67 89</li>
             <li>
-              <a href="boutique.html#produits-de-noel" class="header-rouge">
-                Les Produits de Noël
+              <a
+                href="mailto:contact@basilicferme.fr"
+                aria-label="Envoyer un email à La Ferme de Basile"
+              >
+                contact@basilicferme.fr
               </a>
             </li>
           </ul>
-        </li>
 
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Panier -->
-     <div class="header-actions">
-  <a href="login.html" class="header-compte" aria-label="Mon compte">
-    <i class="fa-regular fa-user" aria-hidden="true"></i>
-    <span>Mon compte</span>
-  </a>
-
-  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-    <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-  </a>
-</div> 
-
-  </div>
-</header>
-
-  <main>
-
-    <!-- HERO À PROPOS -->
-    <section class="apropos-hero">
-      <h2>À propos</h2>
-      <p>
-        Découvrez l'histoire de notre ferme familiale et notre engagement envers une agriculture responsable et authentique.
-      </p>
-    </section>
-
-    <!-- SECTION ÉQUIPE -->
-    <section class="team-section">
-      <div class="team-container">
-        <h2>Notre équipe</h2>
-
-        <div class="team-grid">
-          <article class="team-member">
-            <img src="images/basile.png" alt="Basile" />
-            <h3>Basile</h3>
-            <div class="role">Maraîcher – Fondateur</div>
-            <p>
-              Passionné par l'agriculture depuis son enfance, Basile a repris la ferme familiale en 2012 avec l'ambition de développer une production bio de qualité.
-            </p>
-          </article>
-
-          <article class="team-member">
-            <img src="images/audrey.png" alt="Audrey" />
-            <h3>Audrey</h3>
-            <div class="role">Co-gérante – Responsable commerciale</div>
-            <p>
-              Audrey gère la partie commerciale et les relations avec nos clients. Elle organise également les ateliers et événements à la ferme.
-            </p>
-          </article>
+          <div class="liens-sociaux">
+            <a
+              href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- PRÉSENTATION DE LA FERME -->
-    <section class="farm-presentation">
-      <div class="farm-container">
-        <h2>La Ferme de Basile</h2>
-
-        <p class="farm-intro">
-          La Ferme de Basile est bien plus qu'une simple exploitation agricole, c'est un lieu où l'agriculture durable et le respect de la nature sont au cœur de chaque démarche.
-        </p>
-
-        <div class="farm-image-wrapper">
-          <img src="images/equipe.jpg" alt="Vue de la Ferme de Basile" />
-        </div>
-
-        <div class="farm-content">
-          <p>
-            Située dans un cadre paisible et verdoyant, cette ferme familiale incarne un modèle de production respectueux de l'environnement, alliant savoir-faire traditionnel et innovation.
-          </p>
-          <p>
-            À la Ferme de Basile, la production est fondée sur des valeurs fortes : la qualité des produits, le respect des cycles naturels et le bien-être des animaux. Cultivant une agriculture biologique et raisonnée, la ferme s'efforce de préserver la biodiversité tout en proposant des produits sains et savoureux, issus directement du terroir.
-          </p>
-          <p>
-            Les cultures sont variées et adaptées à l'écosystème local, avec une attention particulière portée à l'utilisation limitée de traitements et engrais chimiques. L'une des spécificités de la ferme réside dans son approche polyculture-élevage, qui permet une rotation des cultures et une gestion des sols optimisée.
-          </p>
-          <p>
-            Les animaux, élevés en plein air, bénéficient d'un espace suffisant pour vivre dans des conditions dignes et naturelles. Ce choix garantit non seulement le respect du bien-être animal, mais aussi une qualité de viande et de produits dérivés qui sont le reflet du respect des cycles naturels.
-          </p>
-          <p>
-            La Ferme de Basile met également un point d'honneur à favoriser les circuits courts, en proposant ses produits directement aux consommateurs, à travers des paniers fermiers, des marchés locaux et des ventes à la ferme. Cela permet de renforcer le lien entre le producteur et le consommateur, tout en réduisant l'empreinte carbone liée au transport des denrées alimentaires.
-          </p>
-          <p>
-            Des ateliers, des visites pédagogiques et des événements sont organisés tout au long de l’année pour faire découvrir au public les coulisses de l'agriculture biologique et les enjeux environnementaux qui y sont liés.
-          </p>
-        </div>
+      <div class="bas-de-page">
+        <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
       </div>
-    </section>
+    </footer>
 
-    <section class="bandeau-promo-produit" aria-label="Découvrez notre savoir faire">
-      <div class="contenu-promo-produit">
-        <div class="texte-promo-produit">
-      <h2 class="titre-promo-produit">Découvrez notre savoir faire </h3>
-
-      <p class="description-promo-produit">
-        Des produits fermiers locaux et de saison issues de notre ferme ou de nos producteurs locaux 
-      </p>
-
-      <a href="boutique.html" class="bouton-promo-produit">
-        Voir les produits 
-      </a>
-    </div>
-  </div>
-
-    </section>
-
-  </main>
-
-   <!-- FOOTER -->
-
- <footer class="pied-de-page">
-
-  <!-- Bouton remonter en haut -->
-  <button class="bouton-remonter" id="boutonRemonter">
-    <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <div class="contenu-pied-de-page">
-
-    <!-- COLONNE 1 : Présentation -->
-    <div class="colonne-pied-de-page">
-      <div class="logo-pied-de-page">
-        <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
-        <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
-      </div>
-
-      <p class="texte-pied-de-page">
-        Des produits frais et locaux cultivés avec passion depuis 1985.
-      </p>
-    </div>
-
-    <!-- NAVIGATION -->
-    <div class="colonne-pied-de-page colonne-accordeon" id="colonneNavigation">
-      <h3 class="titre-accordeon" id="boutonNavigation">
-        Navigation
-      </h3>
-
-      <ul class="liste-navigation">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="boutique.html">La boutique</a></li>
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Mon compte</a></li>
-        <li><a href="panier.html">Panier</a></li>
-      </ul>
-    </div>
-
-    <!-- INFORMATIONS -->
-    <div class="colonne-pied-de-page colonne-accordeon" id="colonneInformations">
-      <h3 class="titre-accordeon" id="boutonInformations">
-        Informations
-      </h3>
-
-      <ul class="liste-informations">
-        <li><a href="boutique.html">Livraison</a></li>
-        <li><a href="#">Paiement</a></li>
-        <li><a href="cgv.html">CGV</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Confidentialité</a></li>
-      </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="colonne-pied-de-page">
-      <h3 class="titre-pied-de-page">Contact</h3>
-
-      <ul class="liste-contact">
-        <li> 123 Rue de la Ferme, 75000 Paris</li>
-        <li> 01 23 45 67 89</li>
-       <li>
-  <a href="mailto:contact@basilicferme.fr" aria-label="Envoyer un email à La Ferme de Basile">
-    contact@basilicferme.fr
-  </a>
-</li>
-
-      </ul>
-
-      <div class="liens-sociaux">
-        <a href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA" target="_blank" rel="noopener noreferrer"  aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="bas-de-page">
-    <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
-  </div>
-
-</footer>
-
-  <script src="scripts.js"></script>
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>

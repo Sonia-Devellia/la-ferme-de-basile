@@ -55,7 +55,7 @@ h3 {
   font-family: "Playfair", serif;
   line-height: 1.3;
   letter-spacing: 0.01em;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 1200px) {
   h3 {
@@ -116,8 +116,8 @@ img {
 
 .btn--blue {
   display: inline-block;
-  padding: 1.125rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -142,8 +142,8 @@ img {
 
 .btn--green {
   display: inline-block;
-  padding: 1.125rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -168,8 +168,8 @@ img {
 
 .btn--white {
   display: inline-block;
-  padding: 1.125rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -186,8 +186,10 @@ img {
   color: #ffffff;
 }
 .btn--white:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18), 0 0 0 4px rgba(164, 166, 97, 0.25);
+  background-color: #1e3a5f;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================== */
@@ -285,18 +287,17 @@ img {
 .header-mobile .header-nav-mobile li {
   list-style: none;
 }
+.header-mobile .header-nav-mobile .header-compte-mobile {
+  color: #1e3a5f;
+}
 .header-mobile .header-nav-mobile a {
   display: block;
-  padding: 10px 0;
   color: #a4a661;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s;
 }
 .header-mobile .header-nav-mobile a:hover {
-  color: #1e3a5f;
-}
-.header-mobile .header-nav-mobile .header-compte {
   color: #1e3a5f;
 }
 .header-mobile .header-nav-mobile .header-lien-boutique {
@@ -309,7 +310,7 @@ img {
   display: none;
   padding: 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
+  border-radius: 8px;
   background: #ffffff;
 }
 .header-mobile .header-nav-mobile .dropdown .dropdown-menu li {
@@ -588,7 +589,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: 1rem;
 }
 
 .nivo-control {
@@ -623,7 +624,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 @media (max-width: 480px) {
   .nivo-slider-container {
     height: 250px;
-    border-radius: 8px;
+    border-radius: 12px;
   }
   .nivo-caption {
     padding: 12px 10px;
@@ -647,7 +648,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   }
   .nivo-slider-container {
     height: 500px;
-    border-radius: 16px;
+    border-radius: 12px;
   }
   .nivo-caption {
     padding: 20px;
@@ -656,37 +657,33 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
     font-size: 1.8rem;
     margin-bottom: 10px;
   }
-  .nivo-caption-content p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
   .nivo-nav-btn {
     width: 56px;
     height: 56px;
   }
   .nivo-control-nav {
-    margin-top: 30px;
+    margin-top: 2rem;
   }
 }
 /* =======================
    A PROPOS DE NOTRE FERME 
 ======================= */
 .a-propos {
-  padding: 60px 20px;
+  padding: 3.5rem 1rem;
   background: #f5f5f5;
 }
 
 /* Titre */
 .titre-section {
   color: #a4a661;
-  margin: 0 0 20px;
+  margin: 0 0 1rem;
   text-align: center;
 }
 
 .contenu-a-propos {
   max-width: 1264px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -709,7 +706,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 
 .texte-a-propos p {
   order: 3;
-  margin: 0 0 12px;
+  margin: 0 0 1rem;
   line-height: 1.8;
 }
 
@@ -725,17 +722,17 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 /* Desktop */
 @media (min-width: 1200px) {
   .a-propos {
-    padding: 80px 0;
+    padding: 4.5rem 0;
   }
   .contenu-a-propos {
-    padding: 0 32px;
+    padding: 0 2rem;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 3.5rem;
     align-items: center;
   }
   .titre-section {
     text-align: left;
-    margin: 0 0 60px;
+    margin: 0 0 3.5rem;
   }
 }
 /* =============================
@@ -747,8 +744,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 10px 30px;
-    gap: 30px;
+    padding: 2rem 0.5rem 2rem;
+    gap: 2rem;
     background: #1e3a5f;
     text-align: center;
     color: #ffffff;
@@ -763,8 +760,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 /* Bouton */
 .bouton-contact {
   display: inline-block;
-  padding: 1.125rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -777,7 +774,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   outline-offset: 3px;
 }
 .bouton-contact {
-  padding: 8px 50px;
+  padding: 0.5rem 3.5rem;
   margin-bottom: 20px;
   background-color: #a4a661;
   color: #ffffff;
@@ -803,8 +800,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   }
   .bouton-contact {
     display: inline-block;
-    padding: 1.125rem 2.5rem;
-    border-radius: 8px;
+    padding: 0.5rem 3.5rem;
+    border-radius: 6px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -838,8 +835,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 
 .titre-actualites {
   max-width: 1264px;
-  margin: 0 auto 40px;
-  padding: 0 32px;
+  margin: 0 auto 2.5rem;
+  padding: 0 2rem;
   text-align: left;
 }
 
@@ -849,7 +846,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 2.5rem;
   padding: 0 20px;
 }
 
@@ -893,13 +890,13 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 
 .date-actualite {
   color: #a4a661;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   display: block;
 }
 
 .contenu-actualite .titre-article {
   color: #1e3a5f;
-  margin: 0 0 15px;
+  margin: 0 0 1rem;
   text-align: left;
   /* retour à la ligne + gestion des mots longs */
   white-space: normal;
@@ -948,16 +945,16 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 /* Desktop */
 @media (min-width: 1200px) {
   .actualites {
-    padding: 80px 20px;
+    padding: 4.5rem 1rem;
   }
   .titre-actualites {
     text-align: left;
     max-width: 1264px;
     margin: 0 auto 24px;
-    padding: 0 32px; /* aligné avec la grille */
+    padding: 0 2rem; /* aligné avec la grille */
   }
   .grille-actualites {
-    padding: 0 32px;
+    padding: 0 2rem;
     grid-template-columns: 1fr auto 1fr auto 1fr;
     gap: 20px;
   }
@@ -977,17 +974,17 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 .article-detail {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 2.5rem 1rem;
 }
 
 /* Lien retour */
 .article-back {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   color: #a4a661;
   text-decoration: none;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   transition: opacity 0.3s ease;
 }
 .article-back:hover {
@@ -996,18 +993,18 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 
 /* En-tête */
 .article-header {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .article-date {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   color: #a4a661;
   font-size: 0.9rem;
 }
 
 .article-title {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   color: #1e3a5f;
 }
 
@@ -1016,8 +1013,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 40px;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
 }
 
 /* Contenu */
@@ -1026,8 +1023,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   line-height: 1.8;
 }
 .article-body h3 {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: #1e3a5f;
 }
 .article-body p {
@@ -1070,7 +1067,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .icone-promotion {
@@ -1090,8 +1087,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 
 .bouton-promotion {
   display: inline-block;
-  padding: 1.125rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1106,7 +1103,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 .bouton-promotion {
   background-color: #1e3a5f;
   color: #ffffff;
-  padding: 8px 50px;
+  padding: 0.5rem 3.5rem;
   margin: 0px;
 }
 .bouton-promotion:hover {
@@ -1134,7 +1131,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 /* HERO À PROPOS */
 .apropos-hero {
   background: #a4a661;
-  padding: 60px 20px;
+  padding: 3.5rem 1rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1191,7 +1188,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 }
 .team-section .team-member .role {
   color: #a4a661;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 .team-section .team-member p {
   max-width: 420px;
@@ -1227,7 +1224,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   text-align: center;
 }
 .farm-presentation .farm-image-wrapper {
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 2.5rem;
@@ -1270,7 +1267,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 
 .bandeau-promo-produit {
   background-color: #a4a661;
-  padding: 20px 40px;
+  padding: 1rem 2.5rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -1279,8 +1276,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 }
 .bandeau-promo-produit .bouton-promo-produit {
   display: inline-block;
-  padding: 1.125rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1306,7 +1303,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 ---------------------------------------------------- */
 .boutique-hero {
   background: #1e3a5f;
-  padding: 60px 20px;
+  padding: 3.5rem 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1368,7 +1365,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   margin-bottom: 2rem;
 }
 .modalite-cta .btn--white {
-  padding: 12px 32px;
+  padding: 6px 2rem;
   border-radius: 8px;
 }
 
@@ -1482,7 +1479,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   background-color: #a4a661;
   color: #ffffff;
   text-align: center;
-  padding: 48px 16px; /* mobile */
+  padding: 48px 1rem; /* mobile */
 }
 .actualites-hero h2 {
   margin-top: 5px;
@@ -1499,7 +1496,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 }
 @media (min-width: 768px) {
   .actualites-hero {
-    padding: 60px 20px;
+    padding: 3.5rem 1rem;
   }
 }
 
@@ -1508,7 +1505,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 -------------------------------------------- */
 .actualites-list {
   background: #f5f5f5;
-  padding: 60px 20px;
+  padding: 3.5rem 1rem;
 }
 .actualites-list .actualites-container {
   max-width: 1200px;
@@ -1529,7 +1526,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr; /* mobile */
-  gap: 56px; /* mobile */
+  gap: 3.5rem; /* mobile */
   /* tablet >= 768px */
 }
 @media (min-width: 768px) {
@@ -1542,7 +1539,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 }
 @media (min-width: 1200px) {
   .actualites-grid {
-    gap: 56px;
+    gap: 3.5rem;
   }
 }
 
@@ -1596,7 +1593,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   font-size: 0.85rem;
 }
 .actualite-card .actualite-content h2 {
-  margin: 6px 0 8px;
+  margin: 6px 0 0.5rem;
   color: #1e3a5f;
 }
 .actualite-card .actualite-content p {
@@ -1607,7 +1604,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 .actualite-card .actualite-content .actualite-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   color: #a4a661;
   text-decoration: none;
   transition: gap 0.3s, color 0.3s;
@@ -1621,7 +1618,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 @media (min-width: 1200px) {
   .actualite-card {
     grid-template-columns: 400px 1fr;
-    gap: 30px;
+    gap: 2rem;
     align-items: stretch;
   }
   .actualite-card .actualite-image-link img {
@@ -1629,7 +1626,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
     min-height: 260px;
   }
   .actualite-card .actualite-content {
-    padding: 30px;
+    padding: 2rem;
   }
 }
 
@@ -1640,7 +1637,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   background: #a4a661;
   color: #ffffff;
   text-align: center;
-  padding: 60px 20px;
+  padding: 3.5rem 1rem;
 }
 .contact-hero h2 {
   margin-top: 5px;
@@ -1688,7 +1685,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 .horaires-section-retrait {
   background-color: #f5f5f5;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 .coordonnees-grid {
@@ -1717,13 +1714,13 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   color: #a4a661;
 }
 
-.news-separator {
+.news-separator-contact {
   display: block;
   width: 12px;
   height: 12px;
   background-color: #a4a661;
   border-radius: 50%;
-  align-self: center;
+  margin: 0 auto;
 }
 
 /* Formulaire */
@@ -1743,7 +1740,9 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   display: block;
   margin-bottom: 6px;
 }
-.form-group input, .form-group textarea, .form-group select {
+.form-group input,
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 14px;
   border-radius: 8px;
@@ -1773,8 +1772,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 .btn-submit {
   background: #a4a661;
   color: #ffffff;
-  padding: 16px;
-  border-radius: 8px;
+  padding: 1rem;
+  border-radius: 6px;
   border: none;
   margin-top: 2rem;
   width: 100%;
@@ -1789,7 +1788,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   background-color: #1e3a5f;
   color: white;
   padding: 15px 20px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 0;
   margin-bottom: 2.5rem;
   margin-left: auto;
@@ -1819,7 +1818,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 .pied-de-page {
   overflow: visible;
   position: relative;
-  padding-top: 40px;
+  padding-top: 2.5rem;
   background-color: #ffffff;
 }
 
@@ -1874,10 +1873,10 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 
 @media (min-width: 1200px) {
   .contenu-pied-de-page {
-    padding: 0 32px;
-    margin-bottom: 40px;
+    padding: 0 2rem;
+    margin-bottom: 2.5rem;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 2.5rem;
   }
 }
 /* Colonne générique */
@@ -2054,7 +2053,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 =========================================== */
 @media (min-width: 768px) {
   .bouton-remonter {
-    right: 40px;
+    right: 2.5rem;
   }
   .contenu-pied-de-page {
     max-width: 768px;
@@ -2063,12 +2062,12 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 @media (min-width: 1200px) {
   .contenu-pied-de-page {
     max-width: 1264px;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     grid-template-columns: 3fr 2fr 2fr 3fr;
-    gap: 40px;
+    gap: 2.5rem;
   }
   .bouton-remonter {
-    right: 50px;
+    right: 3.5rem;
   }
 }
 /* ===========================
@@ -2076,14 +2075,14 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
    =========================== */
 .bandeau-cookies {
   position: fixed;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
   z-index: 1000;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 12px;
   border: 1px solid #a4a661;
-  padding: 16px;
+  padding: 1rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
@@ -2098,13 +2097,13 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 .bandeau-cookies-actions {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 /* Boutons */
 .btn {
-  padding: 10px 14px;
-  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
   font-size: 0.95rem;
@@ -2136,7 +2135,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 ================================== */
 .cgv {
   width: 100%;
-  padding: 24px 16px;
+  padding: 24px 1rem;
   background: #f5f5f5;
   color: #1e3a5f;
   /* conteneur */
@@ -2165,18 +2164,18 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 }
 .cgv__bloc {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 18px 16px;
-  margin: 14px 0;
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .cgv h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 0.5rem 0;
   font-family: "Playfair", serif;
   line-height: 1.3;
   letter-spacing: 0.01em;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 1200px) {
   .cgv h3 {
@@ -2198,7 +2197,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   background: #a4a661;
 }
 .cgv h4 {
-  margin: 14px 0 8px;
+  margin: 1rem 0 0.5rem;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.3;
@@ -2236,10 +2235,10 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 }
 .cgv__liste {
   margin: 10px 0 12px;
-  padding-left: 18px;
+  padding-left: 1rem;
 }
 .cgv__liste li {
-  margin: 0 0 8px;
+  margin: 0 0 0.5rem;
   line-height: 1.55;
 }
 .cgv__liste li strong {
@@ -2269,11 +2268,11 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   }
   .cgv__bloc {
     padding: 22px 22px;
-    margin: 16px 0;
-    border-radius: 18px;
+    margin: 1rem 0;
+    border-radius: 12px;
   }
   .cgv h3 {
-    padding-left: 14px;
+    padding-left: 1rem;
   }
   .cgv__liste {
     padding-left: 22px;
@@ -2284,15 +2283,15 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 ================================== */
 @media (min-width: 1200px) {
   .cgv {
-    padding: 40px 24px;
+    padding: 2.5rem 24px;
   }
   .cgv__header {
     margin-bottom: 26px;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
   }
   .cgv__bloc {
     padding: 26px 28px;
-    border-radius: 20px;
+    border-radius: 12px;
   }
   .cgv p {
     font-size: 1.02rem;
@@ -2302,12 +2301,12 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
    Bouton retour au site
 ================================== */
 .cgv-retour {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 .cgv-retour .btn-retour {
   display: inline-block;
-  padding: 1.125rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -2320,8 +2319,8 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   outline-offset: 3px;
 }
 .cgv-retour .btn-retour {
-  /* ajustements légers spécifiques */
   font-size: 0.9rem;
+  margin: 2rem;
   padding: 6px 14px;
   background-color: #1e3a5f;
   color: #ffffff;
@@ -2329,14 +2328,13 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 }
 .cgv-retour .btn-retour:hover, .cgv-retour .btn-retour:focus-visible {
   background-color: #1e3a5f;
-  transform: translateX(-2px);
 }
 
 @media (min-width: 1200px) {
   .cgv-retour {
     position: relative;
-    top: 30px;
-    left: 30px;
+    top: 2rem;
+    left: 2rem;
   }
 }
 /* ================================
@@ -2369,7 +2367,7 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 .form-group input {
   padding: 0.6rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .form-group input:focus {
   outline: none;
@@ -2377,13 +2375,29 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 }
 
 .login-button {
-  margin-top: 1rem;
-  padding: 0.7rem;
-  background-color: #a4a661;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+  display: inline-block;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
+  text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  border: 2px solid transparent;
+  text-align: center;
+}
+.login-button:focus-visible {
+  outline: 3px solid rgba(164, 166, 97, 0.6);
+  outline-offset: 3px;
+}
+.login-button {
+  background-color: #a4a661;
+  color: #ffffff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 .login-button:hover {
   background-color: #1e3a5f;
@@ -2406,29 +2420,20 @@ toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
 /* ================================
   CREATION DE COMPTE 
 ================================== */
-/* ===============================
-   Conteneur principal
-=============================== */
 .form-container {
   max-width: 800px;
   margin: 0 auto;
   background: #ffffff;
   padding: 3.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ===============================
-   Titres
-=============================== */
 h2 {
   margin-bottom: 2rem;
   margin-top: 5px;
 }
 
-/* ===============================
-   Form groups
-=============================== */
 .form-group {
   margin-bottom: 2rem;
 }
@@ -2437,7 +2442,9 @@ h2 {
   margin-bottom: 6px;
   font-weight: 500;
 }
-.form-group input, .form-group textarea, .form-group select {
+.form-group input,
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
@@ -2480,7 +2487,7 @@ h2 {
   background: #a4a661;
   color: #ffffff;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
   margin-top: 2rem;
   width: 100%;
@@ -2508,19 +2515,16 @@ h2 {
   text-decoration: underline;
 }
 
-/* =========================
-   Plan du site avec flèches
-========================= */
 /* ================================
    Bouton retour – Plan du site
 ================================== */
 .plan-retour {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 .plan-retour .plan-btn-retour {
   display: inline-block;
-  padding: 1.125rem 2.5rem;
-  border-radius: 8px;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -2557,7 +2561,7 @@ h2 {
 ========================= */
 .page-plan-site {
   width: 100%;
-  padding: 24px 16px;
+  padding: 24px 1rem;
   background: #f5f5f5;
   color: #1e3a5f;
   /* conteneur */
@@ -2570,22 +2574,19 @@ h2 {
   margin: 0 0 20px;
 }
 
-/* =========================
-   Sections
-========================= */
 .plan-site-section {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 18px 16px;
-  margin: 14px 0;
+  border-radius: 12px;
+  padding: 18px 1rem;
+  margin: 1rem 0;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .plan-site-section-titre {
-  margin: 0 0 14px;
+  margin: 0 0 1rem;
   position: relative;
-  padding-left: 12px;
+  padding-left: 1rem;
   color: #1e3a5f;
 }
 .plan-site-section-titre::before {
@@ -2599,12 +2600,9 @@ h2 {
   background: #a4a661;
 }
 
-/* =========================
-   LISTES
-========================= */
 .plan-site-liste {
   margin: 10px 0 0;
-  padding-left: 18px;
+  padding-left: 1rem;
 }
 
 .plan-site-liste-principale {
@@ -2626,7 +2624,7 @@ h2 {
 
 /* Items */
 .plan-site-item {
-  margin: 0 0 8px;
+  margin: 0 0 0.5rem;
   line-height: 1.55;
 }
 
@@ -2638,9 +2636,6 @@ h2 {
   text-decoration-thickness: 2px;
 }
 
-/* =========================
-   Accessibilité
-========================= */
 .page-plan-site :focus-visible {
   outline: 3px solid rgba(164, 166, 97, 0.35);
   outline-offset: 3px;
@@ -2652,12 +2647,12 @@ h2 {
 ========================= */
 @media (min-width: 768px) {
   .page-plan-site {
-    padding: 32px 20px;
+    padding: 2rem 20px;
   }
   .plan-site-section {
     padding: 22px 22px;
-    margin: 16px 0;
-    border-radius: 18px;
+    margin: 1rem 0;
+    border-radius: 12px;
   }
   .plan-site-section-titre {
     padding-left: 14px;
@@ -2671,16 +2666,94 @@ h2 {
 ========================= */
 @media (min-width: 1200px) {
   .page-plan-site {
-    padding: 40px 24px;
+    padding: 2.5rem 24px;
   }
   .plan-site-section {
     padding: 26px 28px;
-    border-radius: 20px;
+    border-radius: 12px;
   }
   .plan-site-retour {
     position: relative;
-    top: 30px;
-    left: 30px;
+    top: 2rem;
+    left: 2rem;
+  }
+}
+/* =========================
+   PANIER VIDE
+========================= */
+.panier {
+  padding: 20px 16px;
+}
+
+.panier-vide {
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panier-vide__contenu {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.panier-vide__icone {
+  font-size: 3rem;
+  line-height: 1;
+}
+.panier-vide h1 {
+  margin: 0;
+  color: #1e3a5f;
+}
+.panier-vide p {
+  margin: 0;
+  color: #1b1b1b;
+  max-width: 420px;
+}
+
+/* =========================
+   BOUTON
+========================= */
+.btn-panier {
+  display: inline-block;
+  padding: 0.5rem 3.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  border: 2px solid transparent;
+  text-align: center;
+}
+.btn-panier:focus-visible {
+  outline: 3px solid rgba(164, 166, 97, 0.6);
+  outline-offset: 3px;
+}
+.btn-panier {
+  background: #a4a661;
+  color: #ffffff;
+}
+.btn-panier:hover, .btn-panier:focus-visible {
+  background: #1e3a5f;
+  color: #ffffff;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1000px) {
+  .panier {
+    padding: 40px 20px;
+  }
+  .panier-vide__contenu {
+    padding: 36px 40px;
   }
 }
 

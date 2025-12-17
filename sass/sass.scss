@@ -1,4 +1,3 @@
-
 @use "variables" as *;
 @use "mixins" as *;
 
@@ -17,7 +16,6 @@
   outline-offset: 3px;
 }
 
-
 body {
   margin: 0;
   color: $blue-dark;
@@ -25,12 +23,24 @@ body {
   @include body-text;
 }
 
-h1 { @include heading(1); }
-h2 { @include heading(2); }
-h3 { @include heading(3); }
-h4 { @include heading(4); }
-h5 { @include heading(4); }
-h6 { @include heading(4); }
+h1 {
+  @include heading(1);
+}
+h2 {
+  @include heading(2);
+}
+h3 {
+  @include heading(3);
+}
+h4 {
+  @include heading(4);
+}
+h5 {
+  @include heading(4);
+}
+h6 {
+  @include heading(4);
+}
 
 a {
   @include lien-base;
@@ -155,10 +165,11 @@ img {
     li {
       list-style: none;
     }
-
+    .header-compte-mobile {
+      color: $blue-dark;
+    }
     a {
       display: block;
-      padding: 10px 0;
       color: $green-primary;
       font-weight: 500;
       text-decoration: none;
@@ -168,48 +179,45 @@ img {
         color: $blue-dark;
       }
     }
-    .header-compte {
-      color: $blue-dark
-    }
+    
     .header-lien-boutique {
       color: $blue-dark;
     }
 
-  /* Dropdown mobile */
-.dropdown {
-  .dropdown-menu {
-    display: none;
-    padding: $space-xs 0 ;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-    background: $white;
+    /* Dropdown mobile */
+    .dropdown {
+      .dropdown-menu {
+        display: none;
+        padding: $space-xs 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background: $white;
 
-    li {
-      width: 100%; 
+        li {
+          width: 100%;
 
-      &:hover {
-        background: $gray-light ;
+          &:hover {
+            background: $gray-light;
+          }
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          padding: 10px 16px;
+          color: $blue-dark;
+          text-decoration: none;
+        }
+        
+        .header-rouge {
+          color: $red-noel;
+        }
+      }
+
+      &.active .dropdown-menu {
+        display: block;
       }
     }
-
-    a {
-      display: block;         
-      width: 100%;
-      padding: 10px 16px;
-      color: $blue-dark;
-      text-decoration: none;
-    }
-
-    .header-rouge {
-      color: $red-noel;
-    }
-  }
-
-  &.active .dropdown-menu {
-    display: block;
-  }
-}
-
   }
 }
 
@@ -228,7 +236,6 @@ img {
     max-width: 1264px;
     margin: 0 auto;
     min-height: 90px;
-   
   }
 
   /* Logo + titre */
@@ -278,60 +285,57 @@ img {
       }
 
       &.active {
-      text-decoration: none;
-      color: $blue-dark;
+        text-decoration: none;
+        color: $blue-dark;
+      }
     }
-    }
-  } 
+  }
 
-    .header-lien-boutique {
-      color: $blue-dark;
-    }
+  .header-lien-boutique {
+    color: $blue-dark;
+  }
 
   /* Dropdown desktop */
-.dropdown {
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .dropdown {
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
 
-    min-width: 280px;
-    padding: 10px 0;
-    background: $white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      min-width: 280px;
+      padding: 10px 0;
+      background: $white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
-    li {
-      width: 100%;                toute la largeur du menu
+      li {
+        width: 100%;
+        toute la largeur du menu &:hover {
+          background: rgba(0, 0, 0, 0.05); // hover plein
+        }
+      }
 
-      &:hover {
-        background: rgba(0, 0, 0, 0.05); // hover plein
+      a {
+        display: block;
+        width: 100%;
+        padding: 10px 16px;
+        color: $blue-dark;
+        text-decoration: none;
+      }
+
+      .header-rouge {
+        color: $red-noel;
       }
     }
 
-    a {
-      display: block;           
-      width: 100%;
-      padding: 10px 16px;
-      color: $blue-dark;
-      text-decoration: none;
+    &:hover .dropdown-menu {
+      display: block;
     }
-
-    .header-rouge {
-      color: $red-noel;
-    }
-  }
-
-  &:hover .dropdown-menu {
-    display: block;
   }
 }
 
-  }
-
- 
- /* Bloc actions – NE PAS TOUCHER */
+/* Bloc actions – NE PAS TOUCHER */
 .header-actions {
   display: flex;
   align-items: center;
@@ -370,23 +374,18 @@ img {
   }
 }
 
-
 /* =========================
    NIVO SLIDER — MOBILE FIRST
    ========================= */
 
 .hero-slider-section {
   padding: 20px 0;
-  background:
-    radial-gradient(
-      1200px 400px at 50% -100px,
-      rgba(255,255,255,0.35),
-      rgba(164,166,97,0.9) 60%
-    );
+  background: radial-gradient(
+    1200px 400px at 50% -100px,
+    rgba(255, 255, 255, 0.35),
+    rgba(164, 166, 97, 0.9) 60%
+  );
 }
-
-
-
 
 /* Wrapper */
 .nivo-slider-wrapper {
@@ -400,8 +399,8 @@ img {
 .nivo-slider-container {
   position: relative;
   overflow: hidden;
-  height: 300px;               // mobile
-  border-radius: 12px;         // mobile
+  height: 300px; // mobile
+  border-radius: 12px; // mobile
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -497,7 +496,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: $space-sm;
 }
 
 .nivo-control {
@@ -526,14 +525,14 @@ img {
     border-color: #c41e3a;
   }
 }
-.button.nivo-control{
+.button.nivo-control {
   color: $blue-dark;
 }
 /* Small mobile */
 @media (max-width: 480px) {
   .nivo-slider-container {
     height: 250px;
-    border-radius: 8px;
+    border-radius: 12px;
   }
 
   .nivo-caption {
@@ -565,7 +564,7 @@ img {
 
   .nivo-slider-container {
     height: 500px;
-    border-radius: 16px;
+    border-radius: 12px;
   }
 
   .nivo-caption {
@@ -577,11 +576,6 @@ img {
       font-size: 1.8rem;
       margin-bottom: 10px;
     }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
   }
 
   .nivo-nav-btn {
@@ -590,31 +584,30 @@ img {
   }
 
   .nivo-control-nav {
-    margin-top: 30px;
+    margin-top: $space-md;
   }
 }
-
 
 /* =======================
    A PROPOS DE NOTRE FERME 
 ======================= */
 
 .a-propos {
-  padding: 60px 20px;
-  background: #f5f5f5;
+  padding: $space-xl $space-sm;
+  background: $gray-light;
 }
 
 /* Titre */
 .titre-section {
   color: $green-primary;
-  margin: 0 0 20px;
+  margin: 0 0 $space-sm;
   text-align: center;
 }
 
 .contenu-a-propos {
   max-width: 1264px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 $space-sm;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -638,7 +631,7 @@ img {
 
 .texte-a-propos p {
   order: 3;
-  margin: 0 0 12px;
+  margin: 0 0 $space-sm;
   line-height: 1.8;
 }
 
@@ -654,36 +647,35 @@ img {
 /* Desktop */
 @media (min-width: 1200px) {
   .a-propos {
-    padding: 80px 0;
+    padding: $space-xxl 0;
   }
 
   .contenu-a-propos {
-    padding: 0 32px;
+    padding: 0 $space-md;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: $space-xl;
     align-items: center;
   }
 
   .titre-section {
     text-align: left;
-    margin: 0 0 60px;
+    margin: 0 0 $space-xl;
   }
 }
-
 
 /* =============================
    CTA CONTACT
    ============================= */
 
-   /* Desktop */
+/* Desktop */
 @media (min-width: 1200px) {
   .section-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 10px 30px;
-    gap: 30px ;
-    background: $blue-dark; 
+    padding: $space-md $space-xs $space-md;
+    gap: $space-md;
+    background: $blue-dark;
     text-align: center;
     color: $white;
   }
@@ -697,12 +689,11 @@ img {
 
 /* Bouton */
 .bouton-contact {
-    @include btn-base;
-    padding: 8px 50px;
-    margin-bottom: 20px;
-    background-color: $green-primary;
-    color: $white;
-  
+  @include btn-base;
+  padding: $space-xs $space-xl;
+  margin-bottom: 20px;
+  background-color: $green-primary;
+  color: $white;
 
   &.bouton-contact:hover {
     background: $white;
@@ -733,16 +724,14 @@ img {
     margin-bottom: 20px;
     background-color: $green-primary;
     color: $white;
-  
 
-  &.bouton-contact:hover {
-    background: $white;
-    color: $green-primary;
-    transform: translateY(-2px);
+    &.bouton-contact:hover {
+      background: $white;
+      color: $green-primary;
+      transform: translateY(-2px);
+    }
   }
 }
-}
-
 
 /* =============================
    SECTION ACTUALITÉS (HOME)
@@ -750,13 +739,13 @@ img {
 
 .actualites {
   padding: 60px 20px;
-  background: $gray-light; 
+  background: $gray-light;
 }
 
 .titre-actualites {
   max-width: 1264px;
-  margin: 0 auto 40px;
-  padding: 0 32px;
+  margin: 0 auto $space-lg;
+  padding: 0 $space-md;
   text-align: left;
 }
 
@@ -766,7 +755,7 @@ img {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: $space-lg;
   padding: 0 20px;
 }
 
@@ -814,13 +803,13 @@ img {
 
 .date-actualite {
   color: $green-primary;
-  margin-bottom: 10px;
+  margin-bottom: $space-xs;
   display: block;
 }
 
 .contenu-actualite .titre-article {
   color: $blue-dark;
-  margin: 0 0 15px;
+  margin: 0 0 $space-sm;
   text-align: left;
 
   /* retour à la ligne + gestion des mots longs */
@@ -874,18 +863,18 @@ img {
 /* Desktop */
 @media (min-width: 1200px) {
   .actualites {
-    padding: 80px 20px;
+    padding: $space-xxl $space-sm;
   }
 
   .titre-actualites {
     text-align: left;
     max-width: 1264px;
     margin: 0 auto 24px;
-    padding: 0 32px; /* aligné avec la grille */
+    padding: 0 $space-md; /* aligné avec la grille */
   }
 
   .grille-actualites {
-    padding: 0 32px;
+    padding: 0 $space-md;
     grid-template-columns: 1fr auto 1fr auto 1fr;
     gap: 20px;
   }
@@ -909,18 +898,18 @@ img {
 .article-detail {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: $space-lg $space-sm;
 }
 
 /* Lien retour */
 .article-back {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: $space-xs;
 
   color: $green-primary;
   text-decoration: none;
-  margin-bottom: 30px;
+  margin-bottom: $space-md;
 
   transition: opacity 0.3s ease;
 
@@ -931,19 +920,19 @@ img {
 
 /* En-tête */
 .article-header {
-  margin-bottom: 40px;
+  margin-bottom: $space-lg;
 }
 
 .article-date {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: $space-sm;
 
   color: $green-primary;
   font-size: 0.9rem;
 }
 
 .article-title {
-  margin-bottom: 30px;
+  margin-bottom: $space-md;
   color: $blue-dark;
 }
 
@@ -953,8 +942,8 @@ img {
   height: 400px;
   object-fit: cover;
 
-  border-radius: 12px;
-  margin-bottom: 40px;
+  border-radius: 8px;
+  margin-bottom: $space-lg;
 }
 
 /* Contenu */
@@ -963,8 +952,8 @@ img {
   line-height: 1.8;
 
   h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: $space-md;
+    margin-bottom: $space-sm;
     color: $blue-dark;
   }
 
@@ -1001,8 +990,7 @@ img {
   PROMO NOEL (HOME)
    ============================= */
 
-
-   .bandeau-promotion {
+.bandeau-promotion {
   background: $red-noel;
   padding: 20px;
   display: flex;
@@ -1016,7 +1004,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: $space-sm;
 }
 
 .icone-promotion {
@@ -1038,7 +1026,7 @@ img {
   @include btn-base;
   background-color: $blue-dark;
   color: $white;
-  padding: 8px 50px;
+  padding: $space-xs $space-xl;
   margin: 0px;
 
   &:hover {
@@ -1064,8 +1052,6 @@ img {
   }
 }
 
-
-
 /* ----------------------------------------------------
    PAGE À PROPOS
 ---------------------------------------------------- */
@@ -1073,13 +1059,13 @@ img {
 /* HERO À PROPOS */
 .apropos-hero {
   background: $green-primary;
-  padding: 60px 20px ;
+  padding: $space-xl $space-sm;
   display: flex;
   flex-direction: column;
   text-align: center;
   color: $white;
 
-  h2{
+  h2 {
     margin-top: 5px;
   }
 
@@ -1124,7 +1110,7 @@ img {
       border-radius: 50%;
       object-fit: cover;
       margin: 0 auto $space-sm;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     h3 {
@@ -1134,7 +1120,7 @@ img {
 
     .role {
       color: $green-primary;
-      margin-bottom: 8px;
+      margin-bottom: $space-xs;
     }
 
     p {
@@ -1173,9 +1159,9 @@ img {
   }
 
   .farm-image-wrapper {
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin-bottom: $space-lg;
 
     img {
@@ -1216,7 +1202,7 @@ img {
 
 .bandeau-promo-produit {
   background-color: $green-primary;
-  padding: 20px 40px;
+  padding: $space-sm $space-lg;
   color: $white;
   display: flex;
   flex-direction: column;
@@ -1224,18 +1210,16 @@ img {
   align-items: center;
 
   .bouton-promo-produit {
-    @include btn-base ;
-    background-color : $blue-dark;
+    @include btn-base;
+    background-color: $blue-dark;
     color: $white;
-    
-    &:hover  {
+
+    &:hover {
       background-color: $white;
       color: $green-primary;
     }
   }
-
-  }
-
+}
 
 /* ----------------------------------------------------
    PAGE BOUTIQUE — MODALITÉS
@@ -1243,13 +1227,13 @@ img {
 
 .boutique-hero {
   background: $blue-dark;
-  padding: 60px 20px;
+  padding: $space-xl $space-sm;
   text-align: center;
   display: flex;
   flex-direction: column;
   color: $white;
 
-   h2 {
+  h2 {
     margin-top: 5px;
   }
 
@@ -1275,24 +1259,23 @@ img {
   // Mobile (base)
   padding: $space-md;
 
-  // Tablet et + (on augmente un peu)
+  // Tablet 
   @include tablet {
     padding: $space-lg;
   }
 
-  // Desktop plus large (optionnel)
+  // Desktop 
   @include desktop {
     padding: $space-xl $space-lg;
   }
 }
-
 
 /* CTA */
 .modalite-cta {
   text-align: center;
   margin-bottom: $space-lg;
   padding-bottom: $space-lg;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 
   .cta-title-responsive {
     color: $blue-dark;
@@ -1309,7 +1292,7 @@ img {
   }
 
   .btn--white {
-    padding: 12px 32px;
+    padding: 6px $space-md;
     border-radius: 8px;
   }
 }
@@ -1330,7 +1313,7 @@ img {
 .modalite-card {
   background: $white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
   // Mobile (base)
   padding: $space-md;
@@ -1347,8 +1330,6 @@ img {
     padding: $space-lg;
   }
 }
-
-
 
 /* INFORMATIONS */
 .modalite-info {
@@ -1399,7 +1380,6 @@ img {
     display: flex;
     flex-direction: column;
     gap: $space-md;
-    
 
     @include desktop {
       display: flex;
@@ -1408,7 +1388,7 @@ img {
     .info-item {
       background: $white;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       padding: $space-md;
 
       h4 {
@@ -1425,7 +1405,6 @@ img {
   }
 }
 
-
 /* ----------------------------------------------------
    PAGE ACTUALITÉS
 ---------------------------------------------------- */
@@ -1437,9 +1416,9 @@ img {
   background-color: $green-primary;
   color: $white;
   text-align: center;
-  padding: 48px 16px; /* mobile */
+  padding: 48px $space-sm; /* mobile */
 
-   h2 {
+  h2 {
     margin-top: 5px;
   }
 
@@ -1453,7 +1432,7 @@ img {
 
   /* tablet >= 768px */
   @media (min-width: 768px) {
-    padding: 60px 20px;
+    padding: $space-xl $space-sm;
   }
 }
 
@@ -1462,7 +1441,7 @@ img {
 -------------------------------------------- */
 .actualites-list {
   background: $gray-light;
-  padding: 60px 20px; 
+  padding: $space-xl $space-sm;
 
   .actualites-container {
     @include container(1200px);
@@ -1474,14 +1453,13 @@ img {
   }
 }
 
-
 .actualites-grid {
   max-width: 1100px;
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr; /* mobile */
-  gap: 56px; /* mobile */
+  gap: $space-xl; /* mobile */
 
   /* tablet >= 768px */
   @media (min-width: 768px) {
@@ -1490,7 +1468,7 @@ img {
 
   /* desktop >= 1200px */
   @media (min-width: 1200px) {
-    gap: 56px;
+    gap: $space-xl;
   }
 }
 
@@ -1501,7 +1479,7 @@ img {
   background: $white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 
   display: grid;
   grid-template-columns: 1fr; /* mobile: image au-dessus */
@@ -1509,7 +1487,7 @@ img {
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 
     .actualite-link {
       gap: 12px;
@@ -1551,7 +1529,7 @@ img {
     }
 
     h2 {
-      margin: 6px 0 8px;
+      margin: 6px 0 $space-xs;
       color: $blue-dark;
     }
 
@@ -1564,7 +1542,7 @@ img {
     .actualite-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: $space-xs;
       color: $green-primary;
       text-decoration: none;
       transition: gap 0.3s, color 0.3s;
@@ -1578,7 +1556,7 @@ img {
   /* desktop >= 1200px : image à gauche */
   @media (min-width: 1200px) {
     grid-template-columns: 400px 1fr;
-    gap: 30px;
+    gap: $space-md;
     align-items: stretch;
 
     .actualite-image-link img {
@@ -1587,11 +1565,10 @@ img {
     }
 
     .actualite-content {
-      padding: 30px;
+      padding: $space-md;
     }
   }
 }
-
 
 /* ----------------------------------------------------
    PAGE CONTACT
@@ -1601,7 +1578,7 @@ img {
   background: $green-primary;
   color: $white;
   text-align: center;
-  padding: 60px 20px;
+  padding: $space-xl $space-sm;
 
   h2 {
     margin-top: 5px;
@@ -1624,7 +1601,7 @@ img {
   background: $white;
   padding: $space-lg;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .horaires-list {
@@ -1638,14 +1615,19 @@ img {
     border-bottom: 1px solid #eee;
   }
 
-  .day { font-weight: 600; }
-  .closed { color: red; font-weight: 600; }
+  .day {
+    font-weight: 600;
+  }
+  .closed {
+    color: red;
+    font-weight: 600;
+  }
 }
 
-.horaires-section-retrait{
+.horaires-section-retrait {
   background-color: $gray-light;
   padding: $space-sm;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 .coordonnees-grid {
@@ -1658,15 +1640,14 @@ img {
     grid-template-columns: 1fr 20px 1fr 20px 1fr;
   }
 
-
   .coordonnee-card-blue {
-  background: $blue-dark;
-  color: $white;
-  padding: $space-lg;
-  border-radius: 12px;
-  text-align: center;
+    background: $blue-dark;
+    color: $white;
+    padding: $space-lg;
+    border-radius: 12px;
+    text-align: center;
   }
-  
+
   a {
     text-decoration: none;
     color: $white;
@@ -1677,13 +1658,13 @@ img {
   }
 }
 
- .news-separator{
+.news-separator-contact {
   display: block;
   width: 12px;
   height: 12px;
   background-color: $green-primary;
   border-radius: 50%;
-  align-self: center;
+  margin: 0 auto;
 }
 
 /* Formulaire */
@@ -1694,7 +1675,7 @@ img {
   background: $white;
   padding: $space-xl;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -1705,7 +1686,9 @@ img {
     margin-bottom: 6px;
   }
 
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     width: 100%;
     padding: 14px;
     border-radius: 8px;
@@ -1723,22 +1706,21 @@ img {
   }
 }
 
-.rgpd-checkbox{
+.rgpd-checkbox {
   font-size: 0.75rem;
 
-  a { 
+  a {
     text-decoration: none;
     cursor: pointer;
     color: $green-primary;
   }
-
 }
 
 .btn-submit {
   background: $green-primary;
   color: $white;
-  padding: 16px;
-  border-radius: 8px;
+  padding: $space-sm;
+  border-radius: 6px;
   border: none;
   margin-top: $space-md;
   width: 100%;
@@ -1751,18 +1733,17 @@ img {
 
 .confirmation-message {
   max-width: 800px;
-  background-color: $blue-dark;  
-  color: white;               
-  padding: 15px 20px;      
-  border-radius: 5px;  
-  margin-top: 0; 
-  margin-bottom: $space-lg ;    
-  margin-left: auto; 
-  margin-right: auto;        
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  animation: fadeIn 0.5s ease-out; 
+  background-color: $blue-dark;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-top: 0;
+  margin-bottom: $space-lg;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
   display: none;
-
 
   &.fade-out {
     opacity: 0;
@@ -1770,7 +1751,6 @@ img {
     visibility: hidden;
   }
 }
-
 
 /* Animation pour faire apparaître le message */
 @keyframes fadeIn {
@@ -1782,17 +1762,16 @@ img {
   }
 }
 
-
 /* =====================================================
    FOOTER - LA FERME DE BASILE
 ===================================================== */
 
-.pied-de-page { 
-  overflow: visible; 
+.pied-de-page {
+  overflow: visible;
   position: relative;
-  padding-top: 40px;
+  padding-top: $space-lg;
   background-color: $white;
- }
+}
 
 .bouton-remonter {
   position: absolute;
@@ -1836,8 +1815,6 @@ img {
   }
 }
 
-
-
 /* Contenu du pied de page */
 .contenu-pied-de-page {
   max-width: 1264px;
@@ -1851,10 +1828,10 @@ img {
 
 @include desktop {
   .contenu-pied-de-page {
-    padding: 0 32px;
-    margin-bottom: 40px;
+    padding: 0 $space-md;
+    margin-bottom: $space-lg;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: $space-lg;
   }
 }
 
@@ -1887,14 +1864,12 @@ img {
   align-items: center;
   gap: 10px;
   margin: 0 0 10px;
-  
 }
 
 .logo-pied-de-page img {
   width: 50px;
   height: 50px;
   transform: translateY(-10px);
-  
 }
 
 .titre-pied-de-page {
@@ -2039,7 +2014,7 @@ img {
 =========================================== */
 @include tablet {
   .bouton-remonter {
-    right: 40px;
+    right: $space-lg;
   }
 
   .contenu-pied-de-page {
@@ -2050,13 +2025,13 @@ img {
 @include desktop {
   .contenu-pied-de-page {
     max-width: 1264px;
-    margin-bottom: 40px;
+    margin-bottom: $space-lg;
     grid-template-columns: 3fr 2fr 2fr 3fr;
-    gap: 40px;
+    gap: $space-lg;
   }
 
   .bouton-remonter {
-    right: 50px;
+    right: $space-xl;
   }
 }
 
@@ -2064,17 +2039,17 @@ img {
    COOKIE 
    =========================== */
 
-   .bandeau-cookies {
+.bandeau-cookies {
   position: fixed;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
+  bottom: $space-sm;
+  left: $space-sm;
+  right: $space-sm;
   z-index: 1000;
 
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 12px;
   border: 1px solid $green-primary;
-  padding: 16px;
+  padding: $space-sm;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 
   display: flex;
@@ -2091,14 +2066,14 @@ img {
   &-actions {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: $space-xs;
   }
 }
 
 /* Boutons */
 .btn {
-  padding: 10px 14px;
-  border-radius: 12px;
+  padding: $space-xs $space-sm;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
   font-size: 0.95rem;
@@ -2129,13 +2104,12 @@ img {
   }
 }
 
-
 /* ================================
    CGV
 ================================== */
 .cgv {
   width: 100%;
-  padding: 24px 16px;
+  padding: 24px $space-sm;
   background: $gray-light;
   color: $blue-dark;
 
@@ -2157,15 +2131,15 @@ img {
   /* Blocs / Articles */
   &__bloc {
     background: $white;
-    border-radius: 16px;
-    padding: 18px 16px;
-    margin: 14px 0;
+    border-radius: 12px;
+    padding: $space-sm $space-sm;
+    margin: $space-sm 0;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(0, 0, 0, 0.06);
   }
 
   h3 {
-    margin: 0 0 10px 0;
+    margin: 0 0 $space-xs 0;
     @include heading(3);
     position: relative;
     padding-left: 12px;
@@ -2183,7 +2157,7 @@ img {
   }
 
   h4 {
-    margin: 14px 0 8px;
+    margin: $space-sm 0 $space-xs;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.3;
@@ -2214,10 +2188,10 @@ img {
   /* Listes */
   &__liste {
     margin: 10px 0 12px;
-    padding-left: 18px;
+    padding-left: $space-sm;
 
     li {
-      margin: 0 0 8px;
+      margin: 0 0 $space-xs;
       line-height: 1.55;
 
       strong {
@@ -2229,7 +2203,6 @@ img {
       margin-bottom: 0;
     }
   }
-
 
   strong {
     font-weight: 700;
@@ -2252,12 +2225,12 @@ img {
 
     &__bloc {
       padding: 22px 22px;
-      margin: 16px 0;
-      border-radius: 18px;
+      margin: $space-sm 0;
+      border-radius: 12px;
     }
 
     h3 {
-      padding-left: 14px;
+      padding-left: $space-sm;
     }
 
     &__liste {
@@ -2271,20 +2244,20 @@ img {
 ================================== */
 @media (min-width: 1200px) {
   .cgv {
-    padding: 40px 24px;
+    padding: $space-lg 24px;
 
     &__header {
       margin-bottom: 26px;
-      padding-bottom: 16px;
+      padding-bottom: $space-sm;
     }
 
     &__bloc {
       padding: 26px 28px;
-      border-radius: 20px;
+      border-radius: 12px;
     }
 
     p {
-      font-size: 1.02rem; 
+      font-size: 1.02rem;
     }
   }
 }
@@ -2292,13 +2265,12 @@ img {
    Bouton retour au site
 ================================== */
 .cgv-retour {
-  margin-bottom: 16px;
+  margin-bottom: $space-sm;
 
   .btn-retour {
     @include btn-base;
-
-    /* ajustements légers spécifiques */
     font-size: 0.9rem;
+    margin: $space-md;
     padding: 6px 14px;
     background-color: $blue-dark;
     color: $white;
@@ -2307,7 +2279,6 @@ img {
     &:hover,
     &:focus-visible {
       background-color: $blue-dark;
-      transform: translateX(-2px);
     }
   }
 }
@@ -2315,19 +2286,14 @@ img {
 @media (min-width: 1200px) {
   .cgv-retour {
     position: relative;
-    top: 30px;
-    left: 30px;
+    top: $space-md;
+    left: $space-md;
   }
 }
-
-
-
 
 /* ================================
   LOGIN
 ================================== */
-
-
 
 .account {
   max-width: 400px;
@@ -2358,7 +2324,7 @@ img {
   input {
     padding: 0.6rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
 
     &:focus {
       outline: none;
@@ -2368,13 +2334,15 @@ img {
 }
 
 .login-button {
-  margin-top: 1rem;
-  padding: 0.7rem;
-  background-color:$green-primary;
-  color: #fff;
+ @include btn-base;
+  background-color: $green-primary;
+  color: $white;
+  padding: 0.8rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s ease;
 
   &:hover {
     background-color: $blue-dark;
@@ -2397,36 +2365,25 @@ img {
   }
 }
 
-
 /* ================================
   CREATION DE COMPTE 
 ================================== */
 
-
-/* ===============================
-   Conteneur principal
-=============================== */
 .form-container {
   max-width: 800px;
   margin: 0 auto;
   background: $white;
   padding: $space-xl;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ===============================
-   Titres
-=============================== */
 h2 {
   margin-bottom: $space-md;
   margin-top: 5px;
-  
 }
 
-/* ===============================
-   Form groups
-=============================== */
+
 .form-group {
   margin-bottom: $space-md;
 
@@ -2436,7 +2393,9 @@ h2 {
     font-weight: 500;
   }
 
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -2480,7 +2439,7 @@ h2 {
   background: $green-primary;
   color: $white;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
   margin-top: $space-md;
   width: 100%;
@@ -2488,7 +2447,6 @@ h2 {
   cursor: pointer;
   transition: background 0.3s ease;
   margin: 10px 0;
- 
 
   &:hover {
     background: $blue-dark;
@@ -2500,9 +2458,8 @@ h2 {
 =============================== */
 .account-links {
   font-size: 0.9rem;
-  display: inline;       // pour que tout reste sur la même ligne
- 
-  
+  display: inline; // pour que tout reste sur la même ligne
+
   a {
     color: $green-primary;
     text-decoration: none;
@@ -2513,25 +2470,19 @@ h2 {
   }
 }
 
-
-/* =========================
-   Plan du site avec flèches
-========================= */
-
-
 /* ================================
    Bouton retour – Plan du site
 ================================== */
 
 .plan-retour {
-  margin-bottom: 16px;
+  margin-bottom: $space-sm;
 
   .plan-btn-retour {
     @include btn-base;
     background-color: $blue-dark;
     color: $white;
     border: 1px solid $white;
-    padding:6px 14px ;
+    padding: 6px 14px;
     font-size: 0.9rem;
 
     &:hover,
@@ -2551,13 +2502,13 @@ h2 {
   }
 }
 
-  /* =========================
+/* =========================
    PLAN DU SITE
 ========================= */
 
 .page-plan-site {
   width: 100%;
-  padding: 24px 16px;
+  padding: 24px $space-sm;
   background: $gray-light;
   color: $blue-dark;
 
@@ -2566,29 +2517,24 @@ h2 {
   margin: 0 auto;
 }
 
-
 /* Titre principal */
 .plan-site-titre {
   margin: 0 0 20px;
 }
 
-/* =========================
-   Sections
-========================= */
-
 .plan-site-section {
   background: $white;
-  border-radius: 16px;
-  padding: 18px 16px;
-  margin: 14px 0;
+  border-radius: 12px;
+  padding: 18px $space-sm;
+  margin: $space-sm 0;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .plan-site-section-titre {
-  margin: 0 0 14px;
+  margin: 0 0 $space-sm;
   position: relative;
-  padding-left: 12px;
+  padding-left: $space-sm;
   color: $blue-dark;
 
   &::before {
@@ -2603,52 +2549,43 @@ h2 {
   }
 }
 
-/* =========================
-   LISTES
-========================= */
-
 .plan-site-liste {
   margin: 10px 0 0;
-  padding-left: 18px;
+  padding-left: $space-sm;
 }
 
 .plan-site-liste-principale {
   list-style-type: disc;
-  color:$green-primary;
+  color: $green-primary;
 }
 
 .plan-site-liste-secondaire {
   list-style-type: circle;
   margin-top: 6px;
-color: $green-primary;
+  color: $green-primary;
 }
 
 .plan-site-liste-tertiaire {
   list-style-type: square;
   margin-top: 6px;
-  color:$green-primary;
+  color: $green-primary;
 }
 
 /* Items */
 .plan-site-item {
-  margin: 0 0 8px;
+  margin: 0 0 $space-xs;
   line-height: 1.55;
 }
 
 /* Liens */
 .plan-site-lien {
   color: $blue-dark;
-  
 
   &:hover,
   &:focus-visible {
     text-decoration-thickness: 2px;
   }
 }
-
-/* =========================
-   Accessibilité
-========================= */
 
 .page-plan-site :focus-visible {
   outline: 3px solid rgba($green-primary, 0.35);
@@ -2662,13 +2599,13 @@ color: $green-primary;
 
 @media (min-width: 768px) {
   .page-plan-site {
-    padding: 32px 20px;
+    padding: $space-md 20px;
   }
 
   .plan-site-section {
     padding: 22px 22px;
-    margin: 16px 0;
-    border-radius: 18px;
+    margin: $space-sm 0;
+    border-radius: 12px;
   }
 
   .plan-site-section-titre {
@@ -2686,17 +2623,92 @@ color: $green-primary;
 
 @media (min-width: 1200px) {
   .page-plan-site {
-    padding: 40px 24px;
+    padding: $space-lg 24px;
   }
 
   .plan-site-section {
     padding: 26px 28px;
-    border-radius: 20px;
+    border-radius: 12px;
   }
 
   .plan-site-retour {
     position: relative;
-    top: 30px;
-    left: 30px;
+    top: $space-md;
+    left: $space-md;
+  }
+}
+
+/* =========================
+   PANIER VIDE
+========================= */
+
+.panier {
+  padding: 20px 16px;
+}
+
+.panier-vide {
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__contenu {
+    background: $white;
+    border-radius: 18px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__icone {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  h1 {
+    margin: 0;
+    color: $blue-dark;
+  }
+
+  p {
+    margin: 0;
+    color: $gray-text;
+    max-width: 420px;
+  }
+}
+
+/* =========================
+   BOUTON
+========================= */
+
+.btn-panier {
+  @include btn-base;
+  background: $green-primary;
+  color: $white;
+
+  &:hover,
+  &:focus-visible {
+    background: $blue-dark;
+    color: $white;
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1000px) {
+  .panier {
+    padding: 40px 20px;
+  }
+
+  .panier-vide__contenu {
+    padding: 36px 40px;
   }
 }

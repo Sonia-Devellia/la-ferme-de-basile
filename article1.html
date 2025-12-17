@@ -1,291 +1,320 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article détail – Ferme de Basile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil – Ferme de Basile</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <!-- ========================= -->
+    <!-- HEADER MOBILE -->
+    <!-- ========================= -->
+    <header class="header-mobile">
+      <div class="header-mobile__content">
+        <!-- Burger -->
+        <button
+          class="header-burger"
+          id="mobileMenuBtn"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-<body>
- <!-- ========================= -->
-<!-- HEADER MOBILE -->
-<!-- ========================= -->
-<header class="header-mobile">
-  <div class="header-mobile__content">
+        <!-- Logo centré -->
+        <div class="header-logo">
+          <img
+            src="images/logo.jpg"
+            alt="Logo La Ferme de Basile"
+            class="header-logo-img"
+          />
+        </div>
 
-    <!-- Burger -->
-    <button class="header-burger" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Logo centré -->
-    <div class="header-logo">
-      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
-    </div>
-
-     <!-- Panier -->
-  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-  <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-</a>
-
-    <!-- Navigation mobile -->
-    <ul class="header-nav-mobile" id="mobileNavList">
-      <li><a href="login.html"class="header-compte">Mon compte </a></li>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-
-      <li class="dropdown" id="dropdown">
-        <a href="boutique.html" class="header-lien-boutique">
-          La Boutique ▾
+        <!-- Panier -->
+        <a href="panier.html" class="header-panier" aria-label="Voir le panier">
+          <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
         </a>
-        <ul class="dropdown-menu">
-          <li><a href="boutique.html#boucherie">Boucherie</a></li>
-          <li><a href="boutique.html#cremerie">Crèmerie</a></li>
-          <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
-          <li><a href="boutique.html#epicerie">Épicerie</a></li>
-          <li><a href="boutique.html#cave">La Cave</a></li>
-          <li>
-            <a href="boutique.html#produits-de-noel" class="header-rouge">
-              Les Produits de Noël
+
+        <!-- Navigation mobile -->
+        <ul class="header-nav-mobile" id="mobileNavList">
+          <li><a href="login.html" class="header-compte-mobile">Mon compte </a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+
+          <li class="dropdown" id="dropdown">
+            <a href="boutique.html" class="header-lien-boutique">
+              La Boutique ▾
             </a>
+            <ul class="dropdown-menu">
+              <li><a href="boutique.html#boucherie">Boucherie</a></li>
+              <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+              <li>
+                <a href="boutique.html#fruits-legumes">Fruits & Légumes</a>
+              </li>
+              <li><a href="boutique.html#epicerie">Épicerie</a></li>
+              <li><a href="boutique.html#cave">La Cave</a></li>
+              <li>
+                <a href="boutique.html#produits-de-noel" class="header-rouge">
+                  Les Produits de Noël
+                </a>
+              </li>
+            </ul>
           </li>
+
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-      </li>
+      </div>
+    </header>
 
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- ========================= -->
+    <!-- HEADER DESKTOP -->
+    <!-- ========================= -->
+    <header class="header-desktop">
+      <div class="header-desktop__content">
+        <!-- Logo + titre -->
+        <div class="header-logo">
+          <img
+            src="images/logo.jpg"
+            alt="Logo La Ferme de Basile"
+            class="header-logo-img"
+          />
+          <h1 class="header-titre-site">La Ferme de Basile</h1>
+        </div>
 
-  </div>
-</header>
+        <!-- Navigation desktop -->
+        <nav class="header-nav-desktop" aria-label="Navigation principale">
+          <ul class="header-nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
 
-<!-- ========================= -->
-<!-- HEADER DESKTOP -->
-<!-- ========================= -->
-<header class="header-desktop">
-  <div class="header-desktop__content">
+            <li class="dropdown">
+              <a href="boutique.html" class="header-lien-boutique">
+                La Boutique ▾
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="boutique.html#boucherie">Boucherie</a></li>
+                <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+                <li>
+                  <a href="boutique.html#fruits-legumes">Fruits & Légumes</a>
+                </li>
+                <li><a href="boutique.html#epicerie">Épicerie</a></li>
+                <li><a href="boutique.html#cave">La Cave</a></li>
+                <li>
+                  <a href="boutique.html#produits-de-noel" class="header-rouge">
+                    Les Produits de Noël
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-    <!-- Logo + titre -->
-    <div class="header-logo">
-      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
-      <h1 class="header-titre-site">La Ferme de Basile</h1>
-    </div>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-    <!-- Navigation desktop -->
-    <nav class="header-nav-desktop" aria-label="Navigation principale">
-      <ul class="header-nav-list">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-
-        <li class="dropdown">
-          <a href="boutique.html" class="header-lien-boutique">
-            La Boutique ▾
+        <!-- Panier -->
+        <div class="header-actions">
+          <a href="login.html" class="header-compte" aria-label="Mon compte">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>Mon compte</span>
           </a>
-          <ul class="dropdown-menu">
-            <li><a href="boutique.html#boucherie">Boucherie</a></li>
-            <li><a href="boutique.html#cremerie">Crèmerie</a></li>
-            <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
-            <li><a href="boutique.html#epicerie">Épicerie</a></li>
-            <li><a href="boutique.html#cave">La Cave</a></li>
+
+          <a
+            href="panier.html"
+            class="header-panier"
+            aria-label="Voir le panier"
+          >
+            <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="article-detail">
+        <a href="actualites.html" class="article-back"
+          >← Retour aux actualités</a
+        >
+
+        <div class="article-header">
+          <span class="article-date">20 Novembre 2025</span>
+          <h2 class="article-title">Atelier Biscuits de Noël pour Enfants</h2>
+        </div>
+
+        <img
+          src="images/articles1.jpg"
+          class="article-image"
+          alt="Atelier biscuits"
+        />
+
+        <div class="article-body">
+          <p>Atelier cuisine enfant dès 4 ans : Biscuits de Noël</p>
+
+          <p>
+            Venez vivre un moment cuisine convivial avec votre enfant (ou votre
+            petit-enfant), le tout encadré par une pâtissière diplômée qui
+            partage son savoir-faire avec passion.
+          </p>
+
+          <p>Un moment magique à vivre en famille pour préparer les fêtes.</p>
+
+          <h3>Au programme</h3>
+          <ul>
+            <li>Réalisation de biscuits sablés de Noël</li>
+            <li>Décoration des biscuits avec glaçages colorés</li>
+            <li>Dégustation sur place et biscuits à emporter</li>
+            <li>Apprentissage des techniques simples adaptées aux enfants</li>
+          </ul>
+
+          <h3>Informations pratiques</h3>
+          <ul>
+            <li>Dates : Chaque mercredi et samedi jusqu'au 20 décembre</li>
+            <li>Durée : 1h30 d'atelier</li>
+            <li>Âge : à partir de 4 ans</li>
+            <li>Tarif : 15€ par enfant — 10€ pour le second enfant</li>
+          </ul>
+
+          <h3>Lieu</h3>
+          <p>La Ferme de Basile — 700 avenue de Beaumont, Fosses</p>
+
+          <h3>Réservation</h3>
+          <p>Les places partent vite — réservation obligatoire.</p>
+          <ul>
+            <li>Par téléphone : 01 23 45 67 89</li>
+            <li>En ligne : www.lafermedebasile.fr</li>
+            <li>Par email : contact@lafermedebasile.fr</li>
+          </ul>
+
+          <p>
+            Chaque enfant repart avec sa boîte de biscuits personnalisée et un
+            petit diplôme de pâtissier.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="pied-de-page">
+      <!-- Bouton remonter en haut -->
+      <button class="bouton-remonter" id="boutonRemonter">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke="white"
+          fill="none"
+          stroke-width="2"
+        >
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+
+      <div class="contenu-pied-de-page">
+        <!-- COLONNE 1 : Présentation -->
+        <div class="colonne-pied-de-page">
+          <div class="logo-pied-de-page">
+            <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
+            <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
+          </div>
+
+          <p class="texte-pied-de-page">
+            Des produits frais et locaux cultivés avec passion depuis 1985.
+          </p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div
+          class="colonne-pied-de-page colonne-accordeon"
+          id="colonneNavigation"
+        >
+          <h3 class="titre-accordeon" id="boutonNavigation">Navigation</h3>
+
+          <ul class="liste-navigation">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="boutique.html">La boutique</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Mon compte</a></li>
+            <li><a href="panier.html">Panier</a></li>
+          </ul>
+        </div>
+
+        <!-- INFORMATIONS -->
+        <div
+          class="colonne-pied-de-page colonne-accordeon"
+          id="colonneInformations"
+        >
+          <h3 class="titre-accordeon" id="boutonInformations">Informations</h3>
+
+          <ul class="liste-informations">
+            <li><a href="boutique.html">Livraison</a></li>
+            <li><a href="boutique.html">Paiement</a></li>
+            <li><a href="cgv.html">CGV</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="plandusite.html">Plan du site </a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="colonne-pied-de-page">
+          <h3 class="titre-pied-de-page">Contact</h3>
+
+          <ul class="liste-contact">
+            <li>700 avenue de beaumont 95470 fosses</li>
+            <li>01 23 45 67 89</li>
             <li>
-              <a href="boutique.html#produits-de-noel" class="header-rouge">
-                Les Produits de Noël
+              <a
+                href="mailto:contact@basilicferme.fr"
+                aria-label="Envoyer un email à La Ferme de Basile"
+              >
+                contact@basilicferme.fr
               </a>
             </li>
           </ul>
-        </li>
 
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Panier -->
-     <div class="header-actions">
-  <a href="login.html" class="header-compte" aria-label="Mon compte">
-    <i class="fa-regular fa-user" aria-hidden="true"></i>
-    <span>Mon compte</span>
-  </a>
-
-  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-    <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-  </a>
-</div> 
-
-  </div>
-</header>
-
-  <main>
-
-   <div class="article-detail">
-
-  <a href="actualites.html" class="article-back">← Retour aux actualités</a>
-
-  <div class="article-header">
-    <span class="article-date">20 Novembre 2025</span>
-    <h2 class="article-title">Atelier Biscuits de Noël pour Enfants</h2>
-  </div>
-
-  <img src="images/articles1.jpg" class="article-image" alt="Atelier biscuits">
-
-  <div class="article-body">
-
-    <p>Atelier cuisine enfant dès 4 ans : Biscuits de Noël</p>
-
-    <p>
-      Venez vivre un moment cuisine convivial avec votre enfant (ou votre petit-enfant),
-      le tout encadré par une pâtissière diplômée qui partage son savoir-faire avec passion.
-    </p>
-
-    <p>
-      Un moment magique à vivre en famille pour préparer les fêtes.
-    </p>
-
-    <h3>Au programme</h3>
-    <ul>
-      <li>Réalisation de biscuits sablés de Noël</li>
-      <li>Décoration des biscuits avec glaçages colorés</li>
-      <li>Dégustation sur place et biscuits à emporter</li>
-      <li>Apprentissage des techniques simples adaptées aux enfants</li>
-    </ul>
-
-    <h3>Informations pratiques</h3>
-    <ul>
-      <li>Dates : Chaque mercredi et samedi jusqu'au 20 décembre</li>
-      <li>Durée : 1h30 d'atelier</li>
-      <li>Âge : à partir de 4 ans</li>
-      <li>Tarif : 15€ par enfant — 10€ pour le second enfant</li>
-    </ul>
-
-    <h3>Lieu</h3>
-    <p>
-      La Ferme de Basile — 700 avenue de Beaumont, Fosses
-    </p>
-
-    <h3>Réservation</h3>
-    <p>
-      Les places partent vite — réservation obligatoire.
-    </p>
-    <ul>
-      <li>Par téléphone : 01 23 45 67 89</li>
-      <li>En ligne : www.lafermedebasile.fr</li>
-      <li>Par email : contact@lafermedebasile.fr</li>
-    </ul>
-
-    <p>
-      Chaque enfant repart avec sa boîte de biscuits personnalisée
-      et un petit diplôme de pâtissier.
-    </p>
-
-  </div>
-
-</div>
- 
-
-  </main>
-
-  <!-- FOOTER -->
-
- <footer class="pied-de-page">
-
-  <!-- Bouton remonter en haut -->
-  <button class="bouton-remonter" id="boutonRemonter">
-    <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <div class="contenu-pied-de-page">
-
-    <!-- COLONNE 1 : Présentation -->
-    <div class="colonne-pied-de-page">
-      <div class="logo-pied-de-page">
-        <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
-        <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
+          <div class="liens-sociaux">
+            <a
+              href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <p class="texte-pied-de-page">
-        Des produits frais et locaux cultivés avec passion depuis 1985.
-      </p>
-    </div>
-
-    <!-- NAVIGATION -->
-    <div class="colonne-pied-de-page colonne-accordeon" id="colonneNavigation">
-      <h3 class="titre-accordeon" id="boutonNavigation">
-        Navigation
-      </h3>
-
-      <ul class="liste-navigation">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="boutique.html">La boutique</a></li>
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Mon compte</a></li>
-        <li><a href="panier.html">Panier</a></li>
-      </ul>
-    </div>
-
-    <!-- INFORMATIONS -->
-    <div class="colonne-pied-de-page colonne-accordeon" id="colonneInformations">
-      <h3 class="titre-accordeon" id="boutonInformations">
-        Informations
-      </h3>
-
-      <ul class="liste-informations">
-        <li><a href="boutique.html">Livraison</a></li>
-        <li><a href="#">Paiement</a></li>
-        <li><a href="cgv.html">CGV</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Confidentialité</a></li>
-      </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="colonne-pied-de-page">
-      <h3 class="titre-pied-de-page">Contact</h3>
-
-      <ul class="liste-contact">
-        <li>700 avenue de beaumont 95470 fosses</li>
-        <li> 01 23 45 67 89</li>
-        <li>
-  <a href="mailto:contact@basilicferme.fr" aria-label="Envoyer un email à La Ferme de Basile">
-    contact@basilicferme.fr
-  </a>
-</li>
-
-      </ul>
-
-      <div class="liens-sociaux">
-        <a href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA" target="_blank" rel="noopener noreferrer"  aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
+      <div class="bas-de-page">
+        <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
       </div>
-    </div>
+    </footer>
 
-  </div>
-
-  <div class="bas-de-page">
-    <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
-  </div>
-
-</footer>
-
-  <script src="scripts.js"></script>
-</body>
-</html>
-
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>
