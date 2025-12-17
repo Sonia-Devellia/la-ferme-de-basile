@@ -6,12 +6,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accueil – Ferme de Basile</title>
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
  <!-- ========================= -->
@@ -32,18 +31,13 @@
       <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
     </div>
 
-    <!-- Panier -->
-    <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
-        <circle cx="9" cy="21" r="1"></circle>
-        <circle cx="20" cy="21" r="1"></circle>
-        <path d="M1 1h4l2.68 13.39a2 0 1 0 2 1.61h9.72a2 1.61L23 6H6"></path>
-      </svg>
-    </a>
-
+     <!-- Panier -->
+  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
+  <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+</a>
     <!-- Navigation mobile -->
     <ul class="header-nav-mobile" id="mobileNavList">
-      <li><a href="mon-compte.html"class="header-compte">Mon compte </a></li>
+      <li><a href="login.html"class="header-compte">Mon compte </a></li>
       <li><a href="index.html">Accueil</a></li>
       <li><a href="apropos.html">À propos</a></li>
 
@@ -115,7 +109,7 @@
 
     <!-- Panier -->
      <div class="header-actions">
-  <a href="compte.html" class="header-compte" aria-label="Mon compte">
+  <a href="login.html" class="header-compte" aria-label="Mon compte">
     <i class="fa-regular fa-user" aria-hidden="true"></i>
     <span>Mon compte</span>
   </a>
@@ -257,6 +251,8 @@
         <li><a href="boutique.html">La boutique</a></li>
         <li><a href="actualites.html">Actualités</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Mon compte</a></li>
+        <li><a href="panier.html">Panier</a></li>
       </ul>
     </div>
 
@@ -267,9 +263,9 @@
       </h3>
 
       <ul class="liste-informations">
-        <li><a href="#">Livraison</a></li>
+        <li><a href="boutique.html">Livraison</a></li>
         <li><a href="#">Paiement</a></li>
-        <li><a href="#">CGV</a></li>
+        <li><a href="cgv.html">CGV</a></li>
         <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Confidentialité</a></li>
       </ul>

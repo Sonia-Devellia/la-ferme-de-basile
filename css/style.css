@@ -400,13 +400,17 @@ img {
 .header-desktop .header-nav-list a:hover {
   color: #1e3a5f;
 }
-.header-desktop .header-nav-list .header-lien-boutique {
+.header-desktop .header-nav-list a.active {
+  text-decoration: none;
   color: #1e3a5f;
 }
-.header-desktop .header-nav-list {
+.header-desktop .header-lien-boutique {
+  color: #1e3a5f;
+}
+.header-desktop {
   /* Dropdown desktop */
 }
-.header-desktop .header-nav-list .dropdown .dropdown-menu {
+.header-desktop .dropdown .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -417,51 +421,47 @@ img {
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.header-desktop .header-nav-list .dropdown .dropdown-menu li {
+.header-desktop .dropdown .dropdown-menu li {
   width: 100%;
 }
-toute la largeur du menu .header-desktop .header-nav-list .dropdown .dropdown-menu li:hover {
+toute la largeur du menu .header-desktop .dropdown .dropdown-menu li:hover {
   background: rgba(0, 0, 0, 0.05);
 }
-.header-desktop .header-nav-list .dropdown .dropdown-menu a {
+.header-desktop .dropdown .dropdown-menu a {
   display: block;
   width: 100%;
   padding: 10px 16px;
   color: #1e3a5f;
   text-decoration: none;
 }
-.header-desktop .header-nav-list .dropdown .dropdown-menu .header-rouge {
+.header-desktop .dropdown .dropdown-menu .header-rouge {
   color: #c41e3a;
 }
-.header-desktop .header-nav-list .dropdown:hover .dropdown-menu {
+.header-desktop .dropdown:hover .dropdown-menu {
   display: block;
 }
-.header-desktop {
-  /* Bloc actions – NE PAS TOUCHER */
-}
-.header-desktop .header-actions {
+
+/* Bloc actions – NE PAS TOUCHER */
+.header-actions {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.header-desktop {
-  /* Mon compte */
-}
-.header-desktop .header-compte {
+
+/* Mon compte */
+.header-compte {
   color: #1e3a5f;
   transform: translateX(50px);
 }
-.header-desktop {
-  /* Panier */
-}
-.header-desktop .header-panier {
+
+/* Panier */
+.header-panier {
   color: #1e3a5f;
   transform: translateX(50px);
 }
-.header-desktop {
-  /* Ajustement vertical icône panier */
-}
-.header-desktop .header-panier i {
+
+/* Ajustement vertical icône panier */
+.header-panier i {
   position: relative;
   top: -2px;
 }
@@ -1427,6 +1427,51 @@ toute la largeur du menu .header-desktop .header-nav-list .dropdown .dropdown-me
   margin-bottom: 6px;
 }
 
+/* SECTION PAIEMENT */
+.paiement-section {
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .paiement-section {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .paiement-section {
+    padding: 3.5rem 2.5rem;
+  }
+}
+.paiement-section h3 {
+  color: #a4a661;
+  margin-bottom: 2rem;
+}
+.paiement-section .paiement-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 1200px) {
+  .paiement-section .paiement-info {
+    display: flex;
+  }
+}
+.paiement-section .paiement-info .info-item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+.paiement-section .paiement-info .info-item h4 {
+  color: #1e3a5f;
+  margin-bottom: 6px;
+}
+.paiement-section .paiement-info .info-item p {
+  color: #1b1b1b;
+  margin: 0;
+  line-height: 1.7;
+}
+
 /* ----------------------------------------------------
    PAGE ACTUALITÉS
 ---------------------------------------------------- */
@@ -2289,6 +2334,350 @@ toute la largeur du menu .header-desktop .header-nav-list .dropdown .dropdown-me
 
 @media (min-width: 1200px) {
   .cgv-retour {
+    position: relative;
+    top: 30px;
+    left: 30px;
+  }
+}
+/* ================================
+  LOGIN
+================================== */
+.account {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.account-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+.form-group input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: #1e3a5f;
+}
+
+.login-button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: #a4a661;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-button:hover {
+  background-color: #1e3a5f;
+}
+
+.account-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.account-links a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #1e3a5f;
+}
+.account-links a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+  CREATION DE COMPTE 
+================================== */
+/* ===============================
+   Conteneur principal
+=============================== */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   Titres
+=============================== */
+h2 {
+  margin-bottom: 2rem;
+  margin-top: 5px;
+}
+
+/* ===============================
+   Form groups
+=============================== */
+.form-group {
+  margin-bottom: 2rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+}
+
+/* ===============================
+   Rows pour 2 colonnes
+=============================== */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===============================
+   RGPD
+=============================== */
+.rgpd-checkbox {
+  display: inline;
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}
+.rgpd-checkbox a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #a4a661;
+}
+
+/* ===============================
+   Bouton
+=============================== */
+.btn-submit {
+  background: #a4a661;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 10px 0;
+}
+.btn-submit:hover {
+  background: #1e3a5f;
+}
+
+/* ===============================
+   Liens "déjà un compte"
+=============================== */
+.account-links {
+  font-size: 0.9rem;
+  display: inline;
+}
+.account-links a {
+  color: #a4a661;
+  text-decoration: none;
+}
+.account-links a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Plan du site avec flèches
+========================= */
+/* ================================
+   Bouton retour – Plan du site
+================================== */
+.plan-retour {
+  margin-bottom: 16px;
+}
+.plan-retour .plan-btn-retour {
+  display: inline-block;
+  padding: 1.125rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  border: 2px solid transparent;
+  text-align: center;
+}
+.plan-retour .plan-btn-retour:focus-visible {
+  outline: 3px solid rgba(164, 166, 97, 0.6);
+  outline-offset: 3px;
+}
+.plan-retour .plan-btn-retour {
+  background-color: #1e3a5f;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+}
+.plan-retour .plan-btn-retour:hover, .plan-retour .plan-btn-retour:focus-visible {
+  transform: translateX(-2px);
+}
+
+/* Desktop : bouton fixé à gauche */
+@media (min-width: 1200px) {
+  .plan-btn-retour {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+  }
+}
+/* =========================
+   PLAN DU SITE
+========================= */
+.page-plan-site {
+  width: 100%;
+  padding: 24px 16px;
+  background: #f5f5f5;
+  color: #1e3a5f;
+  /* conteneur */
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Titre principal */
+.plan-site-titre {
+  margin: 0 0 20px;
+}
+
+/* =========================
+   Sections
+========================= */
+.plan-site-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 16px;
+  margin: 14px 0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.plan-site-section-titre {
+  margin: 0 0 14px;
+  position: relative;
+  padding-left: 12px;
+  color: #1e3a5f;
+}
+.plan-site-section-titre::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 4px;
+  height: 1.15em;
+  border-radius: 99px;
+  background: #a4a661;
+}
+
+/* =========================
+   LISTES
+========================= */
+.plan-site-liste {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.plan-site-liste-principale {
+  list-style-type: disc;
+  color: #a4a661;
+}
+
+.plan-site-liste-secondaire {
+  list-style-type: circle;
+  margin-top: 6px;
+  color: #a4a661;
+}
+
+.plan-site-liste-tertiaire {
+  list-style-type: square;
+  margin-top: 6px;
+  color: #a4a661;
+}
+
+/* Items */
+.plan-site-item {
+  margin: 0 0 8px;
+  line-height: 1.55;
+}
+
+/* Liens */
+.plan-site-lien {
+  color: #1e3a5f;
+}
+.plan-site-lien:hover, .plan-site-lien:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
+/* =========================
+   Accessibilité
+========================= */
+.page-plan-site :focus-visible {
+  outline: 3px solid rgba(164, 166, 97, 0.35);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+  .page-plan-site {
+    padding: 32px 20px;
+  }
+  .plan-site-section {
+    padding: 22px 22px;
+    margin: 16px 0;
+    border-radius: 18px;
+  }
+  .plan-site-section-titre {
+    padding-left: 14px;
+  }
+  .plan-site-liste {
+    padding-left: 22px;
+  }
+}
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1200px) {
+  .page-plan-site {
+    padding: 40px 24px;
+  }
+  .plan-site-section {
+    padding: 26px 28px;
+    border-radius: 20px;
+  }
+  .plan-site-retour {
     position: relative;
     top: 30px;
     left: 30px;

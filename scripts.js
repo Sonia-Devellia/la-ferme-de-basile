@@ -37,6 +37,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Mise en avant nav active
+
+// Récupère le nom du fichier de la page actuelle
+const currentPage = window.location.pathname.split("/").pop() || 'index.html'; // si pas de fichier, default index.html
+
+// Sélectionne tous les liens du menu
+const menuLinks = document.querySelectorAll('.header-nav-desktop a');
+
+menuLinks.forEach(link => {
+  // Récupère le fichier du lien
+  const linkPage = link.getAttribute('href').split("/").pop();
+
+  // Si le lien correspond à la page actuelle
+  if (linkPage === currentPage) {
+    link.classList.add('active');  // ajoute active au lien courant
+  } else {
+    link.classList.remove('active'); // enlève active des autres
+  }
+});
+
+
+
 
   // ========================================
   // SLIDER (uniquement sur la home)

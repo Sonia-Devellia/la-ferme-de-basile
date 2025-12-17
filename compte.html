@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil – Ferme de Basile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <main>
+
+       <nav class="cgv-retour" aria-label="Retour au site">
+  <a href="index.html" class="btn-retour">
+    Retour au site
+  </a>
+</nav> 
+
+    <div class="form-container">
+
+  <h2>Créer un compte</h2>
+
+  <form action="#" method="post">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="firstname">Prénom</label>
+        <input type="text" id="firstname" name="firstname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Nom</label>
+        <input type="text" id="lastname" name="lastname" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="address">Adresse</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="zipcode">Code postal</label>
+        <input type="text" id="zipcode" name="zipcode" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="city">Ville</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password_confirm">Confirmer le mot de passe</label>
+        <input type="password" id="password_confirm" name="password_confirm" required>
+      </div>
+    </div>
+
+     <label class="rgpd-checkbox">
+            <input type="checkbox" name="accept_rgpd" required>
+              J'accepte la collecte et le traitement de mes données personnelles conformément à la <a href="#/politique-de-confidentialité" target="_blank"> politique de confidentialité</a>.
+           </label>
+
+    <button type="submit" class="btn-submit">Créer mon compte</button>
+
+    <p class="account-links">Déjà un compte ? 
+      <a href="login.html">Se connecter</a>
+    </p>
+
+  </form>
+
+</div>

@@ -1,310 +1,360 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil – Ferme de Basile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil – Ferme de Basile</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <body>
+    <!-- ========================= -->
+    <!-- HEADER MOBILE -->
+    <!-- ========================= -->
+    <header class="header-mobile">
+      <div class="header-mobile__content">
+        <!-- Burger -->
+        <button
+          class="header-burger"
+          id="mobileMenuBtn"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-</head>
+        <!-- Logo centré -->
+        <div class="header-logo">
+          <img
+            src="images/logo.jpg"
+            alt="Logo La Ferme de Basile"
+            class="header-logo-img"
+          />
+        </div>
 
-<body>
- <!-- ========================= -->
-<!-- HEADER MOBILE -->
-<!-- ========================= -->
-<header class="header-mobile">
-  <div class="header-mobile__content">
-
-    <!-- Burger -->
-    <button class="header-burger" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Logo centré -->
-    <div class="header-logo">
-      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
-    </div>
-
-    <!-- Panier -->
-    <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
-        <circle cx="9" cy="21" r="1"></circle>
-        <circle cx="20" cy="21" r="1"></circle>
-        <path d="M1 1h4l2.68 13.39a2 0 1 0 2 1.61h9.72a2 1.61L23 6H6"></path>
-      </svg>
-    </a>
-
-    <!-- Navigation mobile -->
-    <ul class="header-nav-mobile" id="mobileNavList">
-      <li><a href="mon-compte.html"class="header-compte">Mon compte </a></li>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-
-      <li class="dropdown" id="dropdown">
-        <a href="boutique.html" class="header-lien-boutique">
-          La Boutique ▾
+        <!-- Panier -->
+        <a href="panier.html" class="header-panier" aria-label="Voir le panier">
+          <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
         </a>
-        <ul class="dropdown-menu">
-          <li><a href="boutique.html#boucherie">Boucherie</a></li>
-          <li><a href="boutique.html#cremerie">Crèmerie</a></li>
-          <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
-          <li><a href="boutique.html#epicerie">Épicerie</a></li>
-          <li><a href="boutique.html#cave">La Cave</a></li>
-          <li>
-            <a href="boutique.html#produits-de-noel" class="header-rouge">
-              Les Produits de Noël
+
+        <!-- Navigation mobile -->
+        <ul class="header-nav-mobile" id="mobileNavList">
+          <li><a href="login.html" class="header-compte">Mon compte </a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+
+          <li class="dropdown" id="dropdown">
+            <a href="boutique.html" class="header-lien-boutique">
+              La Boutique ▾
             </a>
+            <ul class="dropdown-menu">
+              <li><a href="boutique.html#boucherie">Boucherie</a></li>
+              <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+              <li>
+                <a href="boutique.html#fruits-legumes">Fruits & Légumes</a>
+              </li>
+              <li><a href="boutique.html#epicerie">Épicerie</a></li>
+              <li><a href="boutique.html#cave">La Cave</a></li>
+              <li>
+                <a href="boutique.html#produits-de-noel" class="header-rouge">
+                  Les Produits de Noël
+                </a>
+              </li>
+            </ul>
           </li>
+
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-      </li>
+      </div>
+    </header>
 
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- ========================= -->
+    <!-- HEADER DESKTOP -->
+    <!-- ========================= -->
+    <header class="header-desktop">
+      <div class="header-desktop__content">
+        <!-- Logo + titre -->
+        <div class="header-logo">
+          <img
+            src="images/logo.jpg"
+            alt="Logo La Ferme de Basile"
+            class="header-logo-img"
+          />
+          <h1 class="header-titre-site">La Ferme de Basile</h1>
+        </div>
 
-  </div>
-</header>
+        <!-- Navigation desktop -->
+        <nav class="header-nav-desktop" aria-label="Navigation principale">
+          <ul class="header-nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
 
-<!-- ========================= -->
-<!-- HEADER DESKTOP -->
-<!-- ========================= -->
-<header class="header-desktop">
-  <div class="header-desktop__content">
+            <li class="dropdown">
+              <a href="boutique.html" class="header-lien-boutique">
+                La Boutique ▾
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="boutique.html#boucherie">Boucherie</a></li>
+                <li><a href="boutique.html#cremerie">Crèmerie</a></li>
+                <li>
+                  <a href="boutique.html#fruits-legumes">Fruits & Légumes</a>
+                </li>
+                <li><a href="boutique.html#epicerie">Épicerie</a></li>
+                <li><a href="boutique.html#cave">La Cave</a></li>
+                <li>
+                  <a href="boutique.html#produits-de-noel" class="header-rouge">
+                    Les Produits de Noël
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-    <!-- Logo + titre -->
-    <div class="header-logo">
-      <img src="images/logo.jpg" alt="Logo La Ferme de Basile" class="header-logo-img" />
-      <h1 class="header-titre-site">La Ferme de Basile</h1>
-    </div>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-    <!-- Navigation desktop -->
-    <nav class="header-nav-desktop" aria-label="Navigation principale">
-      <ul class="header-nav-list">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-
-        <li class="dropdown">
-          <a href="boutique.html" class="header-lien-boutique">
-            La Boutique ▾
+        <!-- Panier -->
+        <div class="header-actions">
+          <a href="login.html" class="header-compte" aria-label="Mon compte">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>Mon compte</span>
           </a>
-          <ul class="dropdown-menu">
-            <li><a href="boutique.html#boucherie">Boucherie</a></li>
-            <li><a href="boutique.html#cremerie">Crèmerie</a></li>
-            <li><a href="boutique.html#fruits-legumes">Fruits & Légumes</a></li>
-            <li><a href="boutique.html#epicerie">Épicerie</a></li>
-            <li><a href="boutique.html#cave">La Cave</a></li>
+
+          <a
+            href="panier.html"
+            class="header-panier"
+            aria-label="Voir le panier"
+          >
+            <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="boutique-hero">
+        <h2>La Boutique</h2>
+        <p>
+          Découvrez notre sélection de produits frais et locaux, cultivés avec
+          passion et dans le respect de la nature.
+        </p>
+      </section>
+
+      <!-- CONTAINER PRINCIPAL -->
+      <div class="boutique-container">
+        <!-- MODALITÉS -->
+        <section class="modalites-section">
+          <!-- CTA -->
+          <div class="modalite-cta">
+            <h2 class="cta-title-responsive">
+              Commandez en ligne et récupérez votre commande
+            </h2>
+
+            <p>
+              En click & collect (retrait à la ferme) ou en vous faisant livrer
+              à domicile
+            </p>
+
+            <a href="#" class="btn--white">Commandez dès maintenant</a>
+          </div>
+
+          <!-- GRID -->
+          <div class="modalites-grid">
+            <!-- CLICK & COLLECT -->
+            <div class="modalite-card">
+              <h3>Click & Collect</h3>
+
+              <div class="modalite-info">
+                <div class="info-item">
+                  <h4>Retrait à la ferme</h4>
+                  <p>
+                    Commandez en ligne et récupérez votre panier directement à
+                    la ferme
+                  </p>
+                </div>
+
+                <div class="info-item">
+                  <h4>Horaires de retrait</h4>
+                  <p>Mercredi, jeudi et vendredi<br />De 9h à 18h</p>
+                </div>
+
+                <div class="info-item">
+                  <h4>Tarif</h4>
+                  <p>Gratuit - aucun frais de retrait</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- LIVRAISON -->
+            <div class="modalite-card">
+              <h3>Livraison à domicile</h3>
+
+              <div class="modalite-info">
+                <div class="info-item">
+                  <h4>Zone de livraison</h4>
+                  <p>À moins de 20 km de notre ferme</p>
+                </div>
+
+                <div class="info-item">
+                  <h4>Jours de livraison</h4>
+                  <p>
+                    Mercredi, jeudi, vendredi<br />Commande avant 9h00 le jour
+                    de la livraison
+                  </p>
+                </div>
+
+                <div class="info-item">
+                  <h4>Frais de livraison</h4>
+                  <ul>
+                    <li>Gratuit dès 100 € d'achat</li>
+                    <li>9,99 € entre 25 € et 100 €</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAIEMENT -->
+          <section class="paiement-section">
+            <h3>Modes de paiement</h3>
+
+            <div class="paiement-info">
+              <div class="info-item">
+                <h4>En ligne</h4>
+                <p>Paiement sécurisé via E-transactions (Crédit Agricole)</p>
+              </div>
+
+              <div class="info-item">
+                <h4>À la ferme</h4>
+                <p>Carte bancaire, paiement sans contact ou espèces acceptés</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="pied-de-page">
+      <!-- Bouton remonter en haut -->
+      <button class="bouton-remonter" id="boutonRemonter">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke="white"
+          fill="none"
+          stroke-width="2"
+        >
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+
+      <div class="contenu-pied-de-page">
+        <!-- COLONNE 1 : Présentation -->
+        <div class="colonne-pied-de-page">
+          <div class="logo-pied-de-page">
+            <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
+            <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
+          </div>
+
+          <p class="texte-pied-de-page">
+            Des produits frais et locaux cultivés avec passion depuis 1985.
+          </p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div
+          class="colonne-pied-de-page colonne-accordeon"
+          id="colonneNavigation"
+        >
+          <h3 class="titre-accordeon" id="boutonNavigation">Navigation</h3>
+
+          <ul class="liste-navigation">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="boutique.html">La boutique</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Mon compte</a></li>
+            <li><a href="panier.html">Panier</a></li>
+          </ul>
+        </div>
+
+        <!-- INFORMATIONS -->
+        <div
+          class="colonne-pied-de-page colonne-accordeon"
+          id="colonneInformations"
+        >
+          <h3 class="titre-accordeon" id="boutonInformations">Informations</h3>
+
+          <ul class="liste-informations">
+            <li><a href="boutique.html">Livraison</a></li>
+            <li><a href="#">Paiement</a></li>
+            <li><a href="cgv.html">CGV</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Confidentialité</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="colonne-pied-de-page">
+          <h3 class="titre-pied-de-page">Contact</h3>
+
+          <ul class="liste-contact">
+            <li>700 avenue de beaumont 95470 fosses</li>
+            <li>01 23 45 67 89</li>
             <li>
-              <a href="boutique.html#produits-de-noel" class="header-rouge">
-                Les Produits de Noël
+              <a
+                href="mailto:contact@basilicferme.fr"
+                aria-label="Envoyer un email à La Ferme de Basile"
+              >
+                contact@basilicferme.fr
               </a>
             </li>
           </ul>
-        </li>
 
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Panier -->
-     <div class="header-actions">
-  <a href="compte.html" class="header-compte" aria-label="Mon compte">
-    <i class="fa-regular fa-user" aria-hidden="true"></i>
-    <span>Mon compte</span>
-  </a>
-
-  <a href="panier.html" class="header-panier" aria-label="Voir le panier">
-    <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-  </a>
-</div> 
-
-  </div>
-</header>
-
-<main>
-
-  <!-- HERO -->
-  <section class="boutique-hero">
-    <h2>La Boutique</h2>
-    <p>
-      Découvrez notre sélection de produits frais et locaux, cultivés avec passion et dans le respect de la nature.
-    </p>
-  </section>
-
-  <!-- CONTAINER PRINCIPAL -->
-  <div class="boutique-container">
-
-    <!-- MODALITÉS -->
-    <section class="modalites-section">
-
-      <!-- CTA -->
-      <div class="modalite-cta">
-        <h2 class="cta-title-responsive">
-          Commandez en ligne et récupérez votre commande
-        </h2>
-
-        <p>En click & collect (retrait à la ferme) ou en vous faisant livrer à domicile</p>
-
-        <a href="#" class="btn--white">Commandez dès maintenant</a>
-      </div>
-
-      <!-- GRID -->
-      <div class="modalites-grid">
-
-        <!-- CLICK & COLLECT -->
-        <div class="modalite-card">
-          <h3>Click & Collect</h3>
-
-          <div class="modalite-info">
-
-            <div class="info-item">
-              <h4>Retrait à la ferme</h4>
-              <p>Commandez en ligne et récupérez votre panier directement à la ferme</p>
-            </div>
-
-            <div class="info-item">
-              <h4>Horaires de retrait</h4>
-              <p>Mercredi, jeudi et vendredi<br>De 9h à 18h</p>
-            </div>
-
-            <div class="info-item">
-              <h4>Tarif</h4>
-              <p>Gratuit - aucun frais de retrait</p>
-            </div>
-
+          <div class="liens-sociaux">
+            <a
+              href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
           </div>
         </div>
-
-        <!-- LIVRAISON -->
-        <div class="modalite-card">
-          <h3>Livraison à domicile</h3>
-
-          <div class="modalite-info">
-
-            <div class="info-item">
-              <h4>Zone de livraison</h4>
-              <p>À moins de 20 km de notre ferme</p>
-            </div>
-
-            <div class="info-item">
-              <h4>Jours de livraison</h4>
-              <p>Mercredi, jeudi, vendredi<br>Commande avant 9h00 le jour de la livraison</p>
-            </div>
-
-            <div class="info-item">
-              <h4>Frais de livraison</h4>
-              <ul>
-                <li>Gratuit dès 100 € d'achat</li>
-                <li>9,99 € entre 25 € et 100 €</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
       </div>
 
-    </section>
-  </div>
-</main>
-
- <!-- FOOTER -->
-
- <footer class="pied-de-page">
-
-  <!-- Bouton remonter en haut -->
-  <button class="bouton-remonter" id="boutonRemonter">
-    <svg width="24" height="24" viewBox="0 0 24 24" stroke="white" fill="none" stroke-width="2">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <div class="contenu-pied-de-page">
-
-    <!-- COLONNE 1 : Présentation -->
-    <div class="colonne-pied-de-page">
-      <div class="logo-pied-de-page">
-        <img src="images/logo.jpg" alt="Logo La Ferme de Basile" />
-        <h3 class="titre-pied-de-page">La Ferme de Basile</h3>
+      <div class="bas-de-page">
+        <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
       </div>
+    </footer>
 
-      <p class="texte-pied-de-page">
-        Des produits frais et locaux cultivés avec passion depuis 1985.
-      </p>
-    </div>
-
-    <!-- NAVIGATION -->
-    <div class="colonne-pied-de-page colonne-accordeon" id="colonneNavigation">
-      <h3 class="titre-accordeon" id="boutonNavigation">
-        Navigation
-      </h3>
-
-      <ul class="liste-navigation">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-        <li><a href="boutique.html">La boutique</a></li>
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- INFORMATIONS -->
-    <div class="colonne-pied-de-page colonne-accordeon" id="colonneInformations">
-      <h3 class="titre-accordeon" id="boutonInformations">
-        Informations
-      </h3>
-
-      <ul class="liste-informations">
-        <li><a href="#">Livraison</a></li>
-        <li><a href="#">Paiement</a></li>
-        <li><a href="#">CGV</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Confidentialité</a></li>
-      </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="colonne-pied-de-page">
-      <h3 class="titre-pied-de-page">Contact</h3>
-
-      <ul class="liste-contact">
-        <li> 700 avenue de beaumont 95470 fosses</li>
-        <li> 01 23 45 67 89</li>
-        <li>
-  <a href="mailto:contact@basilicferme.fr" aria-label="Envoyer un email à La Ferme de Basile">
-    contact@basilicferme.fr
-  </a>
-</li>
-
-      </ul>
-
-      <div class="liens-sociaux">
-        <a href="https://www.instagram.com/la_ferme_de_basile/?fbclid=IwY2xjawOsDQRleHRuA2FlbQIxMABicmlkETBCOEFCNEI1VEJxcGkwRVp3c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnFCUesO2ftiBLFmNtbAvvm8HbSPOzO1AbZ6YBlNEVUx0d5DMCCszk_Vdh3Y_aem_m-wxQXbCzKi6xK_y347ILA" target="_blank" rel="noopener noreferrer"  aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/Lafermedebasile/?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="bas-de-page">
-    <p>© 2025 La Ferme de Basile – Tous droits réservés.</p>
-  </div>
-
-</footer>
-
-  <script src="scripts.js"></script>
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>
-
